@@ -1,0 +1,233 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "금융데이터분석_R",
+    "section": "",
+    "text": "지시함수\n\n\n\n\n\n\n\n\n\n\n\n\nOct 12, 2023\n\n\nSungil Park\n\n\n\n\n\n\n  \n\n\n\n\n회귀분석\n\n\n\n\n\n\n\n\n\n\n\n\nOct 10, 2023\n\n\nSungil Park\n\n\n\n\n\n\n  \n\n\n\n\n빈도와 심도\n\n\n\n\n\n\n\n\n\n\n\n\nSep 14, 2023\n\n\n박성일\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Sungil Park",
+    "section": "",
+    "text": "sungileo@naver.com"
+  },
+  {
+    "objectID": "posts/0914_pt1.html#r",
+    "href": "posts/0914_pt1.html#r",
+    "title": "PT.1 - 설치 & R에 대해",
+    "section": "R",
+    "text": "R\n\nR에 대해\n\n통계 계산과 그래픽을 위한 프로그래밍 언어이자 소프트웨어 환경\n뉴질랜드 오클랜드 대학의 로스 이하카와 로버트 젠틀맨에 의해 개발(1992)\nGPL 하에 배포되어 비용에 부담없이 자유롭게 사용\n많은 연구자들에 의해 새롭게 만들어진 최신의 알고리즘과 로직들을 Package 형태로 제공하여 다른 어떤 통계 소프트웨어들보다도 다양한 분석방법 등을 제공\n초기 접근이 다른 통계 소프트웨어보다 불편하게 느껴질 수 있지만, 익숙해지면 편하게 다룰 수 있음\n\n\n\n설치\nr-project.org\ncran\n\nR 패키지를 호스팅, 저장, 공유하는 공식적인 위치\n영남대 cran"
+  },
+  {
+    "objectID": "posts/0914_pt1.html#rstudio",
+    "href": "posts/0914_pt1.html#rstudio",
+    "title": "PT.1 - 설치 & R에 대해",
+    "section": "Rstudio",
+    "text": "Rstudio\n\nRstudio\n\nR 프로그래밍 언어와 관련된 통합 개발 환경(IDE) 중 하나\nR 패키지를 설치하고 관리하는 도구를 제공, 함수 및 패키지에 대한 도움말에 쉽게 액세스\n데이터 구조를 검사하고 조작하는 도구를 제공, 스크립트 편집\n프로젝트관리, 버전관리, Git, 보고서 작성 등등..\n\n\n\n설치\nPosit"
+  },
+  {
+    "objectID": "posts/1010_pt2.html",
+    "href": "posts/1010_pt2.html",
+    "title": "PT.2 - 벡터, 리스트, 팩터, 행렬",
+    "section": "",
+    "text": "tap 은 자동완성\nF1 은 함수 설명 문서 보기"
+  },
+  {
+    "objectID": "posts/1010_pt2.html#tip",
+    "href": "posts/1010_pt2.html#tip",
+    "title": "PT.2 - 벡터, 리스트, 팩터, 행렬",
+    "section": "",
+    "text": "tap 은 자동완성\nF1 은 함수 설명 문서 보기"
+  },
+  {
+    "objectID": "posts/1010_pt2.html#변수-지우기",
+    "href": "posts/1010_pt2.html#변수-지우기",
+    "title": "PT.2 - 벡터, 리스트, 팩터, 행렬",
+    "section": "변수 지우기",
+    "text": "변수 지우기\nrm = remove 줄임말\nls()는 전체 변수 출력\nrm(list = ls())는 전체변수 삭제\nrm(변수명)은 변수명만 삭제\n\nremove(list = ls())\nrm(list = ls())\n\n\nrm(변수명)"
+  },
+  {
+    "objectID": "posts/1010_pt2.html#벡터",
+    "href": "posts/1010_pt2.html#벡터",
+    "title": "PT.2 - 벡터, 리스트, 팩터, 행렬",
+    "section": "벡터",
+    "text": "벡터\nGNP &lt;- c(2090,2450,960)\n\nGNP 라는 변수에 2090, 2450, 960 3개의 숫자 요소를 가진 벡터 생성\n\nnames(GNP) &lt;- c(\"korea\",\"japan\",\"nepal\")\n\n각 요소에 “korea”, “japan”, “nepal”의 이름 지정\n\n\nGNP &lt;- c(2090,2450,960)\nnames(GNP) &lt;- c(\"korea\",\"japan\",\"nepal\")\n\n\n요소에 지정된 이름으로 값 출력 (인덱싱)\n단일 값 출력\n\nGNP[\"korea\"]\n\nkorea \n 2090 \n\n\n벡터 사용 여러개의 값 출력\n\nGNP[c(\"korea\",\"nepal\")]\n\nkorea nepal \n 2090   960"
+  },
+  {
+    "objectID": "posts/1010_pt2.html#변수에-조건을-지정하기",
+    "href": "posts/1010_pt2.html#변수에-조건을-지정하기",
+    "title": "PT.2 - 벡터, 리스트, 팩터, 행렬",
+    "section": "변수에 조건을 지정하기",
+    "text": "변수에 조건을 지정하기\nd 라는 변수에 1~9까지의 숫자 벡터 생성\n\nd &lt;- c(1,2,3,4,5,6,7,8,9)\nd &lt;- c(1:9) \n\ncondi 라는 변수에 7이하 & 3이상을 만족하는 d 지정\n\nTRUE, FALSE 값으로 출력\n\n\ncondi &lt;- d &lt;= 7 & d &gt;= 3\n\ncondi\n\n[1] FALSE FALSE  TRUE  TRUE  TRUE  TRUE  TRUE FALSE FALSE\n\n\n\n인덱싱으로 d에서의 값 출력하기\n\n\nd[condi]\n\n[1] 3 4 5 6 7\n\n\n& : 두 조건을 모두 만족해야됨, (7보다 작으면서, 3보다 큰 수)\n| : 두 조건중 하나만 만족하면됨, (7보다 크거나, 3보다 작거나), (엔터키 위 shift + \\)\n\ncondi_2 &lt;- d &lt;= 3 | d &gt;= 7\nd[condi]\n\n[1] 3 4 5 6 7"
+  },
+  {
+    "objectID": "posts/1010_pt2.html#리스트",
+    "href": "posts/1010_pt2.html#리스트",
+    "title": "PT.2 - 벡터, 리스트, 팩터, 행렬",
+    "section": "리스트",
+    "text": "리스트\n\n벡터는 한가지 타입의 요소들만을 담을 수 있음 (숫자면 숫자만, 문자면 문자만)\n리스트는 여러가지 타입의 요소를 담을 수 있음\n\n\nlist_example &lt;- list(1, 2, c(3,4), \"munja\", TRUE, FALSE)\n\nlist_example\n\n[[1]]\n[1] 1\n\n[[2]]\n[1] 2\n\n[[3]]\n[1] 3 4\n\n[[4]]\n[1] \"munja\"\n\n[[5]]\n[1] TRUE\n\n[[6]]\n[1] FALSE\n\n\n\n리스트와 생성\n\nmy.info &lt;- list(name='Tom', \n                age=60, \n                status=TRUE, \n                score=c(90, 85, 70, 84))\n\n\n\n리스트 출력\n\nmy.info\n\n$name\n[1] \"Tom\"\n\n$age\n[1] 60\n\n$status\n[1] TRUE\n\n$score\n[1] 90 85 70 84\n\n\n\n\n리스트의 인덱싱\n\n# 첫째 요소\nmy.info[1]\n\n$name\n[1] \"Tom\"\n\n# 이름이 name인 요소\nmy.info$name\n\n[1] \"Tom\"\n\n# 리스트의 2,3번쨰 요소\nmy.info[c(2,3)]\n\n$age\n[1] 60\n\n$status\n[1] TRUE"
+  },
+  {
+    "objectID": "posts/1010_pt2.html#팩터",
+    "href": "posts/1010_pt2.html#팩터",
+    "title": "PT.2 - 벡터, 리스트, 팩터, 행렬",
+    "section": "팩터",
+    "text": "팩터\n\n팩터는 범주형 데이터를 지정하는데 사용\n예시)\n\nbt.vct 라는 문자형 변수 벡터 지정\nbt.fct 라는 팩터 지정\n\n\n\n팩터 요소 확인하기\n\nbt.vct &lt;- c('A','B','B','O','AB','A')\n\nbt.fct &lt;- factor(bt.vct)\n\nstr()함수는 지정한 변수의 타입을 확인할때 사용\n\nstr(bt.vct)\n\n chr [1:6] \"A\" \"B\" \"B\" \"O\" \"AB\" \"A\"\n\nstr(bt.fct)\n\n Factor w/ 4 levels \"A\",\"AB\",\"B\",\"O\": 1 3 3 4 2 1\n\n\nlevels()함수는 팩터 변수의 요소값을 확인할때 사용\n\nlevels(bt.fct)\n\n[1] \"A\"  \"AB\" \"B\"  \"O\" \n\n\n\n\n팩터의 인덱싱\n\nbt.fct[5]\n\n[1] AB\nLevels: A AB B O\n\nbt.fct[c(2,5)]\n\n[1] B  AB\nLevels: A AB B O\n\n\n팩터,벡터를 숫자형으로 바꾸기\n\nas.integer(bt.fct)\n\n[1] 1 3 3 4 2 1\n\nas.integer(bt.vct)\n\nWarning: 강제형변환에 의해 생성된 NA 입니다\n\n\n[1] NA NA NA NA NA NA\n\n\n\n\n팩터에 값 추가\n\n# 기존 6개 값을 가진 팩터에 7번째 값 추가\nbt.fct[7] &lt;- 'B'\nbt.fct\n\n[1] A  B  B  O  AB A  B \nLevels: A AB B O\n\n\n\n\n요소 외 값 추가\n\n# 팩터 요소(A, AB, B, O)에 포함되지 않은 값을 추가하면..\n# Warning message = 경고(O), 에러(X)\n# NA 값으로 입력됨\nbt.fct[8] &lt;- 'C'     \n\nWarning in `[&lt;-.factor`(`*tmp*`, 8, value = \"C\"): 요인의 수준(factor level)이\n올바르지 않아 NA가 생성되었습니다.\n\nbt.fct\n\n[1] A    B    B    O    AB   A    B    &lt;NA&gt;\nLevels: A AB B O\n\n\n\n\n팩터의 요소 추가\n\nlevels() 함수를 써서 \"C\" 요소 추가\n8번째 값에 \"C\" 추가\n\n\nlevels(bt.fct) &lt;- c(levels(bt.fct),\"C\")\nbt.fct[8] &lt;- 'C'     \nbt.fct\n\n[1] A  B  B  O  AB A  B  C \nLevels: A AB B O C"
+  },
+  {
+    "objectID": "posts/1010_pt2.html#행렬-matrix",
+    "href": "posts/1010_pt2.html#행렬-matrix",
+    "title": "PT.2 - 벡터, 리스트, 팩터, 행렬",
+    "section": "행렬 (matrix)",
+    "text": "행렬 (matrix)\n\n행렬의 생성\nz 라는 변수에 1~20 의 값, 4행 5열의 행렬 생성 (행 우선)\n\nz &lt;- matrix(1:20, nrow=4, ncol=5)\nz\n\n     [,1] [,2] [,3] [,4] [,5]\n[1,]    1    5    9   13   17\n[2,]    2    6   10   14   18\n[3,]    3    7   11   15   19\n[4,]    4    8   12   16   20\n\n\nz1 라는 변수에 1~20 의 값, 4행 5열의 행렬 생성 (열 우선)\n\nz1 &lt;- matrix(1:20, nrow=4, ncol=5, byrow=TRUE)\nz1\n\n     [,1] [,2] [,3] [,4] [,5]\n[1,]    1    2    3    4    5\n[2,]    6    7    8    9   10\n[3,]   11   12   13   14   15\n[4,]   16   17   18   19   20\n\n\n\n\n행렬 붙히기 (combine)\nx, y라는 변수에 4개의 값을 가진 벡터 생성\nz 라는 변수에 1~20 의 값, 4행 5열의 행렬 생성\n\nx &lt;- 1:4\ny &lt;- 5:8\nz &lt;- matrix(1:20, nrow=4, ncol=5)\n\ncbind() 함수는 열 기준으로 값을 붙힌다.(column bind)\nrbind() 함수는 행 기준으로 값을 붙힌다.(row bind)\n\nm1 &lt;- cbind(x,y)\nm1\n\n     x y\n[1,] 1 5\n[2,] 2 6\n[3,] 3 7\n[4,] 4 8\n\nm2 &lt;- rbind(x,y)\nm2\n\n  [,1] [,2] [,3] [,4]\nx    1    2    3    4\ny    5    6    7    8\n\n\n\nm3 &lt;- rbind(m2,x)\nm3\n\n  [,1] [,2] [,3] [,4]\nx    1    2    3    4\ny    5    6    7    8\nx    1    2    3    4\n\n\n\nm4 &lt;- cbind(z,x)\nm4\n\n                  x\n[1,] 1 5  9 13 17 1\n[2,] 2 6 10 14 18 2\n[3,] 3 7 11 15 19 3\n[4,] 4 8 12 16 20 4\n\n\n\n\n행렬의 인덱싱\n\npython과는 달리 1부터 시작\n\n\nz &lt;- matrix(1:20, nrow=4, ncol=5)\nz\n\n     [,1] [,2] [,3] [,4] [,5]\n[1,]    1    5    9   13   17\n[2,]    2    6   10   14   18\n[3,]    3    7   11   15   19\n[4,]    4    8   12   16   20\n\n\nmatrix[행, 열]\n\n# 2행 3열의 값\nz[2,3]\n\n[1] 10\n\n# 2행의 모든 값\nz[2,]\n\n[1]  2  6 10 14 18\n\n# 4열의 모든 값\nz[,4]\n\n[1] 13 14 15 16\n\n# 모든 값\nz[]\n\n     [,1] [,2] [,3] [,4] [,5]\n[1,]    1    5    9   13   17\n[2,]    2    6   10   14   18\n[3,]    3    7   11   15   19\n[4,]    4    8   12   16   20\n\n\n\n# 2행 1~3열의 값\nz[2, 1:3]\n\n[1]  2  6 10\n\n# 1행 1, 2, 4 열의 값\nz[1, c(1,2,4)]\n\n[1]  1  5 13\n\n# 1~2행의 모든 값\nz[1:2, ]\n\n     [,1] [,2] [,3] [,4] [,5]\n[1,]    1    5    9   13   17\n[2,]    2    6   10   14   18\n\n# 1열, 4열의 모든 값\nz[, c(1,4)]\n\n     [,1] [,2]\n[1,]    1   13\n[2,]    2   14\n[3,]    3   15\n[4,]    4   16\n\n\n\n\n행렬의 행이름, 열이름 넣기\n\nscore &lt;- matrix(c(90,85,69,78,85,96,49,95,90,80,70,60), nrow=4, ncol=3)\ncolnames(score) &lt;- c(\"국어\",\"영어\",\"수학\")\nrownames(score) &lt;- c(\"철수\",\"영희\",\"릅신\",\"조던\")\nscore\n\n     국어 영어 수학\n철수   90   85   90\n영희   85   96   80\n릅신   69   49   70\n조던   78   95   60"
+  },
+  {
+    "objectID": "posts/1010_Regression.html",
+    "href": "posts/1010_Regression.html",
+    "title": "회귀분석",
+    "section": "",
+    "text": "t\nyymm\nmarket\n\n\n\n\n1\n2020.01\n5238500\n\n\n2\n2020.02\n4775400\n\n\n3\n2020.03\n5916100\n\n\n4\n2020.04\n7929800\n\n\n5\n2020.05\n8008500\n\n\n6\n2020.06\n6293300\n\n\n7\n2020.07\n4182700\n\n\n8\n2020.08\n4118900\n\n\n9\n2020.09\n6592500\n\n\n10\n2020.10\n8618600\n\n\n11\n2020.11\n8767400\n\n\n12\n2020.12\n7748900\n\n\n13\n2021.01\n6511500\n\n\n14\n2021.02\n5523400\n\n\n15\n2021.03\n7364600\n\n\n16\n2021.04\n8607400\n\n\n17\n2021.05\n9470900\n\n\n18\n2021.06\n7742000\n\n\n19\n2021.07\n5285500\n\n\n20\n2021.08\n5240300\n\n\n21\n2021.09\n8001100\n\n\n22\n2021.10\n10318600\n\n\n23\n2021.11\n10330500\n\n\n24\n2021.12\n8428700\n\n\n25\n2022.01\n6550000\n\n\n26\n2022.02\n5592500\n\n\n27\n2022.03\n7171100\n\n\n28\n2022.04\n11005000\n\n\n29\n2022.05\n8824600\n\n\n30\n2022.06\n8025300\n\n\n31\n2022.07\n5223500\n\n\n32\n2022.08\n4723100\n\n\n33\n2022.09\n8074400\n\n\n34\n2022.10\n11198700\n\n\n35\n2022.11\n11798500\n\n\n36\n2022.12\n8723200"
+  },
+  {
+    "objectID": "posts/1010_Regression.html#data",
+    "href": "posts/1010_Regression.html#data",
+    "title": "회귀분석",
+    "section": "",
+    "text": "t\nyymm\nmarket\n\n\n\n\n1\n2020.01\n5238500\n\n\n2\n2020.02\n4775400\n\n\n3\n2020.03\n5916100\n\n\n4\n2020.04\n7929800\n\n\n5\n2020.05\n8008500\n\n\n6\n2020.06\n6293300\n\n\n7\n2020.07\n4182700\n\n\n8\n2020.08\n4118900\n\n\n9\n2020.09\n6592500\n\n\n10\n2020.10\n8618600\n\n\n11\n2020.11\n8767400\n\n\n12\n2020.12\n7748900\n\n\n13\n2021.01\n6511500\n\n\n14\n2021.02\n5523400\n\n\n15\n2021.03\n7364600\n\n\n16\n2021.04\n8607400\n\n\n17\n2021.05\n9470900\n\n\n18\n2021.06\n7742000\n\n\n19\n2021.07\n5285500\n\n\n20\n2021.08\n5240300\n\n\n21\n2021.09\n8001100\n\n\n22\n2021.10\n10318600\n\n\n23\n2021.11\n10330500\n\n\n24\n2021.12\n8428700\n\n\n25\n2022.01\n6550000\n\n\n26\n2022.02\n5592500\n\n\n27\n2022.03\n7171100\n\n\n28\n2022.04\n11005000\n\n\n29\n2022.05\n8824600\n\n\n30\n2022.06\n8025300\n\n\n31\n2022.07\n5223500\n\n\n32\n2022.08\n4723100\n\n\n33\n2022.09\n8074400\n\n\n34\n2022.10\n11198700\n\n\n35\n2022.11\n11798500\n\n\n36\n2022.12\n8723200"
+  },
+  {
+    "objectID": "posts/1010_Regression.html#model",
+    "href": "posts/1010_Regression.html#model",
+    "title": "회귀분석",
+    "section": "model",
+    "text": "model\n\n\n\nCall:\nlm(formula = market ~ t, data = data)\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-3859553 -1315301   -70334  1707873  2962448 \n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)  5879738     634908   9.261 8.03e-11 ***\nt              84466      29924   2.823   0.0079 ** \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 1865000 on 34 degrees of freedom\nMultiple R-squared:  0.1898,    Adjusted R-squared:  0.166 \nF-statistic: 7.967 on 1 and 34 DF,  p-value: 0.007902"
+  },
+  {
+    "objectID": "posts/1010_Regression.html#formula",
+    "href": "posts/1010_Regression.html#formula",
+    "title": "회귀분석",
+    "section": "formula",
+    "text": "formula\ny = 5879738 + 84466 * t\np-value 가 0.007902로 0.05보다 작으므로 유의하다고 볼 수 있다.\nR-squared 값이 0.1898로 설명력이 낮다고 볼 수 있다."
+  },
+  {
+    "objectID": "posts/1010_Regression.html#plot",
+    "href": "posts/1010_Regression.html#plot",
+    "title": "회귀분석",
+    "section": "plot",
+    "text": "plot\n\n\n`geom_smooth()` using formula = 'y ~ x'"
+  },
+  {
+    "objectID": "posts/1010_Regression.html#prediction",
+    "href": "posts/1010_Regression.html#prediction",
+    "title": "회귀분석",
+    "section": "Prediction",
+    "text": "Prediction\n\n\n   pred_t pred_yymm pred_market\n1      37   2023.01     9004980\n2      38   2023.02     9089446\n3      39   2023.03     9173912\n4      40   2023.04     9258378\n5      41   2023.05     9342844\n6      42   2023.06     9427310\n7      43   2023.07     9511776\n8      44   2023.08     9596242\n9      45   2023.09     9680708\n10     46   2023.10     9765174\n11     47   2023.11     9849640\n12     48   2023.12     9934106"
+  },
+  {
+    "objectID": "playground.html",
+    "href": "playground.html",
+    "title": "지시함수",
+    "section": "",
+    "text": "data &lt;- readxl::read_xlsx(\"posts/contents/2. 예측수준의 결정.xlsx\",sheet = 1)\n\ndata$month &lt;- substr(data$yymm,6,8)\n\ndata$quarter &lt;- ifelse(substr(data$yymm,6,8) %in% \n                         c(\"01\", \"02\", \"03\"), \"Q1\",\n                     ifelse(substr(data$yymm,6,8) %in% \n                              c(\"04\", \"05\", \"06\"), \"Q2\",\n                            ifelse(substr(data$yymm,6,8) %in% \n                                     c(\"07\", \"08\", \"09\"), \"Q3\", \"Q4\")))\n\ndata %&gt;% kable()\n\n\n\n\nt\nyymm\nmarket\nmonth\nquarter\n\n\n\n\n1\n2020.01\n5238500\n01\nQ1\n\n\n2\n2020.02\n4775400\n02\nQ1\n\n\n3\n2020.03\n5916100\n03\nQ1\n\n\n4\n2020.04\n7929800\n04\nQ2\n\n\n5\n2020.05\n8008500\n05\nQ2\n\n\n6\n2020.06\n6293300\n06\nQ2\n\n\n7\n2020.07\n4182700\n07\nQ3\n\n\n8\n2020.08\n4118900\n08\nQ3\n\n\n9\n2020.09\n6592500\n09\nQ3\n\n\n10\n2020.10\n8618600\n10\nQ4\n\n\n11\n2020.11\n8767400\n11\nQ4\n\n\n12\n2020.12\n7748900\n12\nQ4\n\n\n13\n2021.01\n6511500\n01\nQ1\n\n\n14\n2021.02\n5523400\n02\nQ1\n\n\n15\n2021.03\n7364600\n03\nQ1\n\n\n16\n2021.04\n8607400\n04\nQ2\n\n\n17\n2021.05\n9470900\n05\nQ2\n\n\n18\n2021.06\n7742000\n06\nQ2\n\n\n19\n2021.07\n5285500\n07\nQ3\n\n\n20\n2021.08\n5240300\n08\nQ3\n\n\n21\n2021.09\n8001100\n09\nQ3\n\n\n22\n2021.10\n10318600\n10\nQ4\n\n\n23\n2021.11\n10330500\n11\nQ4\n\n\n24\n2021.12\n8428700\n12\nQ4\n\n\n25\n2022.01\n6550000\n01\nQ1\n\n\n26\n2022.02\n5592500\n02\nQ1\n\n\n27\n2022.03\n7171100\n03\nQ1\n\n\n28\n2022.04\n11005000\n04\nQ2\n\n\n29\n2022.05\n8824600\n05\nQ2\n\n\n30\n2022.06\n8025300\n06\nQ2\n\n\n31\n2022.07\n5223500\n07\nQ3\n\n\n32\n2022.08\n4723100\n08\nQ3\n\n\n33\n2022.09\n8074400\n09\nQ3\n\n\n34\n2022.10\n11198700\n10\nQ4\n\n\n35\n2022.11\n11798500\n11\nQ4\n\n\n36\n2022.12\n8723200\n12\nQ4"
+  },
+  {
+    "objectID": "playground.html#data",
+    "href": "playground.html#data",
+    "title": "지시함수",
+    "section": "",
+    "text": "data &lt;- readxl::read_xlsx(\"posts/contents/2. 예측수준의 결정.xlsx\",sheet = 1)\n\ndata$month &lt;- substr(data$yymm,6,8)\n\ndata$quarter &lt;- ifelse(substr(data$yymm,6,8) %in% \n                         c(\"01\", \"02\", \"03\"), \"Q1\",\n                     ifelse(substr(data$yymm,6,8) %in% \n                              c(\"04\", \"05\", \"06\"), \"Q2\",\n                            ifelse(substr(data$yymm,6,8) %in% \n                                     c(\"07\", \"08\", \"09\"), \"Q3\", \"Q4\")))\n\ndata %&gt;% kable()\n\n\n\n\nt\nyymm\nmarket\nmonth\nquarter\n\n\n\n\n1\n2020.01\n5238500\n01\nQ1\n\n\n2\n2020.02\n4775400\n02\nQ1\n\n\n3\n2020.03\n5916100\n03\nQ1\n\n\n4\n2020.04\n7929800\n04\nQ2\n\n\n5\n2020.05\n8008500\n05\nQ2\n\n\n6\n2020.06\n6293300\n06\nQ2\n\n\n7\n2020.07\n4182700\n07\nQ3\n\n\n8\n2020.08\n4118900\n08\nQ3\n\n\n9\n2020.09\n6592500\n09\nQ3\n\n\n10\n2020.10\n8618600\n10\nQ4\n\n\n11\n2020.11\n8767400\n11\nQ4\n\n\n12\n2020.12\n7748900\n12\nQ4\n\n\n13\n2021.01\n6511500\n01\nQ1\n\n\n14\n2021.02\n5523400\n02\nQ1\n\n\n15\n2021.03\n7364600\n03\nQ1\n\n\n16\n2021.04\n8607400\n04\nQ2\n\n\n17\n2021.05\n9470900\n05\nQ2\n\n\n18\n2021.06\n7742000\n06\nQ2\n\n\n19\n2021.07\n5285500\n07\nQ3\n\n\n20\n2021.08\n5240300\n08\nQ3\n\n\n21\n2021.09\n8001100\n09\nQ3\n\n\n22\n2021.10\n10318600\n10\nQ4\n\n\n23\n2021.11\n10330500\n11\nQ4\n\n\n24\n2021.12\n8428700\n12\nQ4\n\n\n25\n2022.01\n6550000\n01\nQ1\n\n\n26\n2022.02\n5592500\n02\nQ1\n\n\n27\n2022.03\n7171100\n03\nQ1\n\n\n28\n2022.04\n11005000\n04\nQ2\n\n\n29\n2022.05\n8824600\n05\nQ2\n\n\n30\n2022.06\n8025300\n06\nQ2\n\n\n31\n2022.07\n5223500\n07\nQ3\n\n\n32\n2022.08\n4723100\n08\nQ3\n\n\n33\n2022.09\n8074400\n09\nQ3\n\n\n34\n2022.10\n11198700\n10\nQ4\n\n\n35\n2022.11\n11798500\n11\nQ4\n\n\n36\n2022.12\n8723200\n12\nQ4"
+  },
+  {
+    "objectID": "playground.html#월별",
+    "href": "playground.html#월별",
+    "title": "지시함수",
+    "section": "월별",
+    "text": "월별\n\nSummary\n\nmodel &lt;- lm(market ~ t+factor(month), data = data)\nmodel %&gt;% summary\n\n\nCall:\nlm(formula = market ~ t + factor(month), data = data)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-751429 -374312   26085  377139 1044296 \n\nCoefficients:\n                Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)      5255032     353306  14.874 2.73e-13 ***\nt                  64998       9721   6.686 8.04e-07 ***\nfactor(month)02  -867898     466697  -1.860 0.075772 .  \nfactor(month)03   587272     467000   1.258 0.221177    \nfactor(month)04  2885741     467506   6.173 2.69e-06 ***\nfactor(month)05  2408010     468213   5.143 3.27e-05 ***\nfactor(month)06   928546     469120   1.979 0.059870 .  \nfactor(month)07 -1592752     470226  -3.387 0.002536 ** \nfactor(month)08 -1860883     471531  -3.946 0.000642 ***\nfactor(month)09   936019     473031   1.979 0.059938 .  \nfactor(month)10  3360322     474726   7.078 3.28e-07 ***\nfactor(month)11  3548824     476614   7.446 1.44e-07 ***\nfactor(month)12  1485293     478691   3.103 0.005014 ** \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 571500 on 23 degrees of freedom\nMultiple R-squared:  0.9486,    Adjusted R-squared:  0.9217 \nF-statistic: 35.34 on 12 and 23 DF,  p-value: 6.202e-12\n\n\np-value 가 6.202e-12로 0.05보다 작으므로 유의하다고 볼 수 있다.\nR-squared 값이 0.9486로 설명력이 높다고 볼 수 있다.\n\nggplot(data, aes(x = t, y = market, color = month)) +\n  geom_point() +    \n  geom_smooth(method = \"lm\", se = FALSE) +  \n  labs(title = \"\", x = \"t\", y = \"market\") +\n  theme_minimal()\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\n\n\n\n\n\n예측\n\nlinear_regression &lt;- function(t) {\n  y &lt;- 5255032 + 64998  * t\n  return(y)\n}\n\npred_t &lt;- c(37:48)\npred_yymm &lt;- c(\"2023.01\",\"2023.02\",\"2023.03\"\n               ,\"2023.04\",\"2023.05\",\"2023.06\"\n               ,\"2023.07\",\"2023.08\",\"2023.09\"\n               ,\"2023.10\",\"2023.11\",\"2023.12\")\npred_market &lt;- linear_regression(pred_t)\n\ndata_pred &lt;- data.frame(pred_t,pred_yymm,pred_market)\n\nfor (i in 2:12) {\n  data_pred$pred_market[i] &lt;- data_pred$pred_market[i] + model$coefficients[i + 1]\n}\n\ndata_pred %&gt;% kable()\n\n\n\n\npred_t\npred_yymm\npred_market\n\n\n\n\n37\n2023.01\n7659958\n\n\n38\n2023.02\n6857058\n\n\n39\n2023.03\n8377226\n\n\n40\n2023.04\n10740693\n\n\n41\n2023.05\n10327960\n\n\n42\n2023.06\n8913493\n\n\n43\n2023.07\n6457194\n\n\n44\n2023.08\n6254061\n\n\n45\n2023.09\n9115961\n\n\n46\n2023.10\n11605262\n\n\n47\n2023.11\n11858762\n\n\n48\n2023.12\n9860229"
+  },
+  {
+    "objectID": "playground.html#분기별",
+    "href": "playground.html#분기별",
+    "title": "지시함수",
+    "section": "분기별",
+    "text": "분기별\n\nmodel_2 &lt;- lm(market ~ t+factor(quarter), data = data)\nmodel_2 %&gt;% summary\n\n\nCall:\nlm(formula = market ~ t + factor(quarter), data = data)\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-1765240  -773431   -50370   795498  2220942 \n\nCoefficients:\n                  Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)        5170133     459378  11.255 1.77e-12 ***\nt                    64380      19031   3.383 0.001958 ** \nfactor(quarter)Q2  2169493     532300   4.076 0.000296 ***\nfactor(quarter)Q3  -741959     541408  -1.370 0.180397    \nfactor(quarter)Q4  2897245     556255   5.208 1.18e-05 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 1123000 on 31 degrees of freedom\nMultiple R-squared:  0.7324,    Adjusted R-squared:  0.6979 \nF-statistic: 21.21 on 4 and 31 DF,  p-value: 1.653e-08\n\n\n1분기\ny = 5170133 + 64380x\n2분기\ny = 5170133 + 64380x + 2169493\n3분기\ny = 5170133 + 64380x - 741959\n4분기\ny = 5170133 + 64380x + 2897245\n\nggplot(data, aes(x = t, y = market, color = quarter)) +\n  geom_point() +    \n  geom_smooth(method = \"lm\", se = FALSE) +  \n  labs(title = \"\", x = \"t\", y = \"market\") +\n  theme_minimal()\n\n`geom_smooth()` using formula = 'y ~ x'"
+  },
+  {
+    "objectID": "playground.html#data-1",
+    "href": "playground.html#data-1",
+    "title": "지시함수",
+    "section": "Data",
+    "text": "Data\n\ndata &lt;- readxl::read_xlsx(\"posts/contents/2. 예측수준의 결정.xlsx\",sheet = 1)\n\ndata$month &lt;- substr(data$yymm,6,8)\ndata$year &lt;- substr(data$yymm,1,4)\n\ndata$quarter &lt;- ifelse(substr(data$yymm,6,8) %in% \n                         c(\"01\", \"02\", \"03\"), \"Q1\",\n                     ifelse(substr(data$yymm,6,8) %in% \n                              c(\"04\", \"05\", \"06\"), \"Q2\",\n                            ifelse(substr(data$yymm,6,8) %in% \n                                     c(\"07\", \"08\", \"09\"), \"Q3\", \"Q4\")))\n\ndata %&gt;% head()\n\n# A tibble: 6 × 6\n      t yymm     market month year  quarter\n  &lt;dbl&gt; &lt;chr&gt;     &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;  \n1     1 2020.01 5238500 01    2020  Q1     \n2     2 2020.02 4775400 02    2020  Q1     \n3     3 2020.03 5916100 03    2020  Q1     \n4     4 2020.04 7929800 04    2020  Q2     \n5     5 2020.05 8008500 05    2020  Q2     \n6     6 2020.06 6293300 06    2020  Q2     \n\n\n\nggplot(data, aes(x = t, y = market, color = year)) +\n  geom_point()+\n  geom_line()+\n  theme_minimal()\n\n\n\n\n\ndata[c(\"t\",\"market\")] %&gt;% kable()\n\n\n\n\nt\nmarket\n\n\n\n\n1\n5238500\n\n\n2\n4775400\n\n\n3\n5916100\n\n\n4\n7929800\n\n\n5\n8008500\n\n\n6\n6293300\n\n\n7\n4182700\n\n\n8\n4118900\n\n\n9\n6592500\n\n\n10\n8618600\n\n\n11\n8767400\n\n\n12\n7748900\n\n\n13\n6511500\n\n\n14\n5523400\n\n\n15\n7364600\n\n\n16\n8607400\n\n\n17\n9470900\n\n\n18\n7742000\n\n\n19\n5285500\n\n\n20\n5240300\n\n\n21\n8001100\n\n\n22\n10318600\n\n\n23\n10330500\n\n\n24\n8428700\n\n\n25\n6550000\n\n\n26\n5592500\n\n\n27\n7171100\n\n\n28\n11005000\n\n\n29\n8824600\n\n\n30\n8025300\n\n\n31\n5223500\n\n\n32\n4723100\n\n\n33\n8074400\n\n\n34\n11198700\n\n\n35\n11798500\n\n\n36\n8723200\n\n\n\n\n\n\n# Your data\nt &lt;- 1:36\nmarket &lt;- c(\n  5238500, 4775400, 5916100, 7929800, 8008500, 6293300, 4182700, 4118900,\n  6592500, 8618600, 8767400, 7748900, 6511500, 5523400, 7364600, 8607400,\n  9470900, 7742000, 5285500, 5240300, 8001100, 10318600, 10330500, 8428700,\n  6550000, 5592500, 7171100, 11005000, 8824600, 8025300, 5223500, 4723100,\n  8074400, 11198700, 11798500, 8723200\n)\n\n# Create a data frame\ndata &lt;- data.frame(t, market)\n\nlibrary(rpart)\nlibrary(rpart.plot)\n\n# Fit a decision tree model with control parameters\ncontrol_params &lt;- rpart.control(minsplit = 5, minbucket = 5)  # Adjust these values as needed\ntree_model &lt;- rpart(market ~ t, data = data, control = control_params)\n\n# Visualize the decision tree\nlibrary(rpart.plot)\nrpart.plot(tree_model, type = 4, extra = 101, under = TRUE, tweak = 1.2)\n\n\n\n\n\nplot(data$market,predict(tree_model,data.frame(t)))\n\n\n\n\n\n# Load the required packages\nlibrary(rpart)\nlibrary(rpart.plot)\nlibrary(ggplot2)\n\n# Your data\nt &lt;- 1:36\nmarket &lt;- c(\n  5238500, 4775400, 5916100, 7929800, 8008500, 6293300, 4182700, 4118900,\n  6592500, 8618600, 8767400, 7748900, 6511500, 5523400, 7364600, 8607400,\n  9470900, 7742000, 5285500, 5240300, 8001100, 10318600, 10330500, 8428700,\n  6550000, 5592500, 7171100, 11005000, 8824600, 8025300, 5223500, 4723100,\n  8074400, 11198700, 11798500, 8723200\n)\n\n# Create a data frame\ndata &lt;- data.frame(t, market)\n\n# Fit a decision tree model\ntree_model &lt;- rpart(market ~ t, data = data)\n\n# Create a scatter plot\nscatter_plot &lt;- ggplot(data, aes(x = t, y = market)) +\n  geom_point() +  # Scatter plot\n  geom_smooth(method = \"lm\", se = FALSE, color = \"blue\", formula = y ~ x) +  # Linear regression line\n  geom_smooth(data = data.frame(t = t, market = predict(tree_model)), method = \"lm\", se = FALSE, color = \"red\", formula = y ~ x) +  # Decision tree model line\n  labs(title = \"Scatter Plot with Decision Tree Regression Line\", x = \"t\", y = \"market\")\n\n# Print the plot\nprint(scatter_plot)"
+  },
+  {
+    "objectID": "posts/1012_Indicator_Regression.html",
+    "href": "posts/1012_Indicator_Regression.html",
+    "title": "지시함수",
+    "section": "",
+    "text": "data &lt;- readxl::read_xlsx(\"contents/2. 예측수준의 결정.xlsx\",sheet = 1)\n\ndata$month &lt;- substr(data$yymm,6,8)\n\ndata$quarter &lt;- ifelse(substr(data$yymm,6,8) %in% \n                         c(\"01\", \"02\", \"03\"), \"Q1\",\n                     ifelse(substr(data$yymm,6,8) %in% \n                              c(\"04\", \"05\", \"06\"), \"Q2\",\n                            ifelse(substr(data$yymm,6,8) %in% \n                                     c(\"07\", \"08\", \"09\"), \"Q3\", \"Q4\")))\n\ndata %&gt;% kable()\n\n\n\n\nt\nyymm\nmarket\nmonth\nquarter\n\n\n\n\n1\n2020.01\n5238500\n01\nQ1\n\n\n2\n2020.02\n4775400\n02\nQ1\n\n\n3\n2020.03\n5916100\n03\nQ1\n\n\n4\n2020.04\n7929800\n04\nQ2\n\n\n5\n2020.05\n8008500\n05\nQ2\n\n\n6\n2020.06\n6293300\n06\nQ2\n\n\n7\n2020.07\n4182700\n07\nQ3\n\n\n8\n2020.08\n4118900\n08\nQ3\n\n\n9\n2020.09\n6592500\n09\nQ3\n\n\n10\n2020.10\n8618600\n10\nQ4\n\n\n11\n2020.11\n8767400\n11\nQ4\n\n\n12\n2020.12\n7748900\n12\nQ4\n\n\n13\n2021.01\n6511500\n01\nQ1\n\n\n14\n2021.02\n5523400\n02\nQ1\n\n\n15\n2021.03\n7364600\n03\nQ1\n\n\n16\n2021.04\n8607400\n04\nQ2\n\n\n17\n2021.05\n9470900\n05\nQ2\n\n\n18\n2021.06\n7742000\n06\nQ2\n\n\n19\n2021.07\n5285500\n07\nQ3\n\n\n20\n2021.08\n5240300\n08\nQ3\n\n\n21\n2021.09\n8001100\n09\nQ3\n\n\n22\n2021.10\n10318600\n10\nQ4\n\n\n23\n2021.11\n10330500\n11\nQ4\n\n\n24\n2021.12\n8428700\n12\nQ4\n\n\n25\n2022.01\n6550000\n01\nQ1\n\n\n26\n2022.02\n5592500\n02\nQ1\n\n\n27\n2022.03\n7171100\n03\nQ1\n\n\n28\n2022.04\n11005000\n04\nQ2\n\n\n29\n2022.05\n8824600\n05\nQ2\n\n\n30\n2022.06\n8025300\n06\nQ2\n\n\n31\n2022.07\n5223500\n07\nQ3\n\n\n32\n2022.08\n4723100\n08\nQ3\n\n\n33\n2022.09\n8074400\n09\nQ3\n\n\n34\n2022.10\n11198700\n10\nQ4\n\n\n35\n2022.11\n11798500\n11\nQ4\n\n\n36\n2022.12\n8723200\n12\nQ4"
+  },
+  {
+    "objectID": "posts/1012_Indicator_Regression.html#data",
+    "href": "posts/1012_Indicator_Regression.html#data",
+    "title": "지시함수",
+    "section": "",
+    "text": "data &lt;- readxl::read_xlsx(\"contents/2. 예측수준의 결정.xlsx\",sheet = 1)\n\ndata$month &lt;- substr(data$yymm,6,8)\n\ndata$quarter &lt;- ifelse(substr(data$yymm,6,8) %in% \n                         c(\"01\", \"02\", \"03\"), \"Q1\",\n                     ifelse(substr(data$yymm,6,8) %in% \n                              c(\"04\", \"05\", \"06\"), \"Q2\",\n                            ifelse(substr(data$yymm,6,8) %in% \n                                     c(\"07\", \"08\", \"09\"), \"Q3\", \"Q4\")))\n\ndata %&gt;% kable()\n\n\n\n\nt\nyymm\nmarket\nmonth\nquarter\n\n\n\n\n1\n2020.01\n5238500\n01\nQ1\n\n\n2\n2020.02\n4775400\n02\nQ1\n\n\n3\n2020.03\n5916100\n03\nQ1\n\n\n4\n2020.04\n7929800\n04\nQ2\n\n\n5\n2020.05\n8008500\n05\nQ2\n\n\n6\n2020.06\n6293300\n06\nQ2\n\n\n7\n2020.07\n4182700\n07\nQ3\n\n\n8\n2020.08\n4118900\n08\nQ3\n\n\n9\n2020.09\n6592500\n09\nQ3\n\n\n10\n2020.10\n8618600\n10\nQ4\n\n\n11\n2020.11\n8767400\n11\nQ4\n\n\n12\n2020.12\n7748900\n12\nQ4\n\n\n13\n2021.01\n6511500\n01\nQ1\n\n\n14\n2021.02\n5523400\n02\nQ1\n\n\n15\n2021.03\n7364600\n03\nQ1\n\n\n16\n2021.04\n8607400\n04\nQ2\n\n\n17\n2021.05\n9470900\n05\nQ2\n\n\n18\n2021.06\n7742000\n06\nQ2\n\n\n19\n2021.07\n5285500\n07\nQ3\n\n\n20\n2021.08\n5240300\n08\nQ3\n\n\n21\n2021.09\n8001100\n09\nQ3\n\n\n22\n2021.10\n10318600\n10\nQ4\n\n\n23\n2021.11\n10330500\n11\nQ4\n\n\n24\n2021.12\n8428700\n12\nQ4\n\n\n25\n2022.01\n6550000\n01\nQ1\n\n\n26\n2022.02\n5592500\n02\nQ1\n\n\n27\n2022.03\n7171100\n03\nQ1\n\n\n28\n2022.04\n11005000\n04\nQ2\n\n\n29\n2022.05\n8824600\n05\nQ2\n\n\n30\n2022.06\n8025300\n06\nQ2\n\n\n31\n2022.07\n5223500\n07\nQ3\n\n\n32\n2022.08\n4723100\n08\nQ3\n\n\n33\n2022.09\n8074400\n09\nQ3\n\n\n34\n2022.10\n11198700\n10\nQ4\n\n\n35\n2022.11\n11798500\n11\nQ4\n\n\n36\n2022.12\n8723200\n12\nQ4"
+  },
+  {
+    "objectID": "posts/1012_Indicator_Regression.html#월별",
+    "href": "posts/1012_Indicator_Regression.html#월별",
+    "title": "지시함수",
+    "section": "월별",
+    "text": "월별\n\nSummary\n\nmodel &lt;- lm(market ~ t+factor(month), data = data)\nmodel %&gt;% summary\n\n\nCall:\nlm(formula = market ~ t + factor(month), data = data)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-751429 -374312   26085  377139 1044296 \n\nCoefficients:\n                Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)      5255032     353306  14.874 2.73e-13 ***\nt                  64998       9721   6.686 8.04e-07 ***\nfactor(month)02  -867898     466697  -1.860 0.075772 .  \nfactor(month)03   587272     467000   1.258 0.221177    \nfactor(month)04  2885741     467506   6.173 2.69e-06 ***\nfactor(month)05  2408010     468213   5.143 3.27e-05 ***\nfactor(month)06   928546     469120   1.979 0.059870 .  \nfactor(month)07 -1592752     470226  -3.387 0.002536 ** \nfactor(month)08 -1860883     471531  -3.946 0.000642 ***\nfactor(month)09   936019     473031   1.979 0.059938 .  \nfactor(month)10  3360322     474726   7.078 3.28e-07 ***\nfactor(month)11  3548824     476614   7.446 1.44e-07 ***\nfactor(month)12  1485293     478691   3.103 0.005014 ** \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 571500 on 23 degrees of freedom\nMultiple R-squared:  0.9486,    Adjusted R-squared:  0.9217 \nF-statistic: 35.34 on 12 and 23 DF,  p-value: 6.202e-12\n\n\np-value 가 6.202e-12로 0.05보다 작으므로 유의하다고 볼 수 있다.\nR-squared 값이 0.9486로 설명력이 높다고 볼 수 있다.\n\nggplot(data, aes(x = t, y = market, color = month)) +\n  geom_point() +    \n  geom_smooth(method = \"lm\", se = FALSE) +  \n  labs(title = \"\", x = \"t\", y = \"market\") +\n  theme_minimal()\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\n\n\n\n\ndata %&gt;% hchart(\"scatter\", hcaes(x=t,y=market,group = month),\n                regression = TRUE,\n                regressionSettings = list(\n    type = \"linear\",\n    lineWidth = 2,\n    name = \"%eq\",\n    hideInLegend = FALSE)\n  ) %&gt;% \n  hc_add_dependency(\"plugins/highcharts-regression.js\") %&gt;% \n  hc_legend()\n\n\n\n\n\n\n\n\n예측\n\nlinear_regression &lt;- function(t) {\n  y &lt;- 5255032 + 64998  * t\n  return(y)\n}\n\npred_t &lt;- c(37:48)\npred_yymm &lt;- c(\"2023.01\",\"2023.02\",\"2023.03\"\n               ,\"2023.04\",\"2023.05\",\"2023.06\"\n               ,\"2023.07\",\"2023.08\",\"2023.09\"\n               ,\"2023.10\",\"2023.11\",\"2023.12\")\npred_market &lt;- linear_regression(pred_t)\n\ndata_pred &lt;- data.frame(pred_t,pred_yymm,pred_market)\n\nfor (i in 2:12) {\n  data_pred$pred_market[i] &lt;- data_pred$pred_market[i] + model$coefficients[i + 1]\n}\n\ndata_pred %&gt;% kable()\n\n\n\n\npred_t\npred_yymm\npred_market\n\n\n\n\n37\n2023.01\n7659958\n\n\n38\n2023.02\n6857058\n\n\n39\n2023.03\n8377226\n\n\n40\n2023.04\n10740693\n\n\n41\n2023.05\n10327960\n\n\n42\n2023.06\n8913493\n\n\n43\n2023.07\n6457194\n\n\n44\n2023.08\n6254061\n\n\n45\n2023.09\n9115961\n\n\n46\n2023.10\n11605262\n\n\n47\n2023.11\n11858762\n\n\n48\n2023.12\n9860229"
+  },
+  {
+    "objectID": "posts/1012_Indicator_Regression.html#분기별",
+    "href": "posts/1012_Indicator_Regression.html#분기별",
+    "title": "지시함수",
+    "section": "분기별",
+    "text": "분기별\n\nmodel_2 &lt;- lm(market ~ t+factor(quarter), data = data)\nmodel_2 %&gt;% summary\n\n\nCall:\nlm(formula = market ~ t + factor(quarter), data = data)\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-1765240  -773431   -50370   795498  2220942 \n\nCoefficients:\n                  Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)        5170133     459378  11.255 1.77e-12 ***\nt                    64380      19031   3.383 0.001958 ** \nfactor(quarter)Q2  2169493     532300   4.076 0.000296 ***\nfactor(quarter)Q3  -741959     541408  -1.370 0.180397    \nfactor(quarter)Q4  2897245     556255   5.208 1.18e-05 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 1123000 on 31 degrees of freedom\nMultiple R-squared:  0.7324,    Adjusted R-squared:  0.6979 \nF-statistic: 21.21 on 4 and 31 DF,  p-value: 1.653e-08\n\n\n1분기\ny = 5170133 + 64380x\n2분기\ny = 5170133 + 64380x + 2169493\n3분기\ny = 5170133 + 64380x - 741959\n4분기\ny = 5170133 + 64380x + 2897245\n\nggplot(data, aes(x = t, y = market, color = quarter)) +\n  geom_point() +    \n  geom_smooth(method = \"lm\", se = FALSE) +  \n  labs(title = \"\", x = \"t\", y = \"market\") +\n  theme_minimal()\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\n\n\n\n\ndata %&gt;% hchart(\"scatter\", hcaes(x=t,y=market,group = quarter),\n                regression = TRUE,\n                regressionSettings = list(\n    type = \"linear\",\n    lineWidth = 2,\n    name = \"%eq\",\n    hideInLegend = FALSE)\n  ) %&gt;% \n  hc_add_dependency(\"plugins/highcharts-regression.js\") %&gt;% \n  hc_legend()"
+  },
+  {
+    "objectID": "posts/0914.html",
+    "href": "posts/0914.html",
+    "title": "금융데이터분석",
+    "section": "",
+    "text": "대인손해 빈도 0.021832498210451\n대물손해 빈도 0.0626342161775233\n자손     빈도 0.00536864710093057\n자차손해 빈도 0.284180386542591\n\n대인손해액 심도 4575576.06557377\n대물손해액 심도 1283375.08571429\n자손액     심도 1033460\n자차손해액 심도 909640.365239295\n\n\n\n\n\n담보\n빈도\n\n\n\n\n대인손해\n0.021832498210451\n\n\n대물손해\n0.0626342161775233\n\n\n자손\n0.00536864710093057\n\n\n자차손해\n0.284180386542591\n\n\n\n\n\n\n담보\n심도\n\n\n\n\n대인손해액\n4575576.06557377\n\n\n대물손해액\n1283375.08571429\n\n\n자손액\n1033460\n\n\n자차손해액\n909640.365239295"
+  },
+  {
+    "objectID": "posts/0914.html#정리",
+    "href": "posts/0914.html#정리",
+    "title": "금융데이터분석",
+    "section": "",
+    "text": "대인손해 빈도 0.021832498210451\n대물손해 빈도 0.0626342161775233\n자손     빈도 0.00536864710093057\n자차손해 빈도 0.284180386542591\n\n대인손해액 심도 4575576.06557377\n대물손해액 심도 1283375.08571429\n자손액     심도 1033460\n자차손해액 심도 909640.365239295\n\n\n\n\n\n담보\n빈도\n\n\n\n\n대인손해\n0.021832498210451\n\n\n대물손해\n0.0626342161775233\n\n\n자손\n0.00536864710093057\n\n\n자차손해\n0.284180386542591\n\n\n\n\n\n\n담보\n심도\n\n\n\n\n대인손해액\n4575576.06557377\n\n\n대물손해액\n1283375.08571429\n\n\n자손액\n1033460\n\n\n자차손해액\n909640.365239295"
+  },
+  {
+    "objectID": "posts/0914.html#대인-손해액-빈도심도",
+    "href": "posts/0914.html#대인-손해액-빈도심도",
+    "title": "금융데이터분석",
+    "section": "대인 손해액 빈도&심도",
+    "text": "대인 손해액 빈도&심도\n\n#빈도\nnrow(filter(data,in1_los!=0))/nrow(data)\n\n[1] 0.0218325\n\n\n\n#심도\nsum(data$in1_los)/nrow(filter(data,in1_los!=0))\n\n[1] 4575576"
+  },
+  {
+    "objectID": "posts/0914.html#대물-손해액-빈도심도",
+    "href": "posts/0914.html#대물-손해액-빈도심도",
+    "title": "금융데이터분석",
+    "section": "대물 손해액 빈도&심도",
+    "text": "대물 손해액 빈도&심도\n\n#빈도\nnrow(filter(data,mul_los!=0))/nrow(data)\n\n[1] 0.06263422\n\n\n\n#심도\nsum(data$mul_los)/nrow(filter(data,mul_los!=0))\n\n[1] 1283375"
+  },
+  {
+    "objectID": "posts/0914.html#자손-빈도심도",
+    "href": "posts/0914.html#자손-빈도심도",
+    "title": "금융데이터분석",
+    "section": "자손 빈도&심도",
+    "text": "자손 빈도&심도\n\n#빈도\nnrow(filter(data,jas_los!=0))/nrow(data)\n\n[1] 0.005368647\n\n\n\n#심도\nsum(data$jas_los)/nrow(filter(data,jas_los!=0))\n\n[1] 1033460"
+  },
+  {
+    "objectID": "posts/0914.html#자차-손해액-빈도심도",
+    "href": "posts/0914.html#자차-손해액-빈도심도",
+    "title": "금융데이터분석",
+    "section": "자차 손해액 빈도&심도",
+    "text": "자차 손해액 빈도&심도\n\n#빈도\nnrow(filter(data,cha_los!=0))/nrow(data)\n\n[1] 0.2841804\n\n\n\n#심도\nsum(data$cha_los)/nrow(filter(data,cha_los!=0))\n\n[1] 909640.4\n\n\n\ndata$AGE_CAT &lt;- paste(substr(data$PIB_AGE,1,1),\"0대\",sep=\"\")"
+  }
+]

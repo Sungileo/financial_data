@@ -1,0 +1,16 @@
+{
+  "hash": "c1ad3fc110b713158cbedebc457147a9",
+  "result": {
+    "markdown": "---\ntitle: \"회귀분석\"\ndate: \"2023/10/10\"\nauthor: \"Sungil Park\"\n---\n\n\n\n\n\n\n## Data\n\n\n::: {.cell}\n::: {.cell-output-display}\n|  t|yymm    |   market|\n|--:|:-------|--------:|\n|  1|2020.01 |  5238500|\n|  2|2020.02 |  4775400|\n|  3|2020.03 |  5916100|\n|  4|2020.04 |  7929800|\n|  5|2020.05 |  8008500|\n|  6|2020.06 |  6293300|\n|  7|2020.07 |  4182700|\n|  8|2020.08 |  4118900|\n|  9|2020.09 |  6592500|\n| 10|2020.10 |  8618600|\n| 11|2020.11 |  8767400|\n| 12|2020.12 |  7748900|\n| 13|2021.01 |  6511500|\n| 14|2021.02 |  5523400|\n| 15|2021.03 |  7364600|\n| 16|2021.04 |  8607400|\n| 17|2021.05 |  9470900|\n| 18|2021.06 |  7742000|\n| 19|2021.07 |  5285500|\n| 20|2021.08 |  5240300|\n| 21|2021.09 |  8001100|\n| 22|2021.10 | 10318600|\n| 23|2021.11 | 10330500|\n| 24|2021.12 |  8428700|\n| 25|2022.01 |  6550000|\n| 26|2022.02 |  5592500|\n| 27|2022.03 |  7171100|\n| 28|2022.04 | 11005000|\n| 29|2022.05 |  8824600|\n| 30|2022.06 |  8025300|\n| 31|2022.07 |  5223500|\n| 32|2022.08 |  4723100|\n| 33|2022.09 |  8074400|\n| 34|2022.10 | 11198700|\n| 35|2022.11 | 11798500|\n| 36|2022.12 |  8723200|\n:::\n:::\n\n\n## model\n\n\n::: {.cell}\n::: {.cell-output .cell-output-stdout}\n```\n\nCall:\nlm(formula = market ~ t, data = data)\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-3859553 -1315301   -70334  1707873  2962448 \n\nCoefficients:\n            Estimate Std. Error t value Pr(>|t|)    \n(Intercept)  5879738     634908   9.261 8.03e-11 ***\nt              84466      29924   2.823   0.0079 ** \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 1865000 on 34 degrees of freedom\nMultiple R-squared:  0.1898,\tAdjusted R-squared:  0.166 \nF-statistic: 7.967 on 1 and 34 DF,  p-value: 0.007902\n```\n:::\n:::\n\n\n## formula\n\ny = 5879738 + 84466 \\* t\n\np-value 가 0.007902로 0.05보다 작으므로 유의하다고 볼 수 있다.\n\nR-squared 값이 0.1898로 설명력이 낮다고 볼 수 있다.\n\n## plot\n\n\n::: {.cell}\n::: {.cell-output .cell-output-stderr}\n```\n`geom_smooth()` using formula = 'y ~ x'\n```\n:::\n\n::: {.cell-output-display}\n![](1010_Regression_files/figure-html/unnamed-chunk-5-1.png){width=672}\n:::\n:::\n\n\n## Prediction\n\n\n::: {.cell}\n::: {.cell-output .cell-output-stdout}\n```\n   pred_t pred_yymm pred_market\n1      37   2023.01     9004980\n2      38   2023.02     9089446\n3      39   2023.03     9173912\n4      40   2023.04     9258378\n5      41   2023.05     9342844\n6      42   2023.06     9427310\n7      43   2023.07     9511776\n8      44   2023.08     9596242\n9      45   2023.09     9680708\n10     46   2023.10     9765174\n11     47   2023.11     9849640\n12     48   2023.12     9934106\n```\n:::\n:::\n",
+    "supporting": [
+      "1010_Regression_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

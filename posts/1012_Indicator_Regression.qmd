@@ -1,0 +1,131 @@
+---
+title: "지시함수"
+date: "2023/10/12"
+author: "Sungil Park"
+---
+
+```{r, include=FALSE}
+rm(list=ls())
+library(tidyverse)
+library(knitr)
+library(highcharter)
+```
+
+## Data
+
+```{r}
+data <- readxl::read_xlsx("contents/2. 예측수준의 결정.xlsx",sheet = 1)
+
+data$month <- substr(data$yymm,6,8)
+
+data$quarter <- ifelse(substr(data$yymm,6,8) %in% 
+                         c("01", "02", "03"), "Q1",
+                     ifelse(substr(data$yymm,6,8) %in% 
+                              c("04", "05", "06"), "Q2",
+                            ifelse(substr(data$yymm,6,8) %in% 
+                                     c("07", "08", "09"), "Q3", "Q4")))
+
+data %>% kable()
+```
+
+## 월별
+
+### Summary
+
+```{r}
+model <- lm(market ~ t+factor(month), data = data)
+model %>% summary
+```
+
+p-value 가 6.202e-12로 0.05보다 작으므로 유의하다고 볼 수 있다.
+
+R-squared 값이 0.9486로 설명력이 높다고 볼 수 있다.
+
+```{r}
+ggplot(data, aes(x = t, y = market, color = month)) +
+  geom_point() +    
+  geom_smooth(method = "lm", se = FALSE) +  
+  labs(title = "", x = "t", y = "market") +
+  theme_minimal()
+```
+
+```{r}
+data %>% hchart("scatter", hcaes(x=t,y=market,group = month),
+                regression = TRUE,
+                regressionSettings = list(
+    type = "linear",
+    lineWidth = 2,
+    name = "%eq",
+    hideInLegend = FALSE)
+  ) %>% 
+  hc_add_dependency("plugins/highcharts-regression.js") %>% 
+  hc_legend()
+```
+
+### 예측
+
+```{r}
+linear_regression <- function(t) {
+  y <- 5255032 + 64998  * t
+  return(y)
+}
+
+pred_t <- c(37:48)
+pred_yymm <- c("2023.01","2023.02","2023.03"
+               ,"2023.04","2023.05","2023.06"
+               ,"2023.07","2023.08","2023.09"
+               ,"2023.10","2023.11","2023.12")
+pred_market <- linear_regression(pred_t)
+
+data_pred <- data.frame(pred_t,pred_yymm,pred_market)
+
+for (i in 2:12) {
+  data_pred$pred_market[i] <- data_pred$pred_market[i] + model$coefficients[i + 1]
+}
+
+data_pred %>% kable()
+```
+
+## 분기별
+
+```{r}
+model_2 <- lm(market ~ t+factor(quarter), data = data)
+model_2 %>% summary
+```
+
+1분기
+
+`y = 5170133 + 64380x`
+
+2분기
+
+`y = 5170133 + 64380x + 2169493`
+
+3분기
+
+`y = 5170133 + 64380x - 741959`
+
+4분기
+
+`y = 5170133 + 64380x + 2897245`
+
+```{r}
+ggplot(data, aes(x = t, y = market, color = quarter)) +
+  geom_point() +    
+  geom_smooth(method = "lm", se = FALSE) +  
+  labs(title = "", x = "t", y = "market") +
+  theme_minimal()
+```
+
+```{r}
+data %>% hchart("scatter", hcaes(x=t,y=market,group = quarter),
+                regression = TRUE,
+                regressionSettings = list(
+    type = "linear",
+    lineWidth = 2,
+    name = "%eq",
+    hideInLegend = FALSE)
+  ) %>% 
+  hc_add_dependency("plugins/highcharts-regression.js") %>% 
+  hc_legend()
+```

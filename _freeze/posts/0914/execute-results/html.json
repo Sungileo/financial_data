@@ -1,0 +1,14 @@
+{
+  "hash": "1704b8dc74ed82f0e772bc9d4556c136",
+  "result": {
+    "markdown": "---\ntitle: \"금융데이터분석\"\ndate: \"2023/09/14\"\nauthor: \"박성일\"\n\n---\n\n\n\n\n\n\n## 정리\n\n\n::: {.cell}\n::: {.cell-output .cell-output-stdout}\n```\n대인손해 빈도 0.021832498210451\n대물손해 빈도 0.0626342161775233\n자손     빈도 0.00536864710093057\n자차손해 빈도 0.284180386542591\n\n대인손해액 심도 4575576.06557377\n대물손해액 심도 1283375.08571429\n자손액     심도 1033460\n자차손해액 심도 909640.365239295\n```\n:::\n:::\n\n\n|   담보   | 빈도                |\n|:--------:|---------------------|\n| 대인손해 | 0.021832498210451   |\n| 대물손해 | 0.0626342161775233  |\n|   자손   | 0.00536864710093057 |\n| 자차손해 | 0.284180386542591   |\n\n|    담보    | 심도             |\n|:----------:|------------------|\n| 대인손해액 | 4575576.06557377 |\n| 대물손해액 | 1283375.08571429 |\n|   자손액   | 1033460          |\n| 자차손해액 | 909640.365239295 |\n\n# 빈도&심도\n\n## 대인 손해액 빈도&심도\n\n\n::: {.cell}\n\n```{.r .cell-code}\n#빈도\nnrow(filter(data,in1_los!=0))/nrow(data)\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n[1] 0.0218325\n```\n:::\n:::\n\n::: {.cell}\n\n```{.r .cell-code}\n#심도\nsum(data$in1_los)/nrow(filter(data,in1_los!=0))\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n[1] 4575576\n```\n:::\n:::\n\n\n## 대물 손해액 빈도&심도\n\n\n::: {.cell}\n\n```{.r .cell-code}\n#빈도\nnrow(filter(data,mul_los!=0))/nrow(data)\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n[1] 0.06263422\n```\n:::\n:::\n\n::: {.cell}\n\n```{.r .cell-code}\n#심도\nsum(data$mul_los)/nrow(filter(data,mul_los!=0))\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n[1] 1283375\n```\n:::\n:::\n\n\n## 자손 빈도&심도\n\n\n::: {.cell}\n\n```{.r .cell-code}\n#빈도\nnrow(filter(data,jas_los!=0))/nrow(data)\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n[1] 0.005368647\n```\n:::\n:::\n\n::: {.cell}\n\n```{.r .cell-code}\n#심도\nsum(data$jas_los)/nrow(filter(data,jas_los!=0))\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n[1] 1033460\n```\n:::\n:::\n\n\n## 자차 손해액 빈도&심도\n\n\n::: {.cell}\n\n```{.r .cell-code}\n#빈도\nnrow(filter(data,cha_los!=0))/nrow(data)\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n[1] 0.2841804\n```\n:::\n:::\n\n::: {.cell}\n\n```{.r .cell-code}\n#심도\nsum(data$cha_los)/nrow(filter(data,cha_los!=0))\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n[1] 909640.4\n```\n:::\n:::\n\n::: {.cell}\n\n```{.r .cell-code}\ndata$AGE_CAT <- paste(substr(data$PIB_AGE,1,1),\"0대\",sep=\"\")\n```\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

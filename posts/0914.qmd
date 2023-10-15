@@ -1,0 +1,111 @@
+---
+title: "빈도와 심도"
+date: "2023/09/14"
+author: "박성일"
+
+---
+
+
+
+```{r, include=FALSE}
+library(tidyverse)
+```
+
+```{r, include=FALSE}
+data <- read_csv("contents/프로젝트자료.csv")
+```
+
+## 정리
+
+```{r, echo=FALSE}
+myfunc_1 <- function(df){
+    in1_bin <- paste("대인손해 빈도",nrow(filter(df,in1_los!=0))/nrow(df))
+    mul_bin <- paste("대물손해 빈도",nrow(filter(df,mul_los!=0))/nrow(df))
+    jas_bin <- paste("자손     빈도",nrow(filter(df,jas_los!=0))/nrow(df))
+    cha_bin <- paste("자차손해 빈도",nrow(filter(df,cha_los!=0))/nrow(df))
+    
+    in1_dep <- paste("대인손해액 심도",sum(df$in1_los)/nrow(filter(df,in1_los!=0)))
+    mul_dep <- paste("대물손해액 심도",sum(df$mul_los)/nrow(filter(df,mul_los!=0)))
+    jas_dep <- paste("자손액     심도",sum(df$jas_los)/nrow(filter(df,jas_los!=0)))
+    cha_dep <- paste("자차손해액 심도",sum(df$cha_los)/nrow(filter(df,cha_los!=0)))
+    
+    bin <- paste(in1_bin,mul_bin,jas_bin,cha_bin,sep = "\n")
+    dep <- paste(in1_dep,mul_dep,jas_dep,cha_dep,sep = "\n")
+    
+    return(cat(paste(bin,dep,sep = "\n\n")))
+          
+}
+
+
+data %>% myfunc_1()
+```
+
+|   담보   | 빈도                |
+|:--------:|---------------------|
+| 대인손해 | 0.021832498210451   |
+| 대물손해 | 0.0626342161775233  |
+|   자손   | 0.00536864710093057 |
+| 자차손해 | 0.284180386542591   |
+
+|    담보    | 심도             |
+|:----------:|------------------|
+| 대인손해액 | 4575576.06557377 |
+| 대물손해액 | 1283375.08571429 |
+|   자손액   | 1033460          |
+| 자차손해액 | 909640.365239295 |
+
+# 빈도&심도
+
+## 대인 손해액 빈도&심도
+
+```{r}
+#빈도
+nrow(filter(data,in1_los!=0))/nrow(data)
+```
+
+```{r}
+#심도
+sum(data$in1_los)/nrow(filter(data,in1_los!=0))
+```
+
+## 대물 손해액 빈도&심도
+
+```{r}
+#빈도
+nrow(filter(data,mul_los!=0))/nrow(data)
+```
+
+```{r}
+#심도
+sum(data$mul_los)/nrow(filter(data,mul_los!=0))
+```
+
+## 자손 빈도&심도
+
+```{r}
+#빈도
+nrow(filter(data,jas_los!=0))/nrow(data)
+```
+
+```{r}
+#심도
+sum(data$jas_los)/nrow(filter(data,jas_los!=0))
+```
+
+## 자차 손해액 빈도&심도
+
+```{r}
+#빈도
+nrow(filter(data,cha_los!=0))/nrow(data)
+```
+
+```{r}
+#심도
+sum(data$cha_los)/nrow(filter(data,cha_los!=0))
+```
+
+```{r}
+data$AGE_CAT <- paste(substr(data$PIB_AGE,1,1),"0대",sep="")
+```
+
+

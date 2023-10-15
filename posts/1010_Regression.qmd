@@ -1,0 +1,62 @@
+---
+title: "회귀분석"
+date: "2023/10/10"
+author: "Sungil Park"
+---
+
+```{r, include=FALSE}
+```
+
+```{r, include=FALSE}
+rm(list=ls())
+library(tidyverse)
+library(knitr)
+```
+
+## Data
+
+```{r, echo=FALSE}
+data <- readxl::read_xlsx("contents/2. 예측수준의 결정.xlsx",sheet = 1)
+kable(data)
+```
+
+## model
+
+```{r, echo=FALSE}
+model <- lm(market ~ t, data = data)
+model %>% summary
+```
+
+## formula
+
+y = 5879738 + 84466 \* t
+
+p-value 가 0.007902로 0.05보다 작으므로 유의하다고 볼 수 있다.
+
+R-squared 값이 0.1898로 설명력이 낮다고 볼 수 있다.
+
+## plot
+
+```{r, echo=FALSE}
+ggplot(data, aes(x=t, y=market)) +
+  geom_point() +
+  geom_smooth(method='lm', se=FALSE)+
+  labs(title = "Linear Regression of market ~ t", subtitle = "y = 5879738 + 84466 * t")+
+  theme_minimal()
+```
+
+## Prediction
+
+```{r, echo=FALSE}
+# 회귀식을 함수로 정의
+linear_regression <- function(t) {
+  y <- 5879738 + 84466 * t
+  return(y)
+}
+
+pred_t <- c(37:48)
+pred_yymm <- c("2023.01","2023.02","2023.03","2023.04","2023.05","2023.06","2023.07","2023.08","2023.09","2023.10","2023.11","2023.12")
+pred_market <- linear_regression(pred_t)
+
+data.frame(pred_t,pred_yymm,pred_market)
+```
