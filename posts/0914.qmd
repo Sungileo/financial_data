@@ -1,11 +1,9 @@
 ---
 title: "빈도와 심도"
 date: "2023/09/14"
-author: "박성일"
-
+author: "Sungil Park"
+description: "2023-2학기 R로 하는 금융데이터분석"
 ---
-
-
 
 ```{r, include=FALSE}
 library(tidyverse)
@@ -107,5 +105,3 @@ sum(data$cha_los)/nrow(filter(data,cha_los!=0))
 ```{r}
 data$AGE_CAT <- paste(substr(data$PIB_AGE,1,1),"0대",sep="")
 ```
-
-

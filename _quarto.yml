@@ -5,7 +5,7 @@ project:
 website:
   title: "금융데이터분석"
   navbar:
-    background: '#6D1414'
+    background: '	#ffbf00'
     style: "docked"
     right:
       - about.qmd

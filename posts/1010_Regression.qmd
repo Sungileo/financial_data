@@ -2,12 +2,10 @@
 title: "회귀분석"
 date: "2023/10/10"
 author: "Sungil Park"
+description: "2023-2학기 R로 하는 금융데이터분석"
 ---
 
-```{r, include=FALSE}
-```
-
-```{r, include=FALSE}
+```{r}
 rm(list=ls())
 library(tidyverse)
 library(knitr)
@@ -15,14 +13,14 @@ library(knitr)
 
 ## Data
 
-```{r, echo=FALSE}
+```{r}
 data <- readxl::read_xlsx("contents/2. 예측수준의 결정.xlsx",sheet = 1)
 kable(data)
 ```
 
 ## model
 
-```{r, echo=FALSE}
+```{r}
 model <- lm(market ~ t, data = data)
 model %>% summary
 ```
@@ -37,7 +35,7 @@ R-squared 값이 0.1898로 설명력이 낮다고 볼 수 있다.
 
 ## plot
 
-```{r, echo=FALSE}
+```{r}
 ggplot(data, aes(x=t, y=market)) +
   geom_point() +
   geom_smooth(method='lm', se=FALSE)+
@@ -47,7 +45,7 @@ ggplot(data, aes(x=t, y=market)) +
 
 ## Prediction
 
-```{r, echo=FALSE}
+```{r}
 # 회귀식을 함수로 정의
 linear_regression <- function(t) {
   y <- 5879738 + 84466 * t
