@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "금융데이터분석_R",
     "section": "",
-    "text": "지시함수\n\n\n\n\n\n2023-2학기 R로 하는 금융데이터분석\n\n\n\n\n\n\nOct 12, 2023\n\n\nSungil Park\n\n\n\n\n\n\n  \n\n\n\n\n회귀분석\n\n\n\n\n\n2023-2학기 R로 하는 금융데이터분석\n\n\n\n\n\n\nOct 10, 2023\n\n\nSungil Park\n\n\n\n\n\n\n  \n\n\n\n\n빈도와 심도\n\n\n\n\n\n2023-2학기 R로 하는 금융데이터분석\n\n\n\n\n\n\nSep 14, 2023\n\n\nSungil Park\n\n\n\n\n\n\nNo matching items"
+    "text": "빈도, 심도 선형회귀\n\n\n\n\n\n2023-2학기 R로 하는 금융데이터분석\n\n\n\n\n\n\nOct 24, 2023\n\n\nSungil Park\n\n\n\n\n\n\n  \n\n\n\n\n지시함수\n\n\n\n\n\n2023-2학기 R로 하는 금융데이터분석\n\n\n\n\n\n\nOct 12, 2023\n\n\nSungil Park\n\n\n\n\n\n\n  \n\n\n\n\n회귀분석\n\n\n\n\n\n2023-2학기 R로 하는 금융데이터분석\n\n\n\n\n\n\nOct 10, 2023\n\n\nSungil Park\n\n\n\n\n\n\n  \n\n\n\n\n빈도와 심도\n\n\n\n\n\n2023-2학기 R로 하는 금융데이터분석\n\n\n\n\n\n\nSep 14, 2023\n\n\nSungil Park\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
@@ -229,5 +229,40 @@
     "title": "빈도와 심도",
     "section": "자차 손해액 빈도&심도",
     "text": "자차 손해액 빈도&심도\n\n#빈도\nnrow(filter(data,cha_los!=0))/nrow(data)\n\n[1] 0.2841804\n\n\n\n#심도\nsum(data$cha_los)/nrow(filter(data,cha_los!=0))\n\n[1] 909640.4\n\n\n\ndata$AGE_CAT &lt;- paste(substr(data$PIB_AGE,1,1),\"0대\",sep=\"\")"
+  },
+  {
+    "objectID": "posts/1024_.html",
+    "href": "posts/1024_.html",
+    "title": "빈도, 심도 선형회귀",
+    "section": "",
+    "text": "data_bin &lt;- readxl::read_xlsx(\"contents/2. 예측수준의 결정.xlsx\",sheet = 2)\ndata_sim &lt;- readxl::read_xlsx(\"contents/2. 예측수준의 결정.xlsx\",sheet = 3)\n\ndata_bin %&gt;% head()\n\n# A tibble: 6 × 7\n      t  year  quat in1_bin mul_bin jas_bin cha_bin\n  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;\n1     1  2016     1    5.71    8.42    0.95    15.8\n2     2  2016     2    6.16    8.2     0.75    14.6\n3     3  2016     3    6.54    8.73    0.78    15.4\n4     4  2016     4    6.64    9.01    0.87    15.4\n5     5  2017     1    5.88    9.06    1.05    16.7\n6     6  2017     2    6.02    8.41    0.61    14.0"
+  },
+  {
+    "objectID": "posts/1024_.html#data",
+    "href": "posts/1024_.html#data",
+    "title": "빈도, 심도 선형회귀",
+    "section": "",
+    "text": "data_bin &lt;- readxl::read_xlsx(\"contents/2. 예측수준의 결정.xlsx\",sheet = 2)\ndata_sim &lt;- readxl::read_xlsx(\"contents/2. 예측수준의 결정.xlsx\",sheet = 3)\n\ndata_bin %&gt;% head()\n\n# A tibble: 6 × 7\n      t  year  quat in1_bin mul_bin jas_bin cha_bin\n  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;\n1     1  2016     1    5.71    8.42    0.95    15.8\n2     2  2016     2    6.16    8.2     0.75    14.6\n3     3  2016     3    6.54    8.73    0.78    15.4\n4     4  2016     4    6.64    9.01    0.87    15.4\n5     5  2017     1    5.88    9.06    1.05    16.7\n6     6  2017     2    6.02    8.41    0.61    14.0"
+  },
+  {
+    "objectID": "posts/1024_.html#분기별-r-squared",
+    "href": "posts/1024_.html#분기별-r-squared",
+    "title": "빈도, 심도 선형회귀",
+    "section": "분기별 R-squared",
+    "text": "분기별 R-squared\n\nlin_reg &lt;- function(x){\n  rsq &lt;- summary(lm(x ~ t + factor(quat), data = data_bin))$r.squared\n  print(rsq)\n}\n\nlin_reg(data_bin$in1_bin)\n\n[1] 0.9055443\n\nlin_reg(data_bin$mul_bin)\n\n[1] 0.9156786\n\nlin_reg(data_bin$jas_bin)\n\n[1] 0.4214575\n\nlin_reg(data_bin$cha_bin)\n\n[1] 0.7271797\n\nlin_reg_2 &lt;- function(x){\n  rsq &lt;- summary(lm(x ~ t + factor(quat), data = data_sim))$r.squared\n  print(rsq)\n}\n\nlin_reg(data_sim$in1_sim)\n\n[1] 0.8562366\n\nlin_reg(data_sim$mul_sim)\n\n[1] 0.8859307\n\nlin_reg(data_sim$jas_sim)\n\n[1] 0.7132966\n\nlin_reg(data_sim$cha_sim)\n\n[1] 0.8723479"
+  },
+  {
+    "objectID": "posts/1024_.html#t-r-squared",
+    "href": "posts/1024_.html#t-r-squared",
+    "title": "빈도, 심도 선형회귀",
+    "section": "t R-squared",
+    "text": "t R-squared\n\nlin_reg &lt;- function(x){\n  rsq &lt;- summary(lm(x ~ t, data = data_bin))$r.squared\n  print(rsq)\n}\n\nlin_reg(data_bin$in1_bin)\n\n[1] 0.7933428\n\nlin_reg(data_bin$mul_bin)\n\n[1] 0.8433206\n\nlin_reg(data_bin$jas_bin)\n\n[1] 0.03399262\n\nlin_reg(data_bin$cha_bin)\n\n[1] 0.6356729\n\nlin_reg_2 &lt;- function(x){\n  rsq &lt;- summary(lm(x ~ t, data = data_sim))$r.squared\n  print(rsq)\n}\n\nlin_reg(data_sim$in1_sim)\n\n[1] 0.8401208\n\nlin_reg(data_sim$mul_sim)\n\n[1] 0.878172\n\nlin_reg(data_sim$jas_sim)\n\n[1] 0.6858608\n\nlin_reg(data_sim$cha_sim)\n\n[1] 0.4869522"
+  },
+  {
+    "objectID": "posts/1024_.html#중간고사-분포",
+    "href": "posts/1024_.html#중간고사-분포",
+    "title": "빈도, 심도 선형회귀",
+    "section": "중간고사 분포",
+    "text": "중간고사 분포\n“0 ~ 10” = 2, “10 ~ 20” = 2, “20 ~ 30” = 2, “30 ~ 40” = 2, “40 ~ 50” = 3, “50 ~ 60” = 2, “60 ~ 70” = 3,\n“70 ~ 80” = 4,\n‘80 ~ 90’ = 2"
   }
 ]

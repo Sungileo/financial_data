@@ -1,0 +1,91 @@
+---
+title: "빈도, 심도 선형회귀"
+date: "2023/10/24"
+author: "Sungil Park"
+description: "2023-2학기 R로 하는 금융데이터분석"
+---
+
+```{r, include=FALSE}
+rm(list=ls())
+library(tidyverse)
+library(knitr)
+library(highcharter)
+```
+
+## Data
+
+```{r}
+data_bin <- readxl::read_xlsx("contents/2. 예측수준의 결정.xlsx",sheet = 2)
+data_sim <- readxl::read_xlsx("contents/2. 예측수준의 결정.xlsx",sheet = 3)
+
+data_bin %>% head()
+```
+
+
+## 분기별 R-squared
+ 
+```{r}
+lin_reg <- function(x){
+  rsq <- summary(lm(x ~ t + factor(quat), data = data_bin))$r.squared
+  print(rsq)
+}
+
+lin_reg(data_bin$in1_bin)
+lin_reg(data_bin$mul_bin)
+lin_reg(data_bin$jas_bin)
+lin_reg(data_bin$cha_bin)
+
+lin_reg_2 <- function(x){
+  rsq <- summary(lm(x ~ t + factor(quat), data = data_sim))$r.squared
+  print(rsq)
+}
+
+lin_reg(data_sim$in1_sim)
+lin_reg(data_sim$mul_sim)
+lin_reg(data_sim$jas_sim)
+lin_reg(data_sim$cha_sim)
+```
+
+
+## t R-squared
+ 
+```{r}
+lin_reg <- function(x){
+  rsq <- summary(lm(x ~ t, data = data_bin))$r.squared
+  print(rsq)
+}
+
+lin_reg(data_bin$in1_bin)
+lin_reg(data_bin$mul_bin)
+lin_reg(data_bin$jas_bin)
+lin_reg(data_bin$cha_bin)
+
+lin_reg_2 <- function(x){
+  rsq <- summary(lm(x ~ t, data = data_sim))$r.squared
+  print(rsq)
+}
+
+lin_reg(data_sim$in1_sim)
+lin_reg(data_sim$mul_sim)
+lin_reg(data_sim$jas_sim)
+lin_reg(data_sim$cha_sim)
+```
+
+
+
+
+
+
+
+
+## 중간고사 분포
+
+"0 ~ 10"  =  2,
+"10 ~ 20" =   2,
+"20 ~ 30" =   2,
+"30 ~ 40" =   2,
+"40 ~ 50" =   3,
+"50 ~ 60" =   2,
+"60 ~ 70" =   3,   
+"70 ~ 80" =   4,   
+'80 ~ 90' =   2
