@@ -15,7 +15,7 @@ library(knitr)
 
 ```{r}
 data <- readxl::read_xlsx("contents/2. 예측수준의 결정.xlsx",sheet = 1)
-kable(data)
+head(data)
 ```
 
 ## model
@@ -27,9 +27,8 @@ model %>% summary
 
 ## formula
 
-$$
-\beta _{0} = 5879738, 
-\beta _{1} = 84466
+$$ 
+\beta *{0} = 5879738,* \beta {1} = 84466
 
 $$
 

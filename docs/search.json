@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "금융데이터분석_R",
     "section": "",
-    "text": "빈도, 심도 선형회귀\n\n\n\n\n\n2023-2학기 R로 하는 금융데이터분석\n\n\n\n\n\n\nOct 24, 2023\n\n\nSungil Park\n\n\n\n\n\n\n  \n\n\n\n\n지시함수\n\n\n\n\n\n2023-2학기 R로 하는 금융데이터분석\n\n\n\n\n\n\nOct 12, 2023\n\n\nSungil Park\n\n\n\n\n\n\n  \n\n\n\n\n회귀분석\n\n\n\n\n\n2023-2학기 R로 하는 금융데이터분석\n\n\n\n\n\n\nOct 10, 2023\n\n\nSungil Park\n\n\n\n\n\n\n  \n\n\n\n\n빈도와 심도\n\n\n\n\n\n2023-2학기 R로 하는 금융데이터분석\n\n\n\n\n\n\nSep 14, 2023\n\n\nSungil Park\n\n\n\n\n\n\nNo matching items"
+    "text": "2023 빈도&심도 예측\n\n\n\n\n\n2023-2학기 R로 하는 금융데이터분석\n\n\n\n\n\n\nNov 2, 2023\n\n\nSungil Park\n\n\n\n\n\n\n  \n\n\n\n\n분기별 선형모형_2\n\n\n\n\n\n2023-2학기 R로 하는 금융데이터분석\n\n\n\n\n\n\nOct 31, 2023\n\n\nSungil Park\n\n\n\n\n\n\n  \n\n\n\n\n분기별 선형모형\n\n\n\n\n\n2023-2학기 R로 하는 금융데이터분석\n\n\n\n\n\n\nOct 26, 2023\n\n\nSungil Park\n\n\n\n\n\n\n  \n\n\n\n\n빈도, 심도 선형회귀\n\n\n\n\n\n2023-2학기 R로 하는 금융데이터분석\n\n\n\n\n\n\nOct 24, 2023\n\n\nSungil Park\n\n\n\n\n\n\n  \n\n\n\n\n지시함수\n\n\n\n\n\n2023-2학기 R로 하는 금융데이터분석\n\n\n\n\n\n\nOct 12, 2023\n\n\nSungil Park\n\n\n\n\n\n\n  \n\n\n\n\n회귀분석\n\n\n\n\n\n2023-2학기 R로 하는 금융데이터분석\n\n\n\n\n\n\nOct 10, 2023\n\n\nSungil Park\n\n\n\n\n\n\n  \n\n\n\n\n빈도와 심도\n\n\n\n\n\n2023-2학기 R로 하는 금융데이터분석\n\n\n\n\n\n\nSep 14, 2023\n\n\nSungil Park\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
@@ -264,5 +264,96 @@
     "title": "빈도, 심도 선형회귀",
     "section": "중간고사 분포",
     "text": "중간고사 분포\n“0 ~ 10” = 2, “10 ~ 20” = 2, “20 ~ 30” = 2, “30 ~ 40” = 2, “40 ~ 50” = 3, “50 ~ 60” = 2, “60 ~ 70” = 3,\n“70 ~ 80” = 4,\n‘80 ~ 90’ = 2"
+  },
+  {
+    "objectID": "posts/1026_.html",
+    "href": "posts/1026_.html",
+    "title": "분기별 선형모형",
+    "section": "",
+    "text": "data_bin &lt;- readxl::read_xlsx(\"contents/2. 예측수준의 결정.xlsx\",sheet = 2)\ndata_sim &lt;- readxl::read_xlsx(\"contents/2. 예측수준의 결정.xlsx\",sheet = 3)\n\ndata_bin %&gt;% head() %&gt;% kable()\n\n\n\n\nt\nyear\nquat\nin1_bin\nmul_bin\njas_bin\ncha_bin\n\n\n\n\n1\n2016\n1\n5.71\n8.42\n0.95\n15.84\n\n\n2\n2016\n2\n6.16\n8.20\n0.75\n14.61\n\n\n3\n2016\n3\n6.54\n8.73\n0.78\n15.37\n\n\n4\n2016\n4\n6.64\n9.01\n0.87\n15.39\n\n\n5\n2017\n1\n5.88\n9.06\n1.05\n16.68\n\n\n6\n2017\n2\n6.02\n8.41\n0.61\n13.98"
+  },
+  {
+    "objectID": "posts/1026_.html#data",
+    "href": "posts/1026_.html#data",
+    "title": "분기별 선형모형",
+    "section": "",
+    "text": "data_bin &lt;- readxl::read_xlsx(\"contents/2. 예측수준의 결정.xlsx\",sheet = 2)\ndata_sim &lt;- readxl::read_xlsx(\"contents/2. 예측수준의 결정.xlsx\",sheet = 3)\n\ndata_bin %&gt;% head() %&gt;% kable()\n\n\n\n\nt\nyear\nquat\nin1_bin\nmul_bin\njas_bin\ncha_bin\n\n\n\n\n1\n2016\n1\n5.71\n8.42\n0.95\n15.84\n\n\n2\n2016\n2\n6.16\n8.20\n0.75\n14.61\n\n\n3\n2016\n3\n6.54\n8.73\n0.78\n15.37\n\n\n4\n2016\n4\n6.64\n9.01\n0.87\n15.39\n\n\n5\n2017\n1\n5.88\n9.06\n1.05\n16.68\n\n\n6\n2017\n2\n6.02\n8.41\n0.61\n13.98"
+  },
+  {
+    "objectID": "posts/1026_.html#분기별-선형모형",
+    "href": "posts/1026_.html#분기별-선형모형",
+    "title": "분기별 선형모형",
+    "section": "분기별 선형모형",
+    "text": "분기별 선형모형\n\nin1_bin\n\ndata_bin %&gt;% ggplot(aes(x=t, y=in1_bin, color = factor(quat)))+\n  geom_point()+\n  geom_smooth(data = data_bin,aes(x=t,y=in1_bin,color = factor(quat)),method = \"lm\",se=FALSE)+\n  theme_minimal()\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\n\n\n\n\n1분기\n\\[\ny = 5.58161 + 0.08196 * t\n\\]\n\nR-squared :\n\n\n\n[1] 0.8613146\n\n\n\nadj R-squared :\n\n\n\n[1] 0.8335775\n\n\n\np-value :\n\n\n\n[1] 0.002563184\n\n\n\n\n2분기\n\\[\ny = 5.69036 + 0.08661 * t\n\\]\n\nR-squared :\n\n\n\n[1] 0.8707973\n\n\n\nadj R-squared :\n\n\n\n[1] 0.8449568\n\n\n\np-value :\n\n\n\n[1] 0.002139097\n\n\n\n\n3분기\n\\[\ny = 5.98027 + 0.09741 * t\n\\]\n\nR-squared :\n\n\n\n[1] 0.942346\n\n\n\nadj R-squared :\n\n\n\n[1] 0.9308152\n\n\n\np-value :\n\n\n\n[1] 0.0002767648\n\n\n\n\n4분기\n\\[\ny = 6.02714 + 0.9991 * t\n\\]\n\nR-squared :\n\n\n\n[1] 0.8682876\n\n\n\nadj R-squared :\n\n\n\n[1] 0.8419451\n\n\n\np-value :\n\n\n\n[1] 0.002246747\n\n\n\n\n\nmul_bin\n\ndata_bin %&gt;% ggplot(aes(x=t, y=mul_bin, color = factor(quat)))+\n  geom_point()+\n  geom_smooth(data = data_bin,aes(x=t,y=mul_bin,color = factor(quat)),method = \"lm\",se=FALSE)+\n  theme_minimal()\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\n\n\n\n\n1분기\n\nR-squared :\n\n\n\n[1] 0.8688792\n\n\n\nadj R-squared :\n\n\n\n[1] 0.842655\n\n\n\np-value :\n\n\n\n[1] 0.002221077\n\n\n\n\n2분기\n\nR-squared :\n\n\n\n[1] 0.951164\n\n\n\nadj R-squared :\n\n\n\n[1] 0.9413968\n\n\n\np-value :\n\n\n\n[1] 0.0001821618\n\n\n\n\n3분기\n\nR-squared :\n\n\n\n[1] 0.984909\n\n\n\nadj R-squared :\n\n\n\n[1] 0.9818908\n\n\n\np-value :\n\n\n\n[1] 9.550536e-06\n\n\n\n\n4분기\n\nR-squared :\n\n\n\n[1] 0.8363754\n\n\n\nadj R-squared :\n\n\n\n[1] 0.8036505\n\n\n\np-value :\n\n\n\n[1] 0.00391505\n\n\n\n\n\njas_bin\n\ndata_bin %&gt;% ggplot(aes(x=t, y=jas_bin, color = factor(quat)))+\n  geom_point()+\n  geom_smooth(data = data_bin,aes(x=t,y=jas_bin,color = factor(quat)),method = \"lm\",se=FALSE)+\n  theme_minimal()\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\n\n\n\n\n1분기\n\nR-squared :\n\n\n\n[1] 0.174904\n\n\n\nadj R-squared :\n\n\n\n[1] 0.009884837\n\n\n\np-value :\n\n\n\n[1] 0.3504405\n\n\n\n\n2분기\n\nR-squared :\n\n\n\n[1] 0.1524855\n\n\n\nadj R-squared :\n\n\n\n[1] -0.01701742\n\n\n\np-value :\n\n\n\n[1] 0.386442\n\n\n\n\n3분기\n\nR-squared :\n\n\n\n[1] 0.426441\n\n\n\nadj R-squared :\n\n\n\n[1] 0.3117291\n\n\n\np-value :\n\n\n\n[1] 0.1117648\n\n\n\n\n4분기\n\nR-squared :\n\n\n\n[1] 0.1458333\n\n\n\nadj R-squared :\n\n\n\n[1] -0.025\n\n\n\np-value :\n\n\n\n[1] 0.3979173\n\n\n\n\n\ncha_bin\n\ndata_bin %&gt;% ggplot(aes(x=t, y=cha_bin, color = factor(quat)))+\n  geom_point()+\n  geom_smooth(data = data_bin,aes(x=t,y=cha_bin,color = factor(quat)),method = \"lm\",se=FALSE)+\n  theme_minimal()\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\n\n\n\n\n1분기\n\nR-squared :\n\n\n\n[1] 0.4764292\n\n\n\nadj R-squared :\n\n\n\n[1] 0.371715\n\n\n\np-value :\n\n\n\n[1] 0.08607355\n\n\n\n\n2분기\n\nR-squared :\n\n\n\n[1] 0.7936314\n\n\n\nadj R-squared :\n\n\n\n[1] 0.7523577\n\n\n\np-value :\n\n\n\n[1] 0.007120947\n\n\n\n\n3분기\n\nR-squared :\n\n\n\n[1] 0.7655246\n\n\n\nadj R-squared :\n\n\n\n[1] 0.7186296\n\n\n\np-value :\n\n\n\n[1] 0.009919576\n\n\n\n\n4분기\n\nR-squared :\n\n\n\n[1] 0.723205\n\n\n\nadj R-squared :\n\n\n\n[1] 0.6678459\n\n\n\np-value :\n\n\n\n[1] 0.01530935"
+  },
+  {
+    "objectID": "posts/1031_.html",
+    "href": "posts/1031_.html",
+    "title": "분기별 선형모형",
+    "section": "",
+    "text": "data_bin &lt;- readxl::read_xlsx(\"contents/2. 예측수준의 결정.xlsx\",sheet = 2)\ndata_sim &lt;- readxl::read_xlsx(\"contents/2. 예측수준의 결정.xlsx\",sheet = 3)\n\ndata_bin %&gt;% head() %&gt;% kable()\n\n\n\n\nt\nyear\nquat\nin1_bin\nmul_bin\njas_bin\ncha_bin\n\n\n\n\n1\n2016\n1\n5.71\n8.42\n0.95\n15.84\n\n\n2\n2016\n2\n6.16\n8.20\n0.75\n14.61\n\n\n3\n2016\n3\n6.54\n8.73\n0.78\n15.37\n\n\n4\n2016\n4\n6.64\n9.01\n0.87\n15.39\n\n\n5\n2017\n1\n5.88\n9.06\n1.05\n16.68\n\n\n6\n2017\n2\n6.02\n8.41\n0.61\n13.98"
+  },
+  {
+    "objectID": "posts/1031_.html#data",
+    "href": "posts/1031_.html#data",
+    "title": "분기별 선형모형",
+    "section": "",
+    "text": "data_bin &lt;- readxl::read_xlsx(\"contents/2. 예측수준의 결정.xlsx\",sheet = 2)\ndata_sim &lt;- readxl::read_xlsx(\"contents/2. 예측수준의 결정.xlsx\",sheet = 3)\n\ndata_bin %&gt;% head() %&gt;% kable()\n\n\n\n\nt\nyear\nquat\nin1_bin\nmul_bin\njas_bin\ncha_bin\n\n\n\n\n1\n2016\n1\n5.71\n8.42\n0.95\n15.84\n\n\n2\n2016\n2\n6.16\n8.20\n0.75\n14.61\n\n\n3\n2016\n3\n6.54\n8.73\n0.78\n15.37\n\n\n4\n2016\n4\n6.64\n9.01\n0.87\n15.39\n\n\n5\n2017\n1\n5.88\n9.06\n1.05\n16.68\n\n\n6\n2017\n2\n6.02\n8.41\n0.61\n13.98"
+  },
+  {
+    "objectID": "posts/1031_.html#분기별-선형모형",
+    "href": "posts/1031_.html#분기별-선형모형",
+    "title": "분기별 선형모형",
+    "section": "분기별 선형모형",
+    "text": "분기별 선형모형\n\nin1_bin\n\ndata_bin %&gt;% ggplot(aes(x=t, y=in1_bin, color = factor(quat)))+\n  geom_point()+\n  geom_smooth(data = data_bin,aes(x=t,y=in1_bin,color = factor(quat)),method = \"lm\",se=FALSE)+\n  theme_minimal()\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\n\n\n\n\n1분기\n\\[\ny = 5.58161 + 0.08196 * t\n\\]\n\nR-squared :\n\n\n\n[1] 0.8613146\n\n\n\nadj R-squared :\n\n\n\n[1] 0.8335775\n\n\n\np-value :\n\n\n\n[1] 0.002563184\n\n\n\n\n2분기\n\\[\ny = 5.69036 + 0.08661 * t\n\\]\n\nR-squared :\n\n\n\n[1] 0.8707973\n\n\n\nadj R-squared :\n\n\n\n[1] 0.8449568\n\n\n\np-value :\n\n\n\n[1] 0.002139097\n\n\n\n\n3분기\n\\[\ny = 5.98027 + 0.09741 * t\n\\]\n\nR-squared :\n\n\n\n[1] 0.942346\n\n\n\nadj R-squared :\n\n\n\n[1] 0.9308152\n\n\n\np-value :\n\n\n\n[1] 0.0002767648\n\n\n\n\n4분기\n\\[\ny = 6.02714 + 0.9991 * t\n\\]\n\nR-squared :\n\n\n\n[1] 0.8682876\n\n\n\nadj R-squared :\n\n\n\n[1] 0.8419451\n\n\n\np-value :\n\n\n\n[1] 0.002246747"
+  },
+  {
+    "objectID": "posts/1031_.html#section",
+    "href": "posts/1031_.html#section",
+    "title": "분기별 선형모형",
+    "section": "1031",
+    "text": "1031\n\nfilter(data_bin,quat == 1)\n\n# A tibble: 7 × 7\n      t  year  quat in1_bin mul_bin jas_bin cha_bin\n  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;\n1     1  2016     1    5.71    8.42    0.95    15.8\n2     5  2017     1    5.88    9.06    1.05    16.7\n3     9  2018     1    6.06    9.33    0.76    16.3\n4    13  2019     1    6.82   10.7     0.97    20.2\n5    17  2020     1    7.51   11.3     0.9     19.1\n6    21  2021     1    7.03   10.7     0.8     17.8\n7    25  2022     1    7.52   11.5     0.89    19  \n\n\n\nmodel_1 &lt;- lm(in1_bin ~ t + factor(quat), data = data_bin)\n\n\n#model_1 %&gt;% summary()\n\nmodel_1_pred &lt;- function(x, q) {\n  if (q == 1) {\n    return(model_1$coefficients[1] + model_1$coefficients[2] * x)\n  } else if (q == 2) {\n    return(model_1$coefficients[1] + model_1$coefficients[2] * x + model_1$coefficients[3])\n  } else if (q == 3) {\n    return(model_1$coefficients[1] + model_1$coefficients[2] * x + model_1$coefficients[4])\n  } else if (q == 4) {\n    return(model_1$coefficients[1] + model_1$coefficients[2] * x + model_1$coefficients[5])\n  } else {\n    return(NA)\n  }\n}\n\nd2 &lt;- data.frame(t = seq(29,32),quat = seq(1,4))\n\nd2$in1_bin_pred &lt;- mapply(model_1_pred, d2$t, d2$quat)\n\nd2\n\n   t quat in1_bin_pred\n1 29    1     8.110714\n2 30    2     8.366429\n3 31    3     8.905000\n4 32    4     9.089286\n\n\n\ndata_bin\n\n# A tibble: 28 × 7\n       t  year  quat in1_bin mul_bin jas_bin cha_bin\n   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;\n 1     1  2016     1    5.71    8.42    0.95    15.8\n 2     2  2016     2    6.16    8.2     0.75    14.6\n 3     3  2016     3    6.54    8.73    0.78    15.4\n 4     4  2016     4    6.64    9.01    0.87    15.4\n 5     5  2017     1    5.88    9.06    1.05    16.7\n 6     6  2017     2    6.02    8.41    0.61    14.0\n 7     7  2017     3    6.61    9.41    0.64    16.2\n 8     8  2017     4    6.64   10.0     0.75    16.8\n 9     9  2018     1    6.06    9.33    0.76    16.3\n10    10  2018     2    6.2     9.24    0.62    16.2\n# ℹ 18 more rows\n\ndata_bin$in1bin_pred &lt;- mapply(model_1_pred,data_bin$t,data_bin$quat)\n\ndata_bin %&gt;% ggplot()+\n  geom_line(aes(t,in1bin_pred,color = factor(quat)))+\n#  geom_point(aes(t,in1bin_pred,color = factor(quat)))+\n  geom_point(aes(t,in1_bin, color = factor(quat)))\n\n\n\n\n\ny &lt;- model_1$coefficients[1] + model_1$coefficients[2]*5\n\nmodel_1$coefficients\n\n  (Intercept)             t factor(quat)2 factor(quat)3 factor(quat)4 \n   5.45799107    0.09147321    0.16424107    0.61133929    0.70415179 \n\n\n\nd1 &lt;- filter(data_bin,quat == 1)\nplot(d1$t,d1$in1_bin)\n\n\n\n\n\n66000*1.1\n\n[1] 72600\n\n\n\n1.1*0.9\n\n[1] 0.99"
+  },
+  {
+    "objectID": "posts/playg.html",
+    "href": "posts/playg.html",
+    "title": "2023 빈도&심도 예측",
+    "section": "",
+    "text": "0.022 * 4575576.066\n\n[1] 100662.7\n\n\n\ndata_bin &lt;- readxl::read_xlsx(\"contents/2. 예측수준의 결정.xlsx\",sheet = 2)\ndata_sim &lt;- readxl::read_xlsx(\"contents/2. 예측수준의 결정.xlsx\",sheet = 3)\n\n\nin1_bin_mod &lt;- lm(in1_bin ~ t + factor(quat), data = data_bin)\nmul_bin_mod &lt;- lm(mul_bin ~ t + factor(quat), data = data_bin)\njas_bin_mod &lt;- lm(jas_bin ~ t + factor(quat), data = data_bin)\ncha_bin_mod &lt;- lm(cha_bin ~ t + factor(quat), data = data_bin)\n\nin1_sim_mod &lt;- lm(in1_sim ~ t, data = data_sim)\nmul_sim_mod &lt;- lm(mul_sim ~ t, data = data_sim)\njas_sim_mod &lt;- lm(jas_sim ~ t, data = data_sim)\ncha_sim_mod &lt;- lm(cha_sim ~ t + factor(quat), data = data_sim)\n\n\nin1bin &lt;- c(in1_bin_mod$coefficients[1] +in1_bin_mod$coefficients[2]*29, \n  in1_bin_mod$coefficients[1] +in1_bin_mod$coefficients[2]*30 + in1_bin_mod$coefficients[3],\n  in1_bin_mod$coefficients[1] +in1_bin_mod$coefficients[2]*31 + in1_bin_mod$coefficients[4],\n  in1_bin_mod$coefficients[1] +in1_bin_mod$coefficients[2]*32 + in1_bin_mod$coefficients[5])\n\nmulbin &lt;- c(mul_bin_mod$coefficients[1] +mul_bin_mod$coefficients[2]*29,\n  mul_bin_mod$coefficients[1] +mul_bin_mod$coefficients[2]*30 + mul_bin_mod$coefficients[3],\n  mul_bin_mod$coefficients[1] +mul_bin_mod$coefficients[2]*31 + mul_bin_mod$coefficients[4],\n  mul_bin_mod$coefficients[1] +mul_bin_mod$coefficients[2]*32 + mul_bin_mod$coefficients[5])\n\njasbin &lt;- c(jas_bin_mod$coefficients[1] +jas_bin_mod$coefficients[2]*29,\n  jas_bin_mod$coefficients[1] +jas_bin_mod$coefficients[2]*30 + jas_bin_mod$coefficients[3],\n  jas_bin_mod$coefficients[1] +jas_bin_mod$coefficients[2]*31 + jas_bin_mod$coefficients[4],\n  jas_bin_mod$coefficients[1] +jas_bin_mod$coefficients[2]*32 + jas_bin_mod$coefficients[5])\n\nchabin &lt;- c(cha_bin_mod$coefficients[1] +cha_bin_mod$coefficients[2]*29,\n  cha_bin_mod$coefficients[1] +cha_bin_mod$coefficients[2]*30 + cha_bin_mod$coefficients[3],\n  cha_bin_mod$coefficients[1] +cha_bin_mod$coefficients[2]*31 + cha_bin_mod$coefficients[4],\n  cha_bin_mod$coefficients[1] +cha_bin_mod$coefficients[2]*32 + cha_bin_mod$coefficients[5])\n\nin1sim &lt;- c(in1_sim_mod$coefficients[1] +in1_sim_mod$coefficients[2]*29, \n  in1_sim_mod$coefficients[1] +in1_sim_mod$coefficients[2]*30,\n  in1_sim_mod$coefficients[1] +in1_sim_mod$coefficients[2]*31,\n  in1_sim_mod$coefficients[1] +in1_sim_mod$coefficients[2]*32)\n\nmulsim &lt;- c(mul_sim_mod$coefficients[1] +mul_sim_mod$coefficients[2]*29,\n  mul_sim_mod$coefficients[1] +mul_sim_mod$coefficients[2]*30,\n  mul_sim_mod$coefficients[1] +mul_sim_mod$coefficients[2]*31,\n  mul_sim_mod$coefficients[1] +mul_sim_mod$coefficients[2]*32)\n\njassim &lt;- c(jas_sim_mod$coefficients[1] +jas_sim_mod$coefficients[2]*29,\n  jas_sim_mod$coefficients[1] +jas_sim_mod$coefficients[2]*30,\n  jas_sim_mod$coefficients[1] +jas_sim_mod$coefficients[2]*31,\n  jas_sim_mod$coefficients[1] +jas_sim_mod$coefficients[2]*32)\n\nchasim &lt;- c(cha_sim_mod$coefficients[1] +cha_sim_mod$coefficients[2]*29,\n  cha_sim_mod$coefficients[1] +cha_sim_mod$coefficients[2]*30 + cha_sim_mod$coefficients[3],\n  cha_sim_mod$coefficients[1] +cha_sim_mod$coefficients[2]*31 + cha_sim_mod$coefficients[4],\n  cha_sim_mod$coefficients[1] +cha_sim_mod$coefficients[2]*32 + cha_sim_mod$coefficients[5])\n\n\ndata_2023 &lt;- data.frame(t = seq(29,32),\n                        year = rep(2023,4),\n                        quat = seq(1,4),\n                        in1_bin = in1bin,\n                        mul_bin = mulbin,\n                        jas_bin = jasbin,\n                        cha_bin = chabin,\n                        in1_sim = in1sim,\n                        mul_sim = mulsim,\n                        jas_sim = jassim,\n                        cha_sim = chasim)\n\n\ndata_2023 %&gt;% kable()\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nt\nyear\nquat\nin1_bin\nmul_bin\njas_bin\ncha_bin\nin1_sim\nmul_sim\njas_sim\ncha_sim\n\n\n\n\n29\n2023\n1\n8.110714\n12.45679\n0.9535714\n20.71036\n1555.442\n709.3833\n1212.663\n911.2393\n\n\n30\n2023\n2\n8.366429\n12.25536\n0.7464286\n19.67893\n1531.733\n714.9120\n1187.235\n835.1821\n\n\n31\n2023\n3\n8.905000\n12.81964\n0.8192857\n20.83893\n1508.025\n720.4406\n1161.807\n859.0821\n\n\n32\n2023\n4\n9.089286\n13.52964\n0.8807143\n21.51750\n1484.316\n725.9693\n1136.379\n881.2250"
+  },
+  {
+    "objectID": "posts/playg.html#test_plot",
+    "href": "posts/playg.html#test_plot",
+    "title": "2023 빈도&심도 예측",
+    "section": "test_plot",
+    "text": "test_plot\n\nlibrary(dplyr)\nlibrary(stringr)\nlibrary(purrr)\n\nn &lt;- 6\n\nset.seed(123)\n\ncolors &lt;- c(\"#d35400\", \"#2980b9\", \"#2ecc71\", \"#f1c40f\", \"#2c3e50\", \"#7f8c8d\")\ncolors2 &lt;- c(\"#000004\", \"#3B0F70\", \"#8C2981\", \"#DE4968\", \"#FE9F6D\", \"#FCFDBF\")\n\ndf &lt;- data.frame(x = seq_len(n) - 1) |&gt; \n  mutate(\n    y = 10 + x + 10 * sin(x - 1),\n    z = 5 + (x*y) - median(x*y),\n    e = 10 * abs(rnorm(length(x))) + 2,\n    e = round(e, 1),\n    low = y - e,\n    high = y + e,\n    value = round(y - 1),\n    name = sample(fruit[str_length(fruit) &lt;= 5], size = n),\n    color = rep(colors, length.out = n)\n  ) |&gt; \n  mutate_if(is.numeric, round, 1) |&gt; \n  select(-e)\n\ndf &lt;- df |&gt; \n  mutate(\n    # label = name,\n    from = name[c(1, 1, 1, 2, 3, 4)],\n    to   = name[c(3, 4, 5, 3, 6, 6)],\n    weight = c(1, 1, 1, 1, 2, 2)\n  )\n\n\ndf &lt;- data.frame(\n  stringsAsFactors = FALSE,\n  name = c(\n    \"The Left\",\n    \"Social Democratic Party\",\n    \"Alliance 90/The Greens\",\n    \"Free Democratic Party\",\n    \"Christian Democratic Union\",\n    \"Christian Social Union in Bavaria\",\n    \"Alternative for Germany\"\n  ),\n  count = c(69, 153, 67, 80, 200, 46, 94),\n  col = c(\"#BE3075\", \"#EB001F\", \"#64A12D\", \"#FFED00\",\n          \"#000000\", \"#008AC5\", \"#009EE0\"\n  ),\n  abbrv = c(\"DIE LINKE\", \"SPD\", \"GRÜNE\", \"FDP\", \"CDU\", \"CSU\", \"AfD\")\n)\n\ndf\n\n                               name count     col     abbrv\n1                          The Left    69 #BE3075 DIE LINKE\n2           Social Democratic Party   153 #EB001F       SPD\n3            Alliance 90/The Greens    67 #64A12D     GRÜNE\n4             Free Democratic Party    80 #FFED00       FDP\n5        Christian Democratic Union   200 #000000       CDU\n6 Christian Social Union in Bavaria    46 #008AC5       CSU\n7           Alternative for Germany    94 #009EE0       AfD\n\nhchart(\n  df,\n  \"pie\",\n  hcaes(\n    name = name,\n    y = count,\n    label = abbrv,\n    color = col\n  )\n)\n\n\n\n\n\n\n\nd1 &lt;- data %&gt;% \n  group_by(GAI_COD) %&gt;% \n  summarise(n = n())\n\n\nd1 %&gt;% hchart(\"pie\",hcaes(GAI_COD,n))"
+  },
+  {
+    "objectID": "posts/1102.html",
+    "href": "posts/1102.html",
+    "title": "2023 빈도&심도 예측",
+    "section": "",
+    "text": "in1_bin_mod &lt;- lm(in1_bin ~ t + factor(quat), data = data_bin)\nmul_bin_mod &lt;- lm(mul_bin ~ t + factor(quat), data = data_bin)\njas_bin_mod &lt;- lm(jas_bin ~ t + factor(quat), data = data_bin)\ncha_bin_mod &lt;- lm(cha_bin ~ t + factor(quat), data = data_bin)\n\nin1_sim_mod &lt;- lm(in1_sim ~ t, data = data_sim)\nmul_sim_mod &lt;- lm(mul_sim ~ t, data = data_sim)\njas_sim_mod &lt;- lm(jas_sim ~ t, data = data_sim)\ncha_sim_mod &lt;- lm(cha_sim ~ t + factor(quat), data = data_sim)"
+  },
+  {
+    "objectID": "posts/1102.html#년-빈도심도-예측값",
+    "href": "posts/1102.html#년-빈도심도-예측값",
+    "title": "2023 빈도&심도 예측",
+    "section": "2023년 빈도&심도 예측값",
+    "text": "2023년 빈도&심도 예측값\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nt\nyear\nquat\nin1_bin\nmul_bin\njas_bin\ncha_bin\nin1_sim\nmul_sim\njas_sim\ncha_sim\n\n\n\n\n29\n2023\n1\n8.110714\n12.45679\n0.9535714\n20.71036\n1555.442\n709.3833\n1212.663\n911.2393\n\n\n30\n2023\n2\n8.366429\n12.25536\n0.7464286\n19.67893\n1531.733\n714.9120\n1187.235\n835.1821\n\n\n31\n2023\n3\n8.905000\n12.81964\n0.8192857\n20.83893\n1508.025\n720.4406\n1161.807\n859.0821\n\n\n32\n2023\n4\n9.089286\n13.52964\n0.8807143\n21.51750\n1484.316\n725.9693\n1136.379\n881.2250"
+  },
+  {
+    "objectID": "posts/1102.html#보험료",
+    "href": "posts/1102.html#보험료",
+    "title": "2023 빈도&심도 예측",
+    "section": "보험료",
+    "text": "보험료\n\n\n\n\n\nt\nyear\nin1_sun\nmul_sun\njas_sun\ncha_sun\n\n\n\n\n29\n2023\n12615.75\n8836.636\n1156.3605\n18872.09\n\n\n30\n2023\n12815.14\n8761.502\n886.1859\n16435.49\n\n\n31\n2023\n13428.96\n9235.792\n951.8517\n17902.35\n\n\n32\n2023\n13491.37\n9822.105\n1000.8251\n18961.76"
+  },
+  {
+    "objectID": "posts/1102.html#년-순보험료-보험료",
+    "href": "posts/1102.html#년-순보험료-보험료",
+    "title": "2023 빈도&심도 예측",
+    "section": "2023년 순보험료, 보험료",
+    "text": "2023년 순보험료, 보험료\n\n\n\n\n\n대인 순보험료\n대물 순보험료\n자손 순보험료\n자차 순보험료\n\n\n\n\n12615.75\n8836.636\n1156.3605\n18872.09\n\n\n12815.14\n8761.502\n886.1859\n16435.49\n\n\n13428.96\n9235.792\n951.8517\n17902.35\n\n\n13491.37\n9822.105\n1000.8251\n18961.76\n\n\n\n\n\n\n\n\n\n\n대인 실보험료\n대물 실보험료\n자손 실보험료\n자차 실보험료\n\n\n\n\n18022.49\n12623.77\n1651.944\n26960.13\n\n\n18307.34\n12516.43\n1265.980\n23479.27\n\n\n19184.23\n13193.99\n1359.788\n25574.79\n\n\n19273.39\n14031.58\n1429.750\n27088.23"
   }
 ]
