@@ -92,9 +92,9 @@ boryo <- data_2023 %>%
          mul_sun = mul_bin * mul_sim,
          jas_sun = jas_bin * jas_sim,
          cha_sun = cha_bin * cha_sim) %>% 
-  select(in1_sun,mul_sun,jas_sun,cha_sun)
+  select(year,quat,in1_sun,mul_sun,jas_sun,cha_sun)
 
-colnames(boryo) <- c("대인 순보험료","대물 순보험료","자손 순보험료","자차 순보험료")
+colnames(boryo) <- c("year","quat","대인 순보험료","대물 순보험료","자손 순보험료","자차 순보험료")
 
 ```
 
@@ -111,8 +111,9 @@ boryo %>% kable()
 ```
 
 ```{r, echo=FALSE}
-truebo <- boryo*(10/7)
-colnames(truebo) <- c("대인 실보험료","대물 실보험료","자손 실보험료","자차 실보험료")
+truebo <- select(boryo,1,2) %>% cbind(select(boryo,3,4,5,6)*(10/7))
+
+colnames(truebo) <- c("year","quat","대인 실보험료","대물 실보험료","자손 실보험료","자차 실보험료")
 
 truebo %>% kable()
 ```
