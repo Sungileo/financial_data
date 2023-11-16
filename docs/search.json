@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "금융데이터분석_R",
     "section": "",
-    "text": "2023 빈도&심도 예측\n\n\n\n\n\n2023-2학기 R로 하는 금융데이터분석\n\n\n\n\n\n\nNov 2, 2023\n\n\nSungil Park\n\n\n\n\n\n\n  \n\n\n\n\n분기별 선형모형_2\n\n\n\n\n\n2023-2학기 R로 하는 금융데이터분석\n\n\n\n\n\n\nOct 31, 2023\n\n\nSungil Park\n\n\n\n\n\n\n  \n\n\n\n\n분기별 선형모형\n\n\n\n\n\n2023-2학기 R로 하는 금융데이터분석\n\n\n\n\n\n\nOct 26, 2023\n\n\nSungil Park\n\n\n\n\n\n\n  \n\n\n\n\n빈도, 심도 선형회귀\n\n\n\n\n\n2023-2학기 R로 하는 금융데이터분석\n\n\n\n\n\n\nOct 24, 2023\n\n\nSungil Park\n\n\n\n\n\n\n  \n\n\n\n\n지시함수\n\n\n\n\n\n2023-2학기 R로 하는 금융데이터분석\n\n\n\n\n\n\nOct 12, 2023\n\n\nSungil Park\n\n\n\n\n\n\n  \n\n\n\n\n회귀분석\n\n\n\n\n\n2023-2학기 R로 하는 금융데이터분석\n\n\n\n\n\n\nOct 10, 2023\n\n\nSungil Park\n\n\n\n\n\n\n  \n\n\n\n\n빈도와 심도\n\n\n\n\n\n2023-2학기 R로 하는 금융데이터분석\n\n\n\n\n\n\nSep 14, 2023\n\n\nSungil Park\n\n\n\n\n\n\nNo matching items"
+    "text": "ANOVA\n\n\n\n\n\n2023-2학기 R로 하는 금융데이터분석\n\n\n\n\n\n\nNov 14, 2023\n\n\nSungil Park\n\n\n\n\n\n\n  \n\n\n\n\n정리\n\n\n\n\n\n2023-2학기 R로 하는 금융데이터분석\n\n\n\n\n\n\nNov 9, 2023\n\n\nSungil Park\n\n\n\n\n\n\n  \n\n\n\n\n2023 빈도&심도 예측_\n\n\n\n\n\n2023-2학기 R로 하는 금융데이터분석\n\n\n\n\n\n\nNov 7, 2023\n\n\nSungil Park\n\n\n\n\n\n\n  \n\n\n\n\n2023 빈도&심도 예측\n\n\n\n\n\n2023-2학기 R로 하는 금융데이터분석\n\n\n\n\n\n\nNov 2, 2023\n\n\nSungil Park\n\n\n\n\n\n\n  \n\n\n\n\n분기별 선형모형_2\n\n\n\n\n\n2023-2학기 R로 하는 금융데이터분석\n\n\n\n\n\n\nOct 31, 2023\n\n\nSungil Park\n\n\n\n\n\n\n  \n\n\n\n\n분기별 선형모형\n\n\n\n\n\n2023-2학기 R로 하는 금융데이터분석\n\n\n\n\n\n\nOct 26, 2023\n\n\nSungil Park\n\n\n\n\n\n\n  \n\n\n\n\n빈도, 심도 선형회귀\n\n\n\n\n\n2023-2학기 R로 하는 금융데이터분석\n\n\n\n\n\n\nOct 24, 2023\n\n\nSungil Park\n\n\n\n\n\n\n  \n\n\n\n\n지시함수\n\n\n\n\n\n2023-2학기 R로 하는 금융데이터분석\n\n\n\n\n\n\nOct 12, 2023\n\n\nSungil Park\n\n\n\n\n\n\n  \n\n\n\n\n회귀분석\n\n\n\n\n\n2023-2학기 R로 하는 금융데이터분석\n\n\n\n\n\n\nOct 10, 2023\n\n\nSungil Park\n\n\n\n\n\n\n  \n\n\n\n\n빈도와 심도\n\n\n\n\n\n2023-2학기 R로 하는 금융데이터분석\n\n\n\n\n\n\nSep 14, 2023\n\n\nSungil Park\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
@@ -355,5 +355,61 @@
     "title": "2023 빈도&심도 예측",
     "section": "2023년 순보험료, 보험료",
     "text": "2023년 순보험료, 보험료\n\n\n\n\n\n\n\n\n\n\n\n\n\nyear\nquat\n대인 순보험료\n대물 순보험료\n자손 순보험료\n자차 순보험료\n\n\n\n\n2023\n1\n12615.75\n8836.636\n1156.3605\n18872.09\n\n\n2023\n2\n12815.14\n8761.502\n886.1859\n16435.49\n\n\n2023\n3\n13428.96\n9235.792\n951.8517\n17902.35\n\n\n2023\n4\n13491.37\n9822.105\n1000.8251\n18961.76\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nyear\nquat\n대인 실보험료\n대물 실보험료\n자손 실보험료\n자차 실보험료\n\n\n\n\n2023\n1\n18022.49\n12623.77\n1651.944\n26960.13\n\n\n2023\n2\n18307.34\n12516.43\n1265.980\n23479.27\n\n\n2023\n3\n19184.23\n13193.99\n1359.788\n25574.79\n\n\n2023\n4\n19273.39\n14031.58\n1429.750\n27088.23"
+  },
+  {
+    "objectID": "posts/1109.html",
+    "href": "posts/1109.html",
+    "title": "정리",
+    "section": "",
+    "text": "HI\n\n\nproject_data &lt;- read.csv(\"contents/프로젝트자료.csv\")\ndata_bin &lt;- readxl::read_xlsx(\"contents/2. 예측수준의 결정.xlsx\",sheet = 2)\ndata_sim &lt;- readxl::read_xlsx(\"contents/2. 예측수준의 결정.xlsx\",sheet = 3)\n\n\nbindo &lt;- c(nrow(filter(project_data,in1_los!=0))/nrow(project_data),\n           nrow(filter(project_data,mul_los!=0))/nrow(project_data),\n           nrow(filter(project_data,jas_los!=0))/nrow(project_data),\n           nrow(filter(project_data,cha_los!=0))/nrow(project_data))\n\nsimdo &lt;- c(sum(project_data$in1_los)/nrow(filter(project_data,in1_los!=0)),\n            sum(project_data$mul_los)/nrow(filter(project_data,mul_los!=0)),\n            sum(project_data$jas_los)/nrow(filter(project_data,jas_los!=0)),\n            sum(project_data$cha_los)/nrow(filter(project_data,cha_los!=0)))\n        \nsummary &lt;- data.frame(bindo,simdo)\nrow.names(summary) &lt;- c(\"대인\", \"대물\", \"자손\", \"자차\")\nsummary &lt;- summary %&gt;% mutate(sunbo = bindo*simdo)\n\n\nkable(summary)\n\n\n\n\n\nbindo\nsimdo\nsunbo\n\n\n\n\n대인\n0.0218325\n4575576.1\n99896.256\n\n\n대물\n0.0626342\n1283375.1\n80383.193\n\n\n자손\n0.0053686\n1033460.0\n5548.282\n\n\n자차\n0.2841804\n909640.4\n258501.951\n\n\n\n\n\n\nin1_bin_mod &lt;- lm(in1_bin ~ t + factor(quat), data = data_bin)\nmul_bin_mod &lt;- lm(mul_bin ~ t + factor(quat), data = data_bin)\njas_bin_mod &lt;- lm(jas_bin ~ t + factor(quat), data = data_bin)\ncha_bin_mod &lt;- lm(cha_bin ~ t + factor(quat), data = data_bin)\n\nin1_sim_mod &lt;- lm(in1_sim ~ year, data = data_sim)\nmul_sim_mod &lt;- lm(mul_sim ~ year, data = data_sim)\njas_sim_mod &lt;- lm(jas_sim ~ year, data = data_sim)\ncha_sim_mod &lt;- lm(cha_sim ~ t + factor(quat), data = data_sim)"
+  },
+  {
+    "objectID": "posts/1107.html",
+    "href": "posts/1107.html",
+    "title": "2023 빈도&심도 예측_",
+    "section": "",
+    "text": "in1_bin_mod &lt;- lm(in1_bin ~ t + factor(quat), data = data_bin)\nmul_bin_mod &lt;- lm(mul_bin ~ t + factor(quat), data = data_bin)\njas_bin_mod &lt;- lm(jas_bin ~ t + factor(quat), data = data_bin)\ncha_bin_mod &lt;- lm(cha_bin ~ t + factor(quat), data = data_bin)\n\nin1_sim_mod &lt;- lm(in1_sim ~ t, data = data_sim)\nmul_sim_mod &lt;- lm(mul_sim ~ t, data = data_sim)\njas_sim_mod &lt;- lm(jas_sim ~ t, data = data_sim)\ncha_sim_mod &lt;- lm(cha_sim ~ t + factor(quat), data = data_sim)"
+  },
+  {
+    "objectID": "posts/1107.html#년-빈도심도-예측값",
+    "href": "posts/1107.html#년-빈도심도-예측값",
+    "title": "2023 빈도&심도 예측_",
+    "section": "2023년 빈도&심도 예측값",
+    "text": "2023년 빈도&심도 예측값\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nt\nyear\nquat\nin1_bin\nmul_bin\njas_bin\ncha_bin\nin1_sim\nmul_sim\njas_sim\ncha_sim\n\n\n\n\n29\n2023\n1\n8.110714\n12.45679\n0.9535714\n20.71036\n1555.442\n709.3833\n1212.663\n911.2393\n\n\n30\n2023\n2\n8.366429\n12.25536\n0.7464286\n19.67893\n1531.733\n714.9120\n1187.235\n835.1821\n\n\n31\n2023\n3\n8.905000\n12.81964\n0.8192857\n20.83893\n1508.025\n720.4406\n1161.807\n859.0821\n\n\n32\n2023\n4\n9.089286\n13.52964\n0.8807143\n21.51750\n1484.316\n725.9693\n1136.379\n881.2250"
+  },
+  {
+    "objectID": "posts/1107.html#년-순보험료-보험료",
+    "href": "posts/1107.html#년-순보험료-보험료",
+    "title": "2023 빈도&심도 예측_",
+    "section": "2023년 순보험료, 보험료",
+    "text": "2023년 순보험료, 보험료\n\n\n\n\n\n\n\n\n\n\n\n\n\nyear\nquat\n대인 순보험료\n대물 순보험료\n자손 순보험료\n자차 순보험료\n\n\n\n\n2023\n1\n12615.75\n8836.636\n1156.3605\n18872.09\n\n\n2023\n2\n12815.14\n8761.502\n886.1859\n16435.49\n\n\n2023\n3\n13428.96\n9235.792\n951.8517\n17902.35\n\n\n2023\n4\n13491.37\n9822.105\n1000.8251\n18961.76\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nyear\nquat\n대인 실보험료\n대물 실보험료\n자손 실보험료\n자차 실보험료\n\n\n\n\n2023\n1\n18022.49\n12623.77\n1651.944\n26960.13\n\n\n2023\n2\n18307.34\n12516.43\n1265.980\n23479.27\n\n\n2023\n3\n19184.23\n13193.99\n1359.788\n25574.79\n\n\n2023\n4\n19273.39\n14031.58\n1429.750\n27088.23\n\n\n\n\n\n\nfl &lt;- rbind(data_sim,select(data_2023,1,2,3,8,9,10,11))\nfl_sum &lt;- fl %&gt;% \n  group_by(year) %&gt;% \n  summarize(in1 = sum(in1_sim),\n            mul = sum(mul_sim),\n            jas = sum(jas_sim),\n            cha = sum(cha_sim))\n\n\nfl_sum %&gt;% ggplot(aes(x=year,y=in1))+\n  geom_point()+\n  theme_minimal()\n\n\n\nfl_sum %&gt;% ggplot(aes(x=year,y=mul))+\n  geom_point()+\n  theme_minimal()\n\n\n\nfl_sum %&gt;% ggplot(aes(x=year,y=jas))+\n  geom_point()+\n  theme_minimal()\n\n\n\nfl_sum %&gt;% ggplot(aes(x=year,y=cha))+\n  geom_point()+\n  theme_minimal()"
+  },
+  {
+    "objectID": "posts/1114.html",
+    "href": "posts/1114.html",
+    "title": "ANOVA",
+    "section": "",
+    "text": "project_data &lt;- read.csv(\"contents/프로젝트자료.csv\")\n\ndf &lt;- project_data %&gt;% \n  filter(cha_los!=0) %&gt;% \n  mutate(GAI_COD = factor(GAI_COD),\n         차종 = as.factor(ifelse(car_knd %in% c(\"1A\",\"1E\"), \"소형\",\n                               ifelse(car_knd %in% c(\"1F\",\"1G\",\"1H\"), \"준중형\",\n                                      ifelse(car_knd %in% c(\"1L\",\"1M\",\"1N\"), \"중형\",\n                                             ifelse(car_knd %in% c(\"1P\",\"29\"), \"대형\",\"SUB/VAN\"))))))"
+  },
+  {
+    "objectID": "posts/1114.html#데이터",
+    "href": "posts/1114.html#데이터",
+    "title": "ANOVA",
+    "section": "",
+    "text": "project_data &lt;- read.csv(\"contents/프로젝트자료.csv\")\n\ndf &lt;- project_data %&gt;% \n  filter(cha_los!=0) %&gt;% \n  mutate(GAI_COD = factor(GAI_COD),\n         차종 = as.factor(ifelse(car_knd %in% c(\"1A\",\"1E\"), \"소형\",\n                               ifelse(car_knd %in% c(\"1F\",\"1G\",\"1H\"), \"준중형\",\n                                      ifelse(car_knd %in% c(\"1L\",\"1M\",\"1N\"), \"중형\",\n                                             ifelse(car_knd %in% c(\"1P\",\"29\"), \"대형\",\"SUB/VAN\"))))))"
+  },
+  {
+    "objectID": "posts/1114.html#가입년별-분산분석",
+    "href": "posts/1114.html#가입년별-분산분석",
+    "title": "ANOVA",
+    "section": "가입년별 분산분석",
+    "text": "가입년별 분산분석\n\naov(cha_los ~ GAI_COD, data = df) %&gt;% summary()\n\n             Df    Sum Sq   Mean Sq F value   Pr(&gt;F)    \nGAI_COD       7 1.173e+14 1.676e+13    4.78 2.79e-05 ***\nResiduals   786 2.756e+15 3.507e+12                     \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1"
+  },
+  {
+    "objectID": "posts/1114.html#차종별-분산분석",
+    "href": "posts/1114.html#차종별-분산분석",
+    "title": "ANOVA",
+    "section": "차종별 분산분석",
+    "text": "차종별 분산분석\n\naov(cha_los ~ 차종, data = df) %&gt;% summary()\n\n             Df    Sum Sq   Mean Sq F value   Pr(&gt;F)    \n차종          4 7.622e+13 1.905e+13   5.374 0.000284 ***\nResiduals   789 2.797e+15 3.546e+12                     \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n\n\n\ndf %&gt;% ggplot(aes(x = cha_los, color = 차종, fill = 차종))+\n  geom_density(alpha = 0.3)+\n  scale_x_continuous(limits = c(0,1000000))+\n  theme_minimal()\n\nWarning: Removed 199 rows containing non-finite values (`stat_density()`).\n\n\n\n\n\n\ndf %&gt;% ggplot(aes(y = cha_los, color = 차종, fill = 차종))+\n  geom_boxplot()+\n  theme_minimal()+\n  scale_y_continuous(limits = c(0,1000000))\n\nWarning: Removed 199 rows containing non-finite values (`stat_boxplot()`)."
   }
 ]

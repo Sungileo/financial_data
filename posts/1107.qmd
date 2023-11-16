@@ -1,6 +1,6 @@
 ---
-title: "2023 빈도&심도 예측"
-date: "2023/11/02"
+title: "2023 빈도&심도 예측_"
+date: "2023/11/07"
 author: "Sungil Park"
 description: "2023-2학기 R로 하는 금융데이터분석"
 ---
@@ -113,4 +113,31 @@ truebo <- select(boryo,1,2) %>% cbind(select(boryo,3,4,5,6)*(10/7))
 colnames(truebo) <- c("year","quat","대인 실보험료","대물 실보험료","자손 실보험료","자차 실보험료")
 
 truebo %>% kable()
+```
+
+```{r}
+fl <- rbind(data_sim,select(data_2023,1,2,3,8,9,10,11))
+fl_sum <- fl %>% 
+  group_by(year) %>% 
+  summarize(in1 = sum(in1_sim),
+            mul = sum(mul_sim),
+            jas = sum(jas_sim),
+            cha = sum(cha_sim))
+
+
+fl_sum %>% ggplot(aes(x=year,y=in1))+
+  geom_point()+
+  theme_minimal()
+
+fl_sum %>% ggplot(aes(x=year,y=mul))+
+  geom_point()+
+  theme_minimal()
+
+fl_sum %>% ggplot(aes(x=year,y=jas))+
+  geom_point()+
+  theme_minimal()
+
+fl_sum %>% ggplot(aes(x=year,y=cha))+
+  geom_point()+
+  theme_minimal()
 ```

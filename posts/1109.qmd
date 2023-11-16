@@ -1,6 +1,6 @@
 ---
-title: "2023 빈도&심도 예측"
-date: "2023/11/02"
+title: "정리"
+date: "2023/11/09"
 author: "Sungil Park"
 description: "2023-2학기 R로 하는 금융데이터분석"
 ---
@@ -9,12 +9,34 @@ description: "2023-2학기 R로 하는 금융데이터분석"
 rm(list=ls())
 library(tidyverse)
 library(knitr)
-library(highcharter)
 ```
 
-```{r, include=FALSE}
+<h1>HI</h1>
+
+```{r}
+project_data <- read.csv("contents/프로젝트자료.csv")
 data_bin <- readxl::read_xlsx("contents/2. 예측수준의 결정.xlsx",sheet = 2)
 data_sim <- readxl::read_xlsx("contents/2. 예측수준의 결정.xlsx",sheet = 3)
+```
+
+```{r}
+bindo <- c(nrow(filter(project_data,in1_los!=0))/nrow(project_data),
+           nrow(filter(project_data,mul_los!=0))/nrow(project_data),
+           nrow(filter(project_data,jas_los!=0))/nrow(project_data),
+           nrow(filter(project_data,cha_los!=0))/nrow(project_data))
+
+simdo <- c(sum(project_data$in1_los)/nrow(filter(project_data,in1_los!=0)),
+            sum(project_data$mul_los)/nrow(filter(project_data,mul_los!=0)),
+            sum(project_data$jas_los)/nrow(filter(project_data,jas_los!=0)),
+            sum(project_data$cha_los)/nrow(filter(project_data,cha_los!=0)))
+        
+summary <- data.frame(bindo,simdo)
+row.names(summary) <- c("대인", "대물", "자손", "자차")
+summary <- summary %>% mutate(sunbo = bindo*simdo)
+```
+
+```{r}
+kable(summary)
 ```
 
 ```{r}
@@ -23,9 +45,9 @@ mul_bin_mod <- lm(mul_bin ~ t + factor(quat), data = data_bin)
 jas_bin_mod <- lm(jas_bin ~ t + factor(quat), data = data_bin)
 cha_bin_mod <- lm(cha_bin ~ t + factor(quat), data = data_bin)
 
-in1_sim_mod <- lm(in1_sim ~ t, data = data_sim)
-mul_sim_mod <- lm(mul_sim ~ t, data = data_sim)
-jas_sim_mod <- lm(jas_sim ~ t, data = data_sim)
+in1_sim_mod <- lm(in1_sim ~ year, data = data_sim)
+mul_sim_mod <- lm(mul_sim ~ year, data = data_sim)
+jas_sim_mod <- lm(jas_sim ~ year, data = data_sim)
 cha_sim_mod <- lm(cha_sim ~ t + factor(quat), data = data_sim)
 ```
 
@@ -50,20 +72,20 @@ chabin <- c(cha_bin_mod$coefficients[1] +cha_bin_mod$coefficients[2]*29,
   cha_bin_mod$coefficients[1] +cha_bin_mod$coefficients[2]*31 + cha_bin_mod$coefficients[4],
   cha_bin_mod$coefficients[1] +cha_bin_mod$coefficients[2]*32 + cha_bin_mod$coefficients[5])
 
-in1sim <- c(in1_sim_mod$coefficients[1] +in1_sim_mod$coefficients[2]*29, 
-  in1_sim_mod$coefficients[1] +in1_sim_mod$coefficients[2]*30,
-  in1_sim_mod$coefficients[1] +in1_sim_mod$coefficients[2]*31,
-  in1_sim_mod$coefficients[1] +in1_sim_mod$coefficients[2]*32)
+in1sim <- c(in1_sim_mod$coefficients[1] +in1_sim_mod$coefficients[2]*2023, 
+  in1_sim_mod$coefficients[1] +in1_sim_mod$coefficients[2]*2023,
+  in1_sim_mod$coefficients[1] +in1_sim_mod$coefficients[2]*2023,
+  in1_sim_mod$coefficients[1] +in1_sim_mod$coefficients[2]*2023)
 
-mulsim <- c(mul_sim_mod$coefficients[1] +mul_sim_mod$coefficients[2]*29,
-  mul_sim_mod$coefficients[1] +mul_sim_mod$coefficients[2]*30,
-  mul_sim_mod$coefficients[1] +mul_sim_mod$coefficients[2]*31,
-  mul_sim_mod$coefficients[1] +mul_sim_mod$coefficients[2]*32)
+mulsim <- c(mul_sim_mod$coefficients[1] +mul_sim_mod$coefficients[2]*2023,
+  mul_sim_mod$coefficients[1] +mul_sim_mod$coefficients[2]*2023,
+  mul_sim_mod$coefficients[1] +mul_sim_mod$coefficients[2]*2023,
+  mul_sim_mod$coefficients[1] +mul_sim_mod$coefficients[2]*2023)
 
-jassim <- c(jas_sim_mod$coefficients[1] +jas_sim_mod$coefficients[2]*29,
-  jas_sim_mod$coefficients[1] +jas_sim_mod$coefficients[2]*30,
-  jas_sim_mod$coefficients[1] +jas_sim_mod$coefficients[2]*31,
-  jas_sim_mod$coefficients[1] +jas_sim_mod$coefficients[2]*32)
+jassim <- c(jas_sim_mod$coefficients[1] +jas_sim_mod$coefficients[2]*2023,
+  jas_sim_mod$coefficients[1] +jas_sim_mod$coefficients[2]*2023,
+  jas_sim_mod$coefficients[1] +jas_sim_mod$coefficients[2]*2023,
+  jas_sim_mod$coefficients[1] +jas_sim_mod$coefficients[2]*2023)
 
 chasim <- c(cha_sim_mod$coefficients[1] +cha_sim_mod$coefficients[2]*29,
   cha_sim_mod$coefficients[1] +cha_sim_mod$coefficients[2]*30 + cha_sim_mod$coefficients[3],
@@ -93,24 +115,7 @@ boryo <- data_2023 %>%
 
 colnames(boryo) <- c("year","quat","대인 순보험료","대물 순보험료","자손 순보험료","자차 순보험료")
 
-```
+data_2023
 
-## 2023년 빈도&심도 예측값
-
-```{r, echo=FALSE}
-data_2023 %>% kable()
-```
-
-## 2023년 순보험료, 보험료
-
-```{r, echo=FALSE}
-boryo %>% kable()
-```
-
-```{r, echo=FALSE}
-truebo <- select(boryo,1,2) %>% cbind(select(boryo,3,4,5,6)*(10/7))
-
-colnames(truebo) <- c("year","quat","대인 실보험료","대물 실보험료","자손 실보험료","자차 실보험료")
-
-truebo %>% kable()
+boryo
 ```

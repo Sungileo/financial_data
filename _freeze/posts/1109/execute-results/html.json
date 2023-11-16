@@ -1,0 +1,14 @@
+{
+  "hash": "53aa2c0136e50ce0e84caac44379423f",
+  "result": {
+    "markdown": "---\ntitle: \"정리\"\ndate: \"2023/11/09\"\nauthor: \"Sungil Park\"\ndescription: \"2023-2학기 R로 하는 금융데이터분석\"\n---\n\n\n\n\n<h1>HI</h1>\n\n\n::: {.cell}\n\n```{.r .cell-code}\nproject_data <- read.csv(\"contents/프로젝트자료.csv\")\ndata_bin <- readxl::read_xlsx(\"contents/2. 예측수준의 결정.xlsx\",sheet = 2)\ndata_sim <- readxl::read_xlsx(\"contents/2. 예측수준의 결정.xlsx\",sheet = 3)\n```\n:::\n\n::: {.cell}\n\n```{.r .cell-code}\nbindo <- c(nrow(filter(project_data,in1_los!=0))/nrow(project_data),\n           nrow(filter(project_data,mul_los!=0))/nrow(project_data),\n           nrow(filter(project_data,jas_los!=0))/nrow(project_data),\n           nrow(filter(project_data,cha_los!=0))/nrow(project_data))\n\nsimdo <- c(sum(project_data$in1_los)/nrow(filter(project_data,in1_los!=0)),\n            sum(project_data$mul_los)/nrow(filter(project_data,mul_los!=0)),\n            sum(project_data$jas_los)/nrow(filter(project_data,jas_los!=0)),\n            sum(project_data$cha_los)/nrow(filter(project_data,cha_los!=0)))\n        \nsummary <- data.frame(bindo,simdo)\nrow.names(summary) <- c(\"대인\", \"대물\", \"자손\", \"자차\")\nsummary <- summary %>% mutate(sunbo = bindo*simdo)\n```\n:::\n\n::: {.cell}\n\n```{.r .cell-code}\nkable(summary)\n```\n\n::: {.cell-output-display}\n|     |     bindo|     simdo|      sunbo|\n|:----|---------:|---------:|----------:|\n|대인 | 0.0218325| 4575576.1|  99896.256|\n|대물 | 0.0626342| 1283375.1|  80383.193|\n|자손 | 0.0053686| 1033460.0|   5548.282|\n|자차 | 0.2841804|  909640.4| 258501.951|\n:::\n:::\n\n::: {.cell}\n\n```{.r .cell-code}\nin1_bin_mod <- lm(in1_bin ~ t + factor(quat), data = data_bin)\nmul_bin_mod <- lm(mul_bin ~ t + factor(quat), data = data_bin)\njas_bin_mod <- lm(jas_bin ~ t + factor(quat), data = data_bin)\ncha_bin_mod <- lm(cha_bin ~ t + factor(quat), data = data_bin)\n\nin1_sim_mod <- lm(in1_sim ~ year, data = data_sim)\nmul_sim_mod <- lm(mul_sim ~ year, data = data_sim)\njas_sim_mod <- lm(jas_sim ~ year, data = data_sim)\ncha_sim_mod <- lm(cha_sim ~ t + factor(quat), data = data_sim)\n```\n:::\n\n\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
