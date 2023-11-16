@@ -10,7 +10,7 @@
 <meta name="dcterms.date" content="2023-11-16">
 <meta name="description" content="2023-2학기 R로 하는 금융데이터분석">
 
-<title>금융데이터분석 - _</title>
+<title>금융데이터분석 - 상대도</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -143,7 +143,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">_</h1>
+      <h1 class="title">상대도</h1>
                   <div>
         <div class="description">
           2023-2학기 R로 하는 금융데이터분석
@@ -177,7 +177,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#데이터-로드" id="toc-데이터-로드" class="nav-link active" data-scroll-target="#데이터-로드">데이터 로드</a></li>
+  <li><a href="#빈도-심도-순보험료" id="toc-빈도-심도-순보험료" class="nav-link" data-scroll-target="#빈도-심도-순보험료">빈도, 심도, 순보험료</a></li>
+  <li><a href="#성별-상대도" id="toc-성별-상대도" class="nav-link" data-scroll-target="#성별-상대도">성별 상대도</a></li>
+  <li><a href="#가입경력별-상대도" id="toc-가입경력별-상대도" class="nav-link" data-scroll-target="#가입경력별-상대도">가입경력별 상대도</a></li>
+  <li><a href="#차종별-상대도" id="toc-차종별-상대도" class="nav-link" data-scroll-target="#차종별-상대도">차종별 상대도</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
@@ -185,6 +195,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
+<section id="데이터-로드" class="level2">
+<h2 class="anchored" data-anchor-id="데이터-로드">데이터 로드</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>project_data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"contents/프로젝트자료.csv"</span>)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -198,6 +210,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>      car_knd <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"1P"</span>, <span class="st">"29"</span>) <span class="sc">~</span> <span class="st">"대형"</span>,</span>
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>      <span class="cn">TRUE</span> <span class="sc">~</span> <span class="st">"SUB/VAN"</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+</section>
+<section id="빈도-심도-순보험료" class="level2">
+<h2 class="anchored" data-anchor-id="빈도-심도-순보험료">빈도, 심도, 순보험료</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>myfunc_1 <span class="ot">&lt;-</span> <span class="cf">function</span>(df,y) {</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  in1_bin <span class="ot">&lt;-</span> <span class="fu">sum</span>(df<span class="sc">$</span>in1_los <span class="sc">!=</span> <span class="dv">0</span>) <span class="sc">/</span> <span class="fu">nrow</span>(df)</span>
@@ -215,40 +230,202 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>  jas_sun <span class="ot">&lt;-</span> jas_bin<span class="sc">*</span>jas_dep</span>
 <span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>  cha_sun <span class="ot">&lt;-</span> cha_bin<span class="sc">*</span>cha_dep</span>
 <span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>  result_df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">value =</span> <span class="fu">c</span>(in1_bin, mul_bin, jas_bin, cha_bin, in1_dep, mul_dep, jas_dep, cha_dep,in1_sun, mul_sun, jas_sun, cha_sun) <span class="sc">%&gt;%</span> <span class="fu">as.character</span>())</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>  result_df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">value =</span> <span class="fu">c</span>(in1_bin, mul_bin, jas_bin, cha_bin, in1_dep, mul_dep, jas_dep, cha_dep,in1_sun, mul_sun, jas_sun, cha_sun))</span>
 <span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rownames</span>(result_df) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"대인빈도"</span>,<span class="st">"대물빈도"</span>,<span class="st">"자손빈도"</span>,<span class="st">"자차빈도"</span>,<span class="st">"대인심도"</span>,<span class="st">"대물심도"</span>,<span class="st">"자손심도"</span>,<span class="st">"자차심도"</span>,<span class="st">"대인순보"</span>,<span class="st">"대물순보"</span>,<span class="st">"자손순보"</span>,<span class="st">"자차순보"</span>)</span>
 <span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">colnames</span>(result_df) <span class="ot">&lt;-</span> y</span>
 <span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(result_df)</span>
 <span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>d_2 <span class="ot">&lt;-</span> <span class="fu">cbind</span>(</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">myfunc_1</span>(project_data <span class="sc">%&gt;%</span> <span class="fu">filter</span>(PIB_SEX<span class="sc">==</span><span class="dv">1</span>),<span class="st">"PIB_SEX_1"</span>),</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">myfunc_1</span>(project_data <span class="sc">%&gt;%</span> <span class="fu">filter</span>(PIB_SEX<span class="sc">==</span><span class="dv">2</span>),<span class="st">"PIB_SEX_2"</span>),</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">myfunc_1</span>(project_data <span class="sc">%&gt;%</span> <span class="fu">filter</span>(GAI_COD<span class="sc">==</span><span class="dv">1</span>),<span class="st">"GAI_COD_1"</span>),</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">myfunc_1</span>(project_data <span class="sc">%&gt;%</span> <span class="fu">filter</span>(GAI_COD<span class="sc">==</span><span class="dv">2</span>),<span class="st">"GAI_COD_2"</span>),</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">myfunc_1</span>(project_data <span class="sc">%&gt;%</span> <span class="fu">filter</span>(GAI_COD<span class="sc">==</span><span class="dv">3</span>),<span class="st">"GAI_COD_3"</span>),</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">myfunc_1</span>(project_data <span class="sc">%&gt;%</span> <span class="fu">filter</span>(GAI_COD<span class="sc">==</span><span class="dv">4</span>),<span class="st">"GAI_COD_4"</span>),</span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">myfunc_1</span>(project_data <span class="sc">%&gt;%</span> <span class="fu">filter</span>(GAI_COD<span class="sc">==</span><span class="dv">5</span>),<span class="st">"GAI_COD_5"</span>),</span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">myfunc_1</span>(project_data <span class="sc">%&gt;%</span> <span class="fu">filter</span>(GAI_COD<span class="sc">==</span><span class="dv">6</span>),<span class="st">"GAI_COD_6"</span>),</span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">myfunc_1</span>(project_data <span class="sc">%&gt;%</span> <span class="fu">filter</span>(GAI_COD<span class="sc">==</span><span class="dv">7</span>),<span class="st">"GAI_COD_7"</span>),</span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">myfunc_1</span>(project_data <span class="sc">%&gt;%</span> <span class="fu">filter</span>(GAI_COD<span class="sc">==</span><span class="dv">8</span>),<span class="st">"GAI_COD_8"</span>),</span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">myfunc_1</span>(project_data <span class="sc">%&gt;%</span> <span class="fu">filter</span>(차종<span class="sc">==</span><span class="st">"소형"</span>),<span class="st">"차종_소형"</span>),</span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">myfunc_1</span>(project_data <span class="sc">%&gt;%</span> <span class="fu">filter</span>(차종<span class="sc">==</span><span class="st">"중형"</span>),<span class="st">"차종_중형"</span>),</span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">myfunc_1</span>(project_data <span class="sc">%&gt;%</span> <span class="fu">filter</span>(차종<span class="sc">==</span><span class="st">"준중형"</span>),<span class="st">"차종_준중형"</span>),</span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">myfunc_1</span>(project_data <span class="sc">%&gt;%</span> <span class="fu">filter</span>(차종<span class="sc">==</span><span class="st">"대형"</span>),<span class="st">"차종_대형"</span>),</span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">myfunc_1</span>(project_data <span class="sc">%&gt;%</span> <span class="fu">filter</span>(차종<span class="sc">==</span><span class="st">"SUB/VAN"</span>),<span class="st">"차종_SUB/VAN"</span>)</span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell">
 <div class="cell-output-display">
 
-<div class="datatables html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-50ba9507a9e8f9db4c38" style="width:100%;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-50ba9507a9e8f9db4c38">{"x":{"filter":"none","vertical":false,"data":[["대인빈도","대물빈도","자손빈도","자차빈도","대인심도","대물심도","자손심도","자차심도","대인순보","대물순보","자손순보","자차순보"],["0.0217198581560284","0.061613475177305","0.00620567375886525","0.273492907801418","5366818.97959184","1222076.76258993","1081013.57142857","908856.499189627","116566.546985816","75296.3962765957","6708.41755319149","248565.806737589"],["0.0205607476635514","0.0672897196261682","0.00186915887850467","0.327102803738318","1440490","1520054.72222222","367710","910042.8","29617.5514018692","102284.056074766","687.308411214953","297677.551401869"],["0","0.166666666666667","0","0.833333333333333","NaN","237200","NaN","212094","NaN","39533.3333333333","NaN","176745"],["0.0153846153846154","0.0307692307692308","0.0153846153846154","0.307692307692308","5402840","1221185","1417210","1155746","83120.6153846154","37574.9230769231","21803.2307692308","355614.153846154"],["0.0576923076923077","0.115384615384615","0","0.269230769230769","1046553.33333333","1183188.33333333","NaN","3108533.57142857","60378.0769230769","136521.730769231","NaN","836912.884615385"],["0","0.0549450549450549","0","0.32967032967033","NaN","2090452","NaN","862883.666666667","NaN","114860","NaN","284467.142857143"],["0.0307692307692308","0.0769230769230769","0","0.4","1152670","2191802","NaN","740793.461538462","35466.7692307692","168600.153846154","NaN","296317.384615385"],["0.0135135135135135","0.027027027027027","0","0.22972972972973","140110","3727500","NaN","610847.058823529","1893.37837837838","100743.243243243","NaN","140329.72972973"],["0.0375","0.05","0","0.3375","1898740","1210480","NaN","2115336.2962963","71202.75","60524","NaN","713926"],["0.0216010165184244","0.0635324015247776","0.00592969080897925","0.277424819991529","5145607.25490196","1207358.33333333","1006049.28571429","827349.572519084","111150.347310462","76706.3744176196","5965.56120288014","229527.306226175"],["0.032967032967033","0.043956043956044","0","0.181318681318681","1340416.66666667","819775","NaN","775281.818181818","44189.5604395604","36034.0659340659","NaN","140573.076923077"],["0.0249520153550864","0.072936660268714","0.00383877159309021","0.374280230326296","1606591.53846154","1051098.15789474","646645","1448345.12820513","40087.6967370441","76663.5892514395","2482.32245681382","542086.948176584"],["0.0192043895747599","0.0576131687242798","0.0109739368998628","0.246913580246914","7131054.28571429","1048251.19047619","726227.5","715129.388888889","136947.544581619","60393.072702332","7969.57475994513","176575.157750343"],["0.0184940554821664","0.0607661822985469","0.00396301188903567","0.28005284015852","1674342.85714286","1301056.08695652","1680150","787413.820754717","30965.3896961691","79060.2113606341","6658.45442536328","220517.476882431"],["0.0231404958677686","0.0677685950413223","0.00330578512396694","0.287603305785124","9064742.14285714","1810136.09756098","1679170","681539.252873563","209762.628099174","122670.380165289","5550.97520661157","196012.94214876"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>PIB_SEX_1<\/th>\n      <th>PIB_SEX_2<\/th>\n      <th>GAI_COD_1<\/th>\n      <th>GAI_COD_2<\/th>\n      <th>GAI_COD_3<\/th>\n      <th>GAI_COD_4<\/th>\n      <th>GAI_COD_5<\/th>\n      <th>GAI_COD_6<\/th>\n      <th>GAI_COD_7<\/th>\n      <th>GAI_COD_8<\/th>\n      <th>차종_소형<\/th>\n      <th>차종_중형<\/th>\n      <th>차종_준중형<\/th>\n      <th>차종_대형<\/th>\n      <th>차종_SUB/VAN<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<div class="datatables html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-1319be08d93af42abfde" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-1319be08d93af42abfde">{"x":{"filter":"none","vertical":false,"data":[["대인빈도","대물빈도","자손빈도","자차빈도","대인심도","대물심도","자손심도","자차심도","대인순보","대물순보","자손순보","자차순보"],[0.02171985815602837,0.06161347517730496,0.006205673758865249,0.2734929078014184,5366818.979591837,1222076.762589928,1081013.571428571,908856.4991896272,116566.5469858156,75296.39627659574,6708.417553191489,248565.8067375887],[0.0205607476635514,0.06728971962616823,0.001869158878504673,0.3271028037383177,1440490,1520054.722222222,367710,910042.8,29617.55140186916,102284.0560747664,687.3084112149533,297677.5514018692],[0,0.1666666666666667,0,0.8333333333333334,null,237200,null,212094,null,39533.33333333333,null,176745],[0.01538461538461539,0.03076923076923077,0.01538461538461539,0.3076923076923077,5402840,1221185,1417210,1155746,83120.61538461539,37574.92307692308,21803.23076923077,355614.1538461539],[0.0576923076923077,0.1153846153846154,0,0.2692307692307692,1046553.333333333,1183188.333333333,null,3108533.571428571,60378.07692307693,136521.7307692308,null,836912.8846153845],[0,0.05494505494505494,0,0.3296703296703297,null,2090452,null,862883.6666666666,null,114860,null,284467.1428571428],[0.03076923076923077,0.07692307692307693,0,0.4,1152670,2191802,null,740793.4615384615,35466.76923076923,168600.1538461538,null,296317.3846153846],[0.01351351351351351,0.02702702702702703,0,0.2297297297297297,140110,3727500,null,610847.0588235294,1893.378378378379,100743.2432432433,null,140329.7297297297],[0.0375,0.05,0,0.3375,1898740,1210480,null,2115336.296296296,71202.75,60524,null,713926],[0.0216010165184244,0.06353240152477764,0.005929690808979246,0.277424819991529,5145607.25490196,1207358.333333333,1006049.285714286,827349.572519084,111150.3473104617,76706.37441761965,5965.561202880135,229527.3062261754],[0.03296703296703297,0.04395604395604396,0,0.1813186813186813,1340416.666666667,819775,null,775281.8181818182,44189.56043956045,36034.06593406594,null,140573.0769230769],[0.01920438957475995,0.05761316872427984,0.01097393689986282,0.2469135802469136,7131054.285714285,1048251.190476191,726227.5,715129.3888888889,136947.5445816187,60393.07270233196,7969.57475994513,176575.1577503429],[0.02495201535508637,0.07293666026871401,0.003838771593090211,0.3742802303262956,1606591.538461538,1051098.157894737,646645,1448345.128205128,40087.69673704414,76663.58925143954,2482.322456813819,542086.9481765835],[0.01849405548216645,0.0607661822985469,0.003963011889035667,0.2800528401585205,1674342.857142857,1301056.086956522,1680150,787413.820754717,30965.38969616909,79060.21136063409,6658.454425363276,220517.4768824307],[0.02314049586776859,0.06776859504132231,0.003305785123966942,0.2876033057851239,9064742.142857144,1810136.097560976,1679170,681539.2528735632,209762.6280991736,122670.3801652892,5550.97520661157,196012.9421487603]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>PIB_SEX_1<\/th>\n      <th>PIB_SEX_2<\/th>\n      <th>GAI_COD_1<\/th>\n      <th>GAI_COD_2<\/th>\n      <th>GAI_COD_3<\/th>\n      <th>GAI_COD_4<\/th>\n      <th>GAI_COD_5<\/th>\n      <th>GAI_COD_6<\/th>\n      <th>GAI_COD_7<\/th>\n      <th>GAI_COD_8<\/th>\n      <th>차종_소형<\/th>\n      <th>차종_준중형<\/th>\n      <th>차종_중형<\/th>\n      <th>차종_대형<\/th>\n      <th>차종_SUB/VAN<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<hr>
+</section>
+<section id="성별-상대도" class="level2">
+<h2 class="anchored" data-anchor-id="성별-상대도">성별 상대도</h2>
+<ul>
+<li>남자 상대도 1</li>
+</ul>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: right;">PIB_SEX_1</th>
+<th style="text-align: right;">PIB_SEX_2</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">대인</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0.2540828</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">대물</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1.3584190</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">자손</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0.1024546</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">자차</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1.1975805</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="가입경력별-상대도" class="level2">
+<h2 class="anchored" data-anchor-id="가입경력별-상대도">가입경력별 상대도</h2>
+<ul>
+<li>가입경력 8년 상대도 1</li>
+</ul>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table table-sm table-striped small">
+<colgroup>
+<col style="width: 5%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: right;">GAI_COD_1</th>
+<th style="text-align: right;">GAI_COD_2</th>
+<th style="text-align: right;">GAI_COD_3</th>
+<th style="text-align: right;">GAI_COD_4</th>
+<th style="text-align: right;">GAI_COD_5</th>
+<th style="text-align: right;">GAI_COD_6</th>
+<th style="text-align: right;">GAI_COD_7</th>
+<th style="text-align: right;">GAI_COD_8</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">대인</td>
+<td style="text-align: right;">NaN</td>
+<td style="text-align: right;">0.7478215</td>
+<td style="text-align: right;">0.5432109</td>
+<td style="text-align: right;">NaN</td>
+<td style="text-align: right;">0.3190882</td>
+<td style="text-align: right;">0.0170344</td>
+<td style="text-align: right;">0.6405985</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">대물</td>
+<td style="text-align: right;">0.5153852</td>
+<td style="text-align: right;">0.4898540</td>
+<td style="text-align: right;">1.7797964</td>
+<td style="text-align: right;">1.497398</td>
+<td style="text-align: right;">2.1979940</td>
+<td style="text-align: right;">1.3133621</td>
+<td style="text-align: right;">0.7890348</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">자손</td>
+<td style="text-align: right;">NaN</td>
+<td style="text-align: right;">3.6548499</td>
+<td style="text-align: right;">NaN</td>
+<td style="text-align: right;">NaN</td>
+<td style="text-align: right;">NaN</td>
+<td style="text-align: right;">NaN</td>
+<td style="text-align: right;">NaN</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">자차</td>
+<td style="text-align: right;">0.7700391</td>
+<td style="text-align: right;">1.5493327</td>
+<td style="text-align: right;">3.6462454</td>
+<td style="text-align: right;">1.239361</td>
+<td style="text-align: right;">1.2909897</td>
+<td style="text-align: right;">0.6113858</td>
+<td style="text-align: right;">3.1104186</td>
+<td style="text-align: right;">1</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="차종별-상대도" class="level2">
+<h2 class="anchored" data-anchor-id="차종별-상대도">차종별 상대도</h2>
+<ul>
+<li>차종 대형 상대도 1</li>
+</ul>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: right;">차종_소형</th>
+<th style="text-align: right;">차종_준중형</th>
+<th style="text-align: right;">차종_중형</th>
+<th style="text-align: right;">차종_대형</th>
+<th style="text-align: right;">차종_SUB/VAN</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">대인</td>
+<td style="text-align: right;">1.4270630</td>
+<td style="text-align: right;">4.4226004</td>
+<td style="text-align: right;">1.2945969</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">6.7740994</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">대물</td>
+<td style="text-align: right;">0.4557800</td>
+<td style="text-align: right;">0.7638871</td>
+<td style="text-align: right;">0.9696861</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1.5516070</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">자손</td>
+<td style="text-align: right;">NaN</td>
+<td style="text-align: right;">1.1969106</td>
+<td style="text-align: right;">0.3728076</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0.8336732</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">자차</td>
+<td style="text-align: right;">0.6374691</td>
+<td style="text-align: right;">0.8007309</td>
+<td style="text-align: right;">2.4582494</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0.8888771</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

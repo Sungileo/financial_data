@@ -1,5 +1,5 @@
 ---
-title: "_"
+title: "상대도"
 date: "2023/11/16"
 author: "Sungil Park"
 description: "2023-2학기 R로 하는 금융데이터분석"
@@ -10,6 +10,8 @@ rm(list=ls())
 library(tidyverse)
 library(knitr)
 ```
+
+## 데이터 로드
 
 ```{r}
 project_data <- read.csv("contents/프로젝트자료.csv")
@@ -24,6 +26,8 @@ project_data <- project_data %>%
       car_knd %in% c("1P", "29") ~ "대형",
       TRUE ~ "SUB/VAN")))
 ```
+
+## 빈도, 심도, 순보험료
 
 ```{r}
 myfunc_1 <- function(df,y) {
@@ -42,15 +46,15 @@ myfunc_1 <- function(df,y) {
   jas_sun <- jas_bin*jas_dep
   cha_sun <- cha_bin*cha_dep
   
-  result_df <- data.frame(value = c(in1_bin, mul_bin, jas_bin, cha_bin, in1_dep, mul_dep, jas_dep, cha_dep,in1_sun, mul_sun, jas_sun, cha_sun) %>% as.character())
+  result_df <- data.frame(value = c(in1_bin, mul_bin, jas_bin, cha_bin, in1_dep, mul_dep, jas_dep, cha_dep,in1_sun, mul_sun, jas_sun, cha_sun))
   rownames(result_df) <- c("대인빈도","대물빈도","자손빈도","자차빈도","대인심도","대물심도","자손심도","자차심도","대인순보","대물순보","자손순보","자차순보")
   colnames(result_df) <- y
   return(result_df)
 }
 ```
 
-```{r}
-d_2 <- cbind(
+```{r, echo=FALSE}
+df <- cbind(
   myfunc_1(project_data %>% filter(PIB_SEX==1),"PIB_SEX_1"),
   myfunc_1(project_data %>% filter(PIB_SEX==2),"PIB_SEX_2"),
   myfunc_1(project_data %>% filter(GAI_COD==1),"GAI_COD_1"),
@@ -62,13 +66,50 @@ d_2 <- cbind(
   myfunc_1(project_data %>% filter(GAI_COD==7),"GAI_COD_7"),
   myfunc_1(project_data %>% filter(GAI_COD==8),"GAI_COD_8"),
   myfunc_1(project_data %>% filter(차종=="소형"),"차종_소형"),
-  myfunc_1(project_data %>% filter(차종=="중형"),"차종_중형"),
   myfunc_1(project_data %>% filter(차종=="준중형"),"차종_준중형"),
+  myfunc_1(project_data %>% filter(차종=="중형"),"차종_중형"),
   myfunc_1(project_data %>% filter(차종=="대형"),"차종_대형"),
   myfunc_1(project_data %>% filter(차종=="SUB/VAN"),"차종_SUB/VAN")
   )
 ```
 
 ```{r, echo=FALSE}
-DT::datatable(d_2)
+DT::datatable(df)
 ```
+
+-----
+
+## 성별 상대도
+
+ - 남자 상대도 1
+
+```{r, echo=FALSE}
+d_1 <- df[9:12,1:2]/df[9:12,1]
+rownames(d_1) <- c("대인","대물","자손","자차")
+d_1 %>% kable()
+```
+
+## 가입경력별 상대도
+
+ - 가입경력 8년 상대도 1
+
+```{r, echo=FALSE}
+d_2 <- df[9:12,3:10]/df[9:12,10]
+rownames(d_2) <- c("대인","대물","자손","자차")
+d_2 %>% kable()
+```
+
+## 차종별 상대도
+
+ - 차종 대형 상대도 1
+
+```{r, echo=FALSE}
+d_3 <- df[9:12,11:15]/df[9:12,14]
+rownames(d_3) <- c("대인","대물","자손","자차")
+d_3 %>% kable()
+```
+
+
+
+
+
