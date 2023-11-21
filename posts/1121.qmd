@@ -1,0 +1,213 @@
+---
+title: "상대도_2"
+date: "2023/11/21"
+author: "Sungil Park"
+description: "2023-2학기 R로 하는 금융데이터분석"
+---
+
+```{r, include=FALSE}
+rm(list=ls())
+library(tidyverse)
+library(knitr)
+```
+
+## 데이터 로드
+
+```{r}
+project_data <- read.csv("contents/프로젝트자료.csv")
+
+project_data <- project_data %>%  
+  mutate(
+    GAI_COD = factor(GAI_COD),
+    차종 = as.factor(case_when(
+      car_knd %in% c("1A", "1E") ~ "소형",
+      car_knd %in% c("1F", "1G", "1H") ~ "준중형",
+      car_knd %in% c("1L", "1M", "1N") ~ "중형",
+      car_knd %in% c("1P", "29") ~ "대형",
+      TRUE ~ "SUB/VAN")))
+```
+
+
+
+## 빈도, 심도, 순보험료
+
+```{r}
+myfunc_1 <- function(df,y) {
+  in1_bin <- sum(df$in1_los != 0) / nrow(df)
+  mul_bin <- sum(df$mul_los != 0) / nrow(df)
+  jas_bin <- sum(df$jas_los != 0) / nrow(df)
+  cha_bin <- sum(df$cha_los != 0) / nrow(df)
+
+  in1_dep <- sum(df$in1_los) / sum(df$in1_los != 0)
+  mul_dep <- sum(df$mul_los) / sum(df$mul_los != 0)
+  jas_dep <- sum(df$jas_los) / sum(df$jas_los != 0)
+  cha_dep <- sum(df$cha_los) / sum(df$cha_los != 0)
+  
+  in1_sun <- in1_bin*in1_dep
+  mul_sun <- mul_bin*mul_dep
+  jas_sun <- jas_bin*jas_dep
+  cha_sun <- cha_bin*cha_dep
+  
+  result_df <- data.frame(value = c(in1_bin, mul_bin, jas_bin, cha_bin, in1_dep, mul_dep, jas_dep, cha_dep,in1_sun, mul_sun, jas_sun, cha_sun))
+  rownames(result_df) <- c("대인빈도","대물빈도","자손빈도","자차빈도","대인심도","대물심도","자손심도","자차심도","대인순보","대물순보","자손순보","자차순보")
+  colnames(result_df) <- y
+  return(result_df)
+}
+```
+
+```{r, echo=FALSE}
+df <- cbind(
+  myfunc_1(project_data %>% filter(PIB_SEX %in% c(1,5)),"PIB_SEX_1"),
+  myfunc_1(project_data %>% filter(PIB_SEX==2),"PIB_SEX_2"),
+  myfunc_1(project_data %>% filter(GAI_COD==1),"GAI_COD_1"),
+  myfunc_1(project_data %>% filter(GAI_COD==2),"GAI_COD_2"),
+  myfunc_1(project_data %>% filter(GAI_COD==3),"GAI_COD_3"),
+  myfunc_1(project_data %>% filter(GAI_COD==4),"GAI_COD_4"),
+  myfunc_1(project_data %>% filter(GAI_COD==5),"GAI_COD_5"),
+  myfunc_1(project_data %>% filter(GAI_COD==6),"GAI_COD_6"),
+  myfunc_1(project_data %>% filter(GAI_COD==7),"GAI_COD_7"),
+  myfunc_1(project_data %>% filter(GAI_COD==8),"GAI_COD_8"),
+  myfunc_1(project_data %>% filter(차종=="소형"),"차종_소형"),
+  myfunc_1(project_data %>% filter(차종=="준중형"),"차종_준중형"),
+  myfunc_1(project_data %>% filter(차종=="중형"),"차종_중형"),
+  myfunc_1(project_data %>% filter(차종=="대형"),"차종_대형"),
+  myfunc_1(project_data %>% filter(차종=="SUB/VAN"),"차종_SUB/VAN")
+  )
+```
+
+```{r, echo=FALSE}
+DT::datatable(df)
+```
+
+## 1121
+
+------------------------------------------------------------------------
+
+## 성별 상대도
+
+-   남자 상대도 1
+
+```{r, echo=FALSE}
+d_1 <- df[9:12,1:2]/df[9:12,1]
+rownames(d_1) <- c("대인","대물","자손","자차")
+d_1 %>% kable()
+```
+
+## 가입경력별 상대도
+
+-   가입경력 8년 상대도 1
+
+```{r, echo=FALSE}
+d_2 <- df[9:12,3:10]/df[9:12,10]
+rownames(d_2) <- c("대인","대물","자손","자차")
+d_2 %>% kable()
+```
+
+## 차종별 상대도
+
+-   차종 대형 상대도 1
+
+```{r, echo=FALSE}
+d_3 <- df[9:12,11:15]/df[9:12,14]
+rownames(d_3) <- c("대인","대물","자손","자차")
+d_3 %>% kable()
+```
+
+-----
+
+
+```{r}
+project_data_2 <- project_data %>% 
+  mutate(
+    in1_sex = case_when(
+      PIB_SEX == 1 ~ d_1[1,1],
+      PIB_SEX == 5 ~ d_1[1,1],
+      PIB_SEX == 2 ~ d_1[1,2]),
+    in1_gai = case_when(
+      GAI_COD == 1 ~ d_2[1,2],
+      GAI_COD == 2 ~ d_2[1,2],
+      GAI_COD == 3 ~ d_2[1,3],
+      GAI_COD == 4 ~ d_2[1,5],
+      GAI_COD == 5 ~ d_2[1,5],
+      GAI_COD == 6 ~ d_2[1,6],
+      GAI_COD == 7 ~ d_2[1,7],
+      GAI_COD == 8 ~ d_2[1,8]
+    ),
+    in1_cha = case_when(
+      car_knd %in% c("1A", "1E") ~ d_3[1,1],
+      car_knd %in% c("1F", "1G", "1H") ~ d_3[1,2],
+      car_knd %in% c("1L", "1M", "1N") ~ d_3[1,3],
+      car_knd %in% c("1P", "29") ~ d_3[1,4],
+      TRUE ~ d_2[1,5]),
+    in1_sun = sum(in1_los)/nrow(project_data),
+    in1_new = in1_sun* in1_sex* in1_gai* in1_cha,
+    off_B = in1_sun %>% sum()/in1_new %>% sum()-1,
+    in1_sun_off = in1_sun+in1_sun*off_B,
+    in1_new_off = in1_sun_off* in1_sex* in1_gai* in1_cha
+  )
+```
+
+```{r}
+DT::datatable(project_data_2)
+```
+
+
+```{r}
+project_data_2$in1_sun %>% sum()/project_data_2$in1_new %>% sum()-1
+
+project_data_2$in1_sun %>% sum()
+project_data_2$in1_new_off %>% sum()
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
