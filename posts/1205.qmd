@@ -1,0 +1,122 @@
+---
+title: "군집분석"
+date: "2023/12/05"
+author: "Sungil Park"
+description: "2023-2학기 R로 하는 금융데이터분석"
+---
+
+```{r, include=FALSE}
+rm(list=ls())
+library(dplyr)
+library(knitr)
+```
+
+```{r}
+protein <- read.csv("contents/protein.csv",header=TRUE)
+
+head(protein)
+# x1 - red meat / x2 - white meat / x3 - eggs / x4 - milk
+# x5 - fish / x6 - cereal / x7 - starch(탄수화물 bread로 해석) / x8 - nuts / x9 - fruits & vegetables
+```
+
+```{r}
+# 예 7.1 
+protein.X <- cbind(protein[1],scale(protein[-1],center=TRUE,scale=TRUE))   # ① 표준화
+summary(protein.X)
+```
+
+```{r}
+protein
+protein[-1]  # 첫번째 나라 이름 변수를 제외하는 옵션
+```
+
+```{r}
+protein.Z <- scale(protein[-1],center=TRUE,scale=TRUE)   # ① 표준화
+summary(protein.Z)
+var(protein.Z)
+```
+
+```{r}
+protein.Z.dist <- dist(protein.Z, method="euclidean")   # ② 거리행렬
+# 나중에 다양한 방법들을 적용해보기
+protein.Z.dist
+```
+
+```{r}
+# 계층적 군집분석 - hierarchical
+protein.Z.hclust <- hclust(protein.Z.dist, method="ward.D")   # ③ 군집분석single
+# 연결 방식에 대한 옵션 해보기
+protein.Z.hclust
+```
+
+```{r}
+plot(protein.Z.hclust,labels=protein$country)   # ④ 덴드로그램
+plot(protein.Z.hclust,labels=protein$country, hang=-1)   # ④ 덴드로그램 (밑에서 맞추기)
+plot(protein.Z.hclust,labels=protein$country, hang=-1, cex=0.4)   # ④ 덴드로그램(변수글자크기)
+
+rect.hclust(protein.Z.hclust,k=3,border="red")   # ⑤ 군집 구분
+```
+
+```{r}
+# 참고사항1
+#install.packages("cluster")
+library("cluster")
+plot(silhouette(cutree(protein.Z.hclust,k=3),dist=dist(protein.Z),col=1:5))
+```
+
+```{r}
+#install.packages("fpc")
+library("fpc")
+
+clust <- numeric(20)
+for(k in 2:20){
+  clust[[k]] <- pam(protein.Z, k) $ silinfo $ avg.width # s_data대신 데이터변수만 넣어줍시다.
+  k.best <- which.max(clust)}
+cat("최적의 실루엣 값을 갖는 클러스터 개수는:", k.best, "\n")
+```
+
+```{r}
+# 참고사항2
+#install.packages("corrplot")
+library(corrplot)
+M <- cor(protein.Z) 
+#M
+#corrplot(M, method="circle")
+#corrplot(M, method="ellipse")
+corrplot(M, method="number")
+```
+
+```{r}
+# 예 7.2
+hcluster <- cutree(protein.Z.hclust,k=5)
+hcluster  # 25개의 자료에 해당하는 군집
+```
+
+```{r}
+protein.X.hclust <- data.frame(protein,hcluster)
+head(protein.X.hclust,n=10)
+protein.X.hclust
+```
+
+```{r}
+# 자료화하여 정리 
+write.csv(protein.X.hclust,"protein_X_hclust.csv")
+```
+
+```{r}
+# 예 7.3
+table(hcluster)
+# 각 군집에 포함되는 케이스의 수
+```
+
+```{r}
+aggregate(protein.Z,by=list(hcluster),FUN=mean)
+aggregate(protein[-1],by=list(hcluster),FUN=mean)
+# 특성 파악 - 정답이 없음
+```
+
+```{r}
+protein.Z.hclust <- data.frame(protein.Z,hcluster)
+protein.Z.hclust
+aggregate(cbind(x1,x2,x3,x4,x5,x6,x7,x8,x9)~hcluster,data=protein.Z.hclust,mean)
+```

@@ -7,7 +7,7 @@ description: "2023-2학기 R로 하는 금융데이터분석"
 
 ```{r, include=FALSE}
 rm(list=ls())
-library(tidyverse)
+library(dplyr)
 library(knitr)
 ```
 
@@ -26,8 +26,6 @@ project_data <- project_data %>%
       car_knd %in% c("1P", "29") ~ "대형",
       TRUE ~ "SUB/VAN")))
 ```
-
-
 
 ## 빈도, 심도, 순보험료
 
@@ -113,8 +111,7 @@ rownames(d_3) <- c("대인","대물","자손","자차")
 d_3 %>% kable()
 ```
 
------
-
+------------------------------------------------------------------------
 
 ```{r}
 project_data_2 <- project_data %>% 
@@ -151,63 +148,22 @@ project_data_2 <- project_data %>%
 DT::datatable(project_data_2)
 ```
 
+## Off-Balance 계수
 
 ```{r}
 project_data_2$in1_sun %>% sum()/project_data_2$in1_new %>% sum()-1
-
-project_data_2$in1_sun %>% sum()
-project_data_2$in1_new_off %>% sum()
 ```
 
+## 총 대인 순보험료
 
+-   수지균등의 원칙
 
+```{r}
+project_data_2$in1_sun %>% sum()
+```
 
+## 상대도 반영 총 대인 순보험료
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+```{r}
+project_data_2$in1_new_off %>% sum()
+```
