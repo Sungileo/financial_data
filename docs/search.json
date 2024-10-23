@@ -4,14 +4,14 @@
     "href": "index.html",
     "title": "금융데이터분석_R",
     "section": "",
-    "text": "군집분석\n\n\n\n\n\n2023-2학기 R로 하는 금융데이터분석\n\n\n\n\n\n\nDec 5, 2023\n\n\nSungil Park\n\n\n\n\n\n\n  \n\n\n\n\n군집분석\n\n\n\n\n\n2023-2학기 R로 하는 금융데이터분석\n\n\n\n\n\n\nNov 28, 2023\n\n\nSungil Park\n\n\n\n\n\n\n  \n\n\n\n\n상대도_2\n\n\n\n\n\n2023-2학기 R로 하는 금융데이터분석\n\n\n\n\n\n\nNov 21, 2023\n\n\nSungil Park\n\n\n\n\n\n\n  \n\n\n\n\n상대도\n\n\n\n\n\n2023-2학기 R로 하는 금융데이터분석\n\n\n\n\n\n\nNov 16, 2023\n\n\nSungil Park\n\n\n\n\n\n\n  \n\n\n\n\nANOVA\n\n\n\n\n\n2023-2학기 R로 하는 금융데이터분석\n\n\n\n\n\n\nNov 14, 2023\n\n\nSungil Park\n\n\n\n\n\n\n  \n\n\n\n\n정리\n\n\n\n\n\n2023-2학기 R로 하는 금융데이터분석\n\n\n\n\n\n\nNov 9, 2023\n\n\nSungil Park\n\n\n\n\n\n\n  \n\n\n\n\n2023 빈도&심도 예측_\n\n\n\n\n\n2023-2학기 R로 하는 금융데이터분석\n\n\n\n\n\n\nNov 7, 2023\n\n\nSungil Park\n\n\n\n\n\n\n  \n\n\n\n\n2023 빈도&심도 예측\n\n\n\n\n\n2023-2학기 R로 하는 금융데이터분석\n\n\n\n\n\n\nNov 2, 2023\n\n\nSungil Park\n\n\n\n\n\n\n  \n\n\n\n\n분기별 선형모형_2\n\n\n\n\n\n2023-2학기 R로 하는 금융데이터분석\n\n\n\n\n\n\nOct 31, 2023\n\n\nSungil Park\n\n\n\n\n\n\n  \n\n\n\n\n분기별 선형모형\n\n\n\n\n\n2023-2학기 R로 하는 금융데이터분석\n\n\n\n\n\n\nOct 26, 2023\n\n\nSungil Park\n\n\n\n\n\n\n  \n\n\n\n\n빈도, 심도 선형회귀\n\n\n\n\n\n2023-2학기 R로 하는 금융데이터분석\n\n\n\n\n\n\nOct 24, 2023\n\n\nSungil Park\n\n\n\n\n\n\n  \n\n\n\n\n지시함수\n\n\n\n\n\n2023-2학기 R로 하는 금융데이터분석\n\n\n\n\n\n\nOct 12, 2023\n\n\nSungil Park\n\n\n\n\n\n\n  \n\n\n\n\n회귀분석\n\n\n\n\n\n2023-2학기 R로 하는 금융데이터분석\n\n\n\n\n\n\nOct 10, 2023\n\n\nSungil Park\n\n\n\n\n\n\n  \n\n\n\n\n빈도와 심도\n\n\n\n\n\n2023-2학기 R로 하는 금융데이터분석\n\n\n\n\n\n\nSep 14, 2023\n\n\nSungil Park\n\n\n\n\n\n\nNo matching items"
+    "text": "자동차 보험 데이터 분석\n설명 작성\n설명\n\n\n\n\n\n\n\n\n\n  \n\n\n\n\n01_빈도와 심도\n\n\n\n\n\n2023-2학기 R로 하는 금융데이터분석\n\n\n\n\n\n\nSep 14, 2023\n\n\nSungil Park\n\n\n\n\n\n\n  \n\n\n\n\n02_회귀분석\n\n\n\n\n\n2023-2학기 R로 하는 금융데이터분석\n\n\n\n\n\n\nOct 10, 2023\n\n\nSungil Park\n\n\n\n\n\n\n  \n\n\n\n\n03_지시함수\n\n\n\n\n\n2023-2학기 R로 하는 금융데이터분석\n\n\n\n\n\n\nOct 12, 2023\n\n\nSungil Park\n\n\n\n\n\n\n  \n\n\n\n\n빈도, 심도 선형회귀\n\n\n\n\n\n2023-2학기 R로 하는 금융데이터분석\n\n\n\n\n\n\nOct 24, 2023\n\n\nSungil Park\n\n\n\n\n\n\n  \n\n\n\n\n분기별 선형모형\n\n\n\n\n\n2023-2학기 R로 하는 금융데이터분석\n\n\n\n\n\n\nOct 26, 2023\n\n\nSungil Park\n\n\n\n\n\n\n  \n\n\n\n\n분기별 선형모형_2\n\n\n\n\n\n2023-2학기 R로 하는 금융데이터분석\n\n\n\n\n\n\nOct 31, 2023\n\n\nSungil Park\n\n\n\n\n\n\n  \n\n\n\n\n2023 빈도&심도 예측\n\n\n\n\n\n2023-2학기 R로 하는 금융데이터분석\n\n\n\n\n\n\nNov 2, 2023\n\n\nSungil Park\n\n\n\n\n\n\n  \n\n\n\n\n2023 빈도&심도 예측_\n\n\n\n\n\n2023-2학기 R로 하는 금융데이터분석\n\n\n\n\n\n\nNov 7, 2023\n\n\nSungil Park\n\n\n\n\n\n\n  \n\n\n\n\n정리\n\n\n\n\n\n2023-2학기 R로 하는 금융데이터분석\n\n\n\n\n\n\nNov 9, 2023\n\n\nSungil Park\n\n\n\n\n\n\n  \n\n\n\n\nANOVA\n\n\n\n\n\n2023-2학기 R로 하는 금융데이터분석\n\n\n\n\n\n\nNov 14, 2023\n\n\nSungil Park\n\n\n\n\n\n\n  \n\n\n\n\n상대도\n\n\n\n\n\n2023-2학기 R로 하는 금융데이터분석\n\n\n\n\n\n\nNov 16, 2023\n\n\nSungil Park\n\n\n\n\n\n\n  \n\n\n\n\n상대도_2\n\n\n\n\n\n2023-2학기 R로 하는 금융데이터분석\n\n\n\n\n\n\nNov 21, 2023\n\n\nSungil Park\n\n\n\n\n\n\n  \n\n\n\n\n군집분석\n\n\n\n\n\n2023-2학기 R로 하는 금융데이터분석\n\n\n\n\n\n\nNov 28, 2023\n\n\nSungil Park\n\n\n\n\n\n\n  \n\n\n\n\n군집분석\n\n\n\n\n\n2023-2학기 R로 하는 금융데이터분석\n\n\n\n\n\n\nDec 5, 2023\n\n\nSungil Park\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
     "href": "about.html",
     "title": "Sungil Park",
     "section": "",
-    "text": "sungileo@naver.com"
+    "text": "sungileo@naver.com\nhttps://sungileo.github.io/sanai_sungil/"
   },
   {
     "objectID": "posts/0914_pt1.html#r",
@@ -86,42 +86,42 @@
   {
     "objectID": "posts/1010_Regression.html",
     "href": "posts/1010_Regression.html",
-    "title": "회귀분석",
+    "title": "02_회귀분석",
     "section": "",
-    "text": "rm(list=ls())\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.3     ✔ readr     2.1.4\n✔ forcats   1.0.0     ✔ stringr   1.5.0\n✔ ggplot2   3.4.3     ✔ tibble    3.2.1\n✔ lubridate 1.9.2     ✔ tidyr     1.3.0\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nlibrary(knitr)"
+    "text": "실습 데이터는 2020~2022년의 월별 대인 손해액이다.월별 대인 손해액을 회귀분석 한다."
   },
   {
     "objectID": "posts/1010_Regression.html#data",
     "href": "posts/1010_Regression.html#data",
-    "title": "회귀분석",
-    "section": "Data",
-    "text": "Data\n\ndata &lt;- readxl::read_xlsx(\"contents/2. 예측수준의 결정.xlsx\",sheet = 1)\nkable(data)\n\n\n\n\nt\nyymm\nmarket\n\n\n\n\n1\n2020.01\n5238500\n\n\n2\n2020.02\n4775400\n\n\n3\n2020.03\n5916100\n\n\n4\n2020.04\n7929800\n\n\n5\n2020.05\n8008500\n\n\n6\n2020.06\n6293300\n\n\n7\n2020.07\n4182700\n\n\n8\n2020.08\n4118900\n\n\n9\n2020.09\n6592500\n\n\n10\n2020.10\n8618600\n\n\n11\n2020.11\n8767400\n\n\n12\n2020.12\n7748900\n\n\n13\n2021.01\n6511500\n\n\n14\n2021.02\n5523400\n\n\n15\n2021.03\n7364600\n\n\n16\n2021.04\n8607400\n\n\n17\n2021.05\n9470900\n\n\n18\n2021.06\n7742000\n\n\n19\n2021.07\n5285500\n\n\n20\n2021.08\n5240300\n\n\n21\n2021.09\n8001100\n\n\n22\n2021.10\n10318600\n\n\n23\n2021.11\n10330500\n\n\n24\n2021.12\n8428700\n\n\n25\n2022.01\n6550000\n\n\n26\n2022.02\n5592500\n\n\n27\n2022.03\n7171100\n\n\n28\n2022.04\n11005000\n\n\n29\n2022.05\n8824600\n\n\n30\n2022.06\n8025300\n\n\n31\n2022.07\n5223500\n\n\n32\n2022.08\n4723100\n\n\n33\n2022.09\n8074400\n\n\n34\n2022.10\n11198700\n\n\n35\n2022.11\n11798500\n\n\n36\n2022.12\n8723200"
+    "title": "02_회귀분석",
+    "section": "",
+    "text": "data &lt;- readxl::read_xlsx(\"contents/2. 예측수준의 결정.xlsx\",sheet = 1)\ndatatable(data)"
   },
   {
     "objectID": "posts/1010_Regression.html#model",
     "href": "posts/1010_Regression.html#model",
-    "title": "회귀분석",
+    "title": "02_회귀분석",
     "section": "model",
     "text": "model\n\nmodel &lt;- lm(market ~ t, data = data)\nmodel %&gt;% summary\n\n\nCall:\nlm(formula = market ~ t, data = data)\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-3859553 -1315301   -70334  1707873  2962448 \n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)  5879738     634908   9.261 8.03e-11 ***\nt              84466      29924   2.823   0.0079 ** \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 1865000 on 34 degrees of freedom\nMultiple R-squared:  0.1898,    Adjusted R-squared:  0.166 \nF-statistic: 7.967 on 1 and 34 DF,  p-value: 0.007902"
   },
   {
     "objectID": "posts/1010_Regression.html#formula",
     "href": "posts/1010_Regression.html#formula",
-    "title": "회귀분석",
+    "title": "02_회귀분석",
     "section": "formula",
-    "text": "formula\ny = 5879738 + 84466 * t\np-value 가 0.007902로 0.05보다 작으므로 유의하다고 볼 수 있다.\nR-squared 값이 0.1898로 설명력이 낮다고 볼 수 있다."
+    "text": "formula\n$$ = 5879738,* = 84466\n$$\n\\[y = \\]\ny = 5879738 + 84466 * t\np-value 가 0.007902로 0.05보다 작으므로 유의하다고 볼 수 있다.\nR-squared 값이 0.1898로 설명력이 낮다고 볼 수 있다."
   },
   {
     "objectID": "posts/1010_Regression.html#plot",
     "href": "posts/1010_Regression.html#plot",
-    "title": "회귀분석",
+    "title": "02_회귀분석",
     "section": "plot",
     "text": "plot\n\nggplot(data, aes(x=t, y=market)) +\n  geom_point() +\n  geom_smooth(method='lm', se=FALSE)+\n  labs(title = \"Linear Regression of market ~ t\", subtitle = \"y = 5879738 + 84466 * t\")+\n  theme_minimal()\n\n`geom_smooth()` using formula = 'y ~ x'"
   },
   {
     "objectID": "posts/1010_Regression.html#prediction",
     "href": "posts/1010_Regression.html#prediction",
-    "title": "회귀분석",
+    "title": "02_회귀분석",
     "section": "Prediction",
     "text": "Prediction\n\n# 회귀식을 함수로 정의\nlinear_regression &lt;- function(t) {\n  y &lt;- 5879738 + 84466 * t\n  return(y)\n}\n\npred_t &lt;- c(37:48)\npred_yymm &lt;- c(\"2023.01\",\"2023.02\",\"2023.03\",\"2023.04\",\"2023.05\",\"2023.06\",\"2023.07\",\"2023.08\",\"2023.09\",\"2023.10\",\"2023.11\",\"2023.12\")\npred_market &lt;- linear_regression(pred_t)\n\ndata.frame(pred_t,pred_yymm,pred_market)\n\n   pred_t pred_yymm pred_market\n1      37   2023.01     9004980\n2      38   2023.02     9089446\n3      39   2023.03     9173912\n4      40   2023.04     9258378\n5      41   2023.05     9342844\n6      42   2023.06     9427310\n7      43   2023.07     9511776\n8      44   2023.08     9596242\n9      45   2023.09     9680708\n10     46   2023.10     9765174\n11     47   2023.11     9849640\n12     48   2023.12     9934106"
   },
@@ -163,72 +163,72 @@
   {
     "objectID": "posts/1012_Indicator_Regression.html",
     "href": "posts/1012_Indicator_Regression.html",
-    "title": "지시함수",
+    "title": "03_지시함수",
     "section": "",
-    "text": "data &lt;- readxl::read_xlsx(\"contents/2. 예측수준의 결정.xlsx\",sheet = 1)\n\ndata$month &lt;- substr(data$yymm,6,8)\n\ndata$quarter &lt;- ifelse(substr(data$yymm,6,8) %in% \n                         c(\"01\", \"02\", \"03\"), \"Q1\",\n                     ifelse(substr(data$yymm,6,8) %in% \n                              c(\"04\", \"05\", \"06\"), \"Q2\",\n                            ifelse(substr(data$yymm,6,8) %in% \n                                     c(\"07\", \"08\", \"09\"), \"Q3\", \"Q4\")))\n\ndata %&gt;% kable()\n\n\n\n\nt\nyymm\nmarket\nmonth\nquarter\n\n\n\n\n1\n2020.01\n5238500\n01\nQ1\n\n\n2\n2020.02\n4775400\n02\nQ1\n\n\n3\n2020.03\n5916100\n03\nQ1\n\n\n4\n2020.04\n7929800\n04\nQ2\n\n\n5\n2020.05\n8008500\n05\nQ2\n\n\n6\n2020.06\n6293300\n06\nQ2\n\n\n7\n2020.07\n4182700\n07\nQ3\n\n\n8\n2020.08\n4118900\n08\nQ3\n\n\n9\n2020.09\n6592500\n09\nQ3\n\n\n10\n2020.10\n8618600\n10\nQ4\n\n\n11\n2020.11\n8767400\n11\nQ4\n\n\n12\n2020.12\n7748900\n12\nQ4\n\n\n13\n2021.01\n6511500\n01\nQ1\n\n\n14\n2021.02\n5523400\n02\nQ1\n\n\n15\n2021.03\n7364600\n03\nQ1\n\n\n16\n2021.04\n8607400\n04\nQ2\n\n\n17\n2021.05\n9470900\n05\nQ2\n\n\n18\n2021.06\n7742000\n06\nQ2\n\n\n19\n2021.07\n5285500\n07\nQ3\n\n\n20\n2021.08\n5240300\n08\nQ3\n\n\n21\n2021.09\n8001100\n09\nQ3\n\n\n22\n2021.10\n10318600\n10\nQ4\n\n\n23\n2021.11\n10330500\n11\nQ4\n\n\n24\n2021.12\n8428700\n12\nQ4\n\n\n25\n2022.01\n6550000\n01\nQ1\n\n\n26\n2022.02\n5592500\n02\nQ1\n\n\n27\n2022.03\n7171100\n03\nQ1\n\n\n28\n2022.04\n11005000\n04\nQ2\n\n\n29\n2022.05\n8824600\n05\nQ2\n\n\n30\n2022.06\n8025300\n06\nQ2\n\n\n31\n2022.07\n5223500\n07\nQ3\n\n\n32\n2022.08\n4723100\n08\nQ3\n\n\n33\n2022.09\n8074400\n09\nQ3\n\n\n34\n2022.10\n11198700\n10\nQ4\n\n\n35\n2022.11\n11798500\n11\nQ4\n\n\n36\n2022.12\n8723200\n12\nQ4"
+    "text": "지시함수(indicator function)이란 0,1로 표현되는 변수로 손해액에 대한 월별, 분기별 효과를 고려하기 위해 사용한다.\n\n\n\\[y = b_0 + b_1x_1 +b_2In(x_2) +...+b_iIn(x_i) \\]"
   },
   {
     "objectID": "posts/1012_Indicator_Regression.html#data",
     "href": "posts/1012_Indicator_Regression.html#data",
-    "title": "지시함수",
+    "title": "03_지시함수",
     "section": "",
-    "text": "data &lt;- readxl::read_xlsx(\"contents/2. 예측수준의 결정.xlsx\",sheet = 1)\n\ndata$month &lt;- substr(data$yymm,6,8)\n\ndata$quarter &lt;- ifelse(substr(data$yymm,6,8) %in% \n                         c(\"01\", \"02\", \"03\"), \"Q1\",\n                     ifelse(substr(data$yymm,6,8) %in% \n                              c(\"04\", \"05\", \"06\"), \"Q2\",\n                            ifelse(substr(data$yymm,6,8) %in% \n                                     c(\"07\", \"08\", \"09\"), \"Q3\", \"Q4\")))\n\ndata %&gt;% kable()\n\n\n\n\nt\nyymm\nmarket\nmonth\nquarter\n\n\n\n\n1\n2020.01\n5238500\n01\nQ1\n\n\n2\n2020.02\n4775400\n02\nQ1\n\n\n3\n2020.03\n5916100\n03\nQ1\n\n\n4\n2020.04\n7929800\n04\nQ2\n\n\n5\n2020.05\n8008500\n05\nQ2\n\n\n6\n2020.06\n6293300\n06\nQ2\n\n\n7\n2020.07\n4182700\n07\nQ3\n\n\n8\n2020.08\n4118900\n08\nQ3\n\n\n9\n2020.09\n6592500\n09\nQ3\n\n\n10\n2020.10\n8618600\n10\nQ4\n\n\n11\n2020.11\n8767400\n11\nQ4\n\n\n12\n2020.12\n7748900\n12\nQ4\n\n\n13\n2021.01\n6511500\n01\nQ1\n\n\n14\n2021.02\n5523400\n02\nQ1\n\n\n15\n2021.03\n7364600\n03\nQ1\n\n\n16\n2021.04\n8607400\n04\nQ2\n\n\n17\n2021.05\n9470900\n05\nQ2\n\n\n18\n2021.06\n7742000\n06\nQ2\n\n\n19\n2021.07\n5285500\n07\nQ3\n\n\n20\n2021.08\n5240300\n08\nQ3\n\n\n21\n2021.09\n8001100\n09\nQ3\n\n\n22\n2021.10\n10318600\n10\nQ4\n\n\n23\n2021.11\n10330500\n11\nQ4\n\n\n24\n2021.12\n8428700\n12\nQ4\n\n\n25\n2022.01\n6550000\n01\nQ1\n\n\n26\n2022.02\n5592500\n02\nQ1\n\n\n27\n2022.03\n7171100\n03\nQ1\n\n\n28\n2022.04\n11005000\n04\nQ2\n\n\n29\n2022.05\n8824600\n05\nQ2\n\n\n30\n2022.06\n8025300\n06\nQ2\n\n\n31\n2022.07\n5223500\n07\nQ3\n\n\n32\n2022.08\n4723100\n08\nQ3\n\n\n33\n2022.09\n8074400\n09\nQ3\n\n\n34\n2022.10\n11198700\n10\nQ4\n\n\n35\n2022.11\n11798500\n11\nQ4\n\n\n36\n2022.12\n8723200\n12\nQ4"
+    "text": "data &lt;- readxl::read_xlsx(\"contents/2. 예측수준의 결정.xlsx\",sheet = 1)\n\ndata$month &lt;- substr(data$yymm,6,8)\n\ndata$quarter &lt;- ifelse(data$month %in% \n                         c(\"01\", \"02\", \"03\"), \"Q1\",\n                     ifelse(data$month %in% \n                              c(\"04\", \"05\", \"06\"), \"Q2\",\n                            ifelse(data$month %in% \n                                     c(\"07\", \"08\", \"09\"), \"Q3\", \"Q4\")))\n\ndata %&gt;% kable()\n\n\n\n\nt\nyymm\nmarket\nmonth\nquarter\n\n\n\n\n1\n2020.01\n5238500\n01\nQ1\n\n\n2\n2020.02\n4775400\n02\nQ1\n\n\n3\n2020.03\n5916100\n03\nQ1\n\n\n4\n2020.04\n7929800\n04\nQ2\n\n\n5\n2020.05\n8008500\n05\nQ2\n\n\n6\n2020.06\n6293300\n06\nQ2\n\n\n7\n2020.07\n4182700\n07\nQ3\n\n\n8\n2020.08\n4118900\n08\nQ3\n\n\n9\n2020.09\n6592500\n09\nQ3\n\n\n10\n2020.10\n8618600\n10\nQ4\n\n\n11\n2020.11\n8767400\n11\nQ4\n\n\n12\n2020.12\n7748900\n12\nQ4\n\n\n13\n2021.01\n6511500\n01\nQ1\n\n\n14\n2021.02\n5523400\n02\nQ1\n\n\n15\n2021.03\n7364600\n03\nQ1\n\n\n16\n2021.04\n8607400\n04\nQ2\n\n\n17\n2021.05\n9470900\n05\nQ2\n\n\n18\n2021.06\n7742000\n06\nQ2\n\n\n19\n2021.07\n5285500\n07\nQ3\n\n\n20\n2021.08\n5240300\n08\nQ3\n\n\n21\n2021.09\n8001100\n09\nQ3\n\n\n22\n2021.10\n10318600\n10\nQ4\n\n\n23\n2021.11\n10330500\n11\nQ4\n\n\n24\n2021.12\n8428700\n12\nQ4\n\n\n25\n2022.01\n6550000\n01\nQ1\n\n\n26\n2022.02\n5592500\n02\nQ1\n\n\n27\n2022.03\n7171100\n03\nQ1\n\n\n28\n2022.04\n11005000\n04\nQ2\n\n\n29\n2022.05\n8824600\n05\nQ2\n\n\n30\n2022.06\n8025300\n06\nQ2\n\n\n31\n2022.07\n5223500\n07\nQ3\n\n\n32\n2022.08\n4723100\n08\nQ3\n\n\n33\n2022.09\n8074400\n09\nQ3\n\n\n34\n2022.10\n11198700\n10\nQ4\n\n\n35\n2022.11\n11798500\n11\nQ4\n\n\n36\n2022.12\n8723200\n12\nQ4"
   },
   {
     "objectID": "posts/1012_Indicator_Regression.html#월별",
     "href": "posts/1012_Indicator_Regression.html#월별",
-    "title": "지시함수",
+    "title": "03_지시함수",
     "section": "월별",
     "text": "월별\n\nSummary\n\nmodel &lt;- lm(market ~ t+factor(month), data = data)\nmodel %&gt;% summary\n\n\nCall:\nlm(formula = market ~ t + factor(month), data = data)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-751429 -374312   26085  377139 1044296 \n\nCoefficients:\n                Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)      5255032     353306  14.874 2.73e-13 ***\nt                  64998       9721   6.686 8.04e-07 ***\nfactor(month)02  -867898     466697  -1.860 0.075772 .  \nfactor(month)03   587272     467000   1.258 0.221177    \nfactor(month)04  2885741     467506   6.173 2.69e-06 ***\nfactor(month)05  2408010     468213   5.143 3.27e-05 ***\nfactor(month)06   928546     469120   1.979 0.059870 .  \nfactor(month)07 -1592752     470226  -3.387 0.002536 ** \nfactor(month)08 -1860883     471531  -3.946 0.000642 ***\nfactor(month)09   936019     473031   1.979 0.059938 .  \nfactor(month)10  3360322     474726   7.078 3.28e-07 ***\nfactor(month)11  3548824     476614   7.446 1.44e-07 ***\nfactor(month)12  1485293     478691   3.103 0.005014 ** \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 571500 on 23 degrees of freedom\nMultiple R-squared:  0.9486,    Adjusted R-squared:  0.9217 \nF-statistic: 35.34 on 12 and 23 DF,  p-value: 6.202e-12\n\n\np-value 가 6.202e-12로 0.05보다 작으므로 유의하다고 볼 수 있다.\nR-squared 값이 0.9486로 설명력이 높다고 볼 수 있다.\n\nggplot(data, aes(x = t, y = market, color = month)) +\n  geom_point() +    \n  geom_smooth(method = \"lm\", se = FALSE) +  \n  labs(title = \"\", x = \"t\", y = \"market\") +\n  theme_minimal()\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\n\n\n\n\ndata %&gt;% hchart(\"scatter\", hcaes(x=t,y=market,group = month),\n                regression = TRUE,\n                regressionSettings = list(\n    type = \"linear\",\n    lineWidth = 2,\n    name = \"%eq\",\n    hideInLegend = FALSE)\n  ) %&gt;% \n  hc_add_dependency(\"plugins/highcharts-regression.js\") %&gt;% \n  hc_legend()\n\n\n\n\n\n\n\n\n예측\n\nlinear_regression &lt;- function(t) {\n  y &lt;- 5255032 + 64998  * t\n  return(y)\n}\n\npred_t &lt;- c(37:48)\npred_yymm &lt;- c(\"2023.01\",\"2023.02\",\"2023.03\"\n               ,\"2023.04\",\"2023.05\",\"2023.06\"\n               ,\"2023.07\",\"2023.08\",\"2023.09\"\n               ,\"2023.10\",\"2023.11\",\"2023.12\")\npred_market &lt;- linear_regression(pred_t)\n\ndata_pred &lt;- data.frame(pred_t,pred_yymm,pred_market)\n\nfor (i in 2:12) {\n  data_pred$pred_market[i] &lt;- data_pred$pred_market[i] + model$coefficients[i + 1]\n}\n\ndata_pred %&gt;% kable()\n\n\n\n\npred_t\npred_yymm\npred_market\n\n\n\n\n37\n2023.01\n7659958\n\n\n38\n2023.02\n6857058\n\n\n39\n2023.03\n8377226\n\n\n40\n2023.04\n10740693\n\n\n41\n2023.05\n10327960\n\n\n42\n2023.06\n8913493\n\n\n43\n2023.07\n6457194\n\n\n44\n2023.08\n6254061\n\n\n45\n2023.09\n9115961\n\n\n46\n2023.10\n11605262\n\n\n47\n2023.11\n11858762\n\n\n48\n2023.12\n9860229"
   },
   {
     "objectID": "posts/1012_Indicator_Regression.html#분기별",
     "href": "posts/1012_Indicator_Regression.html#분기별",
-    "title": "지시함수",
+    "title": "03_지시함수",
     "section": "분기별",
     "text": "분기별\n\nmodel_2 &lt;- lm(market ~ t+factor(quarter), data = data)\nmodel_2 %&gt;% summary\n\n\nCall:\nlm(formula = market ~ t + factor(quarter), data = data)\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-1765240  -773431   -50370   795498  2220942 \n\nCoefficients:\n                  Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)        5170133     459378  11.255 1.77e-12 ***\nt                    64380      19031   3.383 0.001958 ** \nfactor(quarter)Q2  2169493     532300   4.076 0.000296 ***\nfactor(quarter)Q3  -741959     541408  -1.370 0.180397    \nfactor(quarter)Q4  2897245     556255   5.208 1.18e-05 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 1123000 on 31 degrees of freedom\nMultiple R-squared:  0.7324,    Adjusted R-squared:  0.6979 \nF-statistic: 21.21 on 4 and 31 DF,  p-value: 1.653e-08\n\n\n1분기\ny = 5170133 + 64380x\n2분기\ny = 5170133 + 64380x + 2169493\n3분기\ny = 5170133 + 64380x - 741959\n4분기\ny = 5170133 + 64380x + 2897245\n\nggplot(data, aes(x = t, y = market, color = quarter)) +\n  geom_point() +    \n  geom_smooth(method = \"lm\", se = FALSE) +  \n  labs(title = \"\", x = \"t\", y = \"market\") +\n  theme_minimal()\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\n\n\n\n\ndata %&gt;% hchart(\"scatter\", hcaes(x=t,y=market,group = quarter),\n                regression = TRUE,\n                regressionSettings = list(\n    type = \"linear\",\n    lineWidth = 2,\n    name = \"%eq\",\n    hideInLegend = FALSE)\n  ) %&gt;% \n  hc_add_dependency(\"plugins/highcharts-regression.js\") %&gt;% \n  hc_legend()"
   },
   {
     "objectID": "posts/0914.html",
     "href": "posts/0914.html",
-    "title": "빈도와 심도",
+    "title": "01_빈도와 심도",
     "section": "",
-    "text": "대인손해 빈도 0.021832498210451\n대물손해 빈도 0.0626342161775233\n자손     빈도 0.00536864710093057\n자차손해 빈도 0.284180386542591\n\n대인손해액 심도 4575576.06557377\n대물손해액 심도 1283375.08571429\n자손액     심도 1033460\n자차손해액 심도 909640.365239295\n\n\n\n\n\n담보\n빈도\n\n\n\n\n대인손해\n0.021832498210451\n\n\n대물손해\n0.0626342161775233\n\n\n자손\n0.00536864710093057\n\n\n자차손해\n0.284180386542591\n\n\n\n\n\n\n담보\n심도\n\n\n\n\n대인손해액\n4575576.06557377\n\n\n대물손해액\n1283375.08571429\n\n\n자손액\n1033460\n\n\n자차손해액\n909640.365239295"
+    "text": "보험료는 심도와 빈도의 곱으로 나타낼 수 있다.\n심도란 사고 1건당 피해액을 말하며빈도란 사건 발생률로 보험기간에 유효한 계약건수 중 사고 건수의 비율을 말한다.\n자동차 보험에는 물담보, 인담보가 존재한다.\n물담보에는 대물, 자차가 해당하고 인담보에는 대인, 자손이 해당한다."
   },
   {
     "objectID": "posts/0914.html#정리",
     "href": "posts/0914.html#정리",
-    "title": "빈도와 심도",
-    "section": "",
-    "text": "대인손해 빈도 0.021832498210451\n대물손해 빈도 0.0626342161775233\n자손     빈도 0.00536864710093057\n자차손해 빈도 0.284180386542591\n\n대인손해액 심도 4575576.06557377\n대물손해액 심도 1283375.08571429\n자손액     심도 1033460\n자차손해액 심도 909640.365239295\n\n\n\n\n\n담보\n빈도\n\n\n\n\n대인손해\n0.021832498210451\n\n\n대물손해\n0.0626342161775233\n\n\n자손\n0.00536864710093057\n\n\n자차손해\n0.284180386542591\n\n\n\n\n\n\n담보\n심도\n\n\n\n\n대인손해액\n4575576.06557377\n\n\n대물손해액\n1283375.08571429\n\n\n자손액\n1033460\n\n\n자차손해액\n909640.365239295"
+    "title": "01_빈도와 심도",
+    "section": "정리",
+    "text": "정리\n\n\n대인손해 빈도 0.021832498210451\n대물손해 빈도 0.0626342161775233\n자손     빈도 0.00536864710093057\n자차손해 빈도 0.284180386542591\n\n대인손해액 심도 4575576.06557377\n대물손해액 심도 1283375.08571429\n자손액     심도 1033460\n자차손해액 심도 909640.365239295\n\n\n\n\n\n담보\n빈도\n\n\n\n\n대인손해\n0.021832498210451\n\n\n대물손해\n0.0626342161775233\n\n\n자손\n0.00536864710093057\n\n\n자차손해\n0.284180386542591\n\n\n\n\n\n\n담보\n심도\n\n\n\n\n대인손해액\n4575576.06557377\n\n\n대물손해액\n1283375.08571429\n\n\n자손액\n1033460\n\n\n자차손해액\n909640.365239295"
   },
   {
     "objectID": "posts/0914.html#대인-손해액-빈도심도",
     "href": "posts/0914.html#대인-손해액-빈도심도",
-    "title": "빈도와 심도",
+    "title": "01_빈도와 심도",
     "section": "대인 손해액 빈도&심도",
     "text": "대인 손해액 빈도&심도\n\n#빈도\nnrow(filter(data,in1_los!=0))/nrow(data)\n\n[1] 0.0218325\n\n\n\n#심도\nsum(data$in1_los)/nrow(filter(data,in1_los!=0))\n\n[1] 4575576"
   },
   {
     "objectID": "posts/0914.html#대물-손해액-빈도심도",
     "href": "posts/0914.html#대물-손해액-빈도심도",
-    "title": "빈도와 심도",
+    "title": "01_빈도와 심도",
     "section": "대물 손해액 빈도&심도",
     "text": "대물 손해액 빈도&심도\n\n#빈도\nnrow(filter(data,mul_los!=0))/nrow(data)\n\n[1] 0.06263422\n\n\n\n#심도\nsum(data$mul_los)/nrow(filter(data,mul_los!=0))\n\n[1] 1283375"
   },
   {
     "objectID": "posts/0914.html#자손-빈도심도",
     "href": "posts/0914.html#자손-빈도심도",
-    "title": "빈도와 심도",
+    "title": "01_빈도와 심도",
     "section": "자손 빈도&심도",
     "text": "자손 빈도&심도\n\n#빈도\nnrow(filter(data,jas_los!=0))/nrow(data)\n\n[1] 0.005368647\n\n\n\n#심도\nsum(data$jas_los)/nrow(filter(data,jas_los!=0))\n\n[1] 1033460"
   },
   {
     "objectID": "posts/0914.html#자차-손해액-빈도심도",
     "href": "posts/0914.html#자차-손해액-빈도심도",
-    "title": "빈도와 심도",
+    "title": "01_빈도와 심도",
     "section": "자차 손해액 빈도&심도",
-    "text": "자차 손해액 빈도&심도\n\n#빈도\nnrow(filter(data,cha_los!=0))/nrow(data)\n\n[1] 0.2841804\n\n\n\n#심도\nsum(data$cha_los)/nrow(filter(data,cha_los!=0))\n\n[1] 909640.4\n\n\n\ndata$AGE_CAT &lt;- paste(substr(data$PIB_AGE,1,1),\"0대\",sep=\"\")"
+    "text": "자차 손해액 빈도&심도\n\n#빈도\nnrow(filter(data,cha_los!=0))/nrow(data)\n\n[1] 0.2841804\n\n\n\n#심도\nsum(data$cha_los)/nrow(filter(data,cha_los!=0))\n\n[1] 909640.4"
   },
   {
     "objectID": "posts/1024_.html",
@@ -565,5 +565,89 @@
     "title": "군집분석",
     "section": "차종별 상대도",
     "text": "차종별 상대도\n\n차종 대형 상대도 1\n\n\n\n\n\n\n\n차종_소형\n차종_준중형\n차종_중형\n차종_대형\n차종_SUB/VAN\n\n\n\n\n대인\n1.4270630\n4.4226004\n1.2945969\n1\n6.7740994\n\n\n대물\n0.4557800\n0.7638871\n0.9696861\n1\n1.5516070\n\n\n자손\nNaN\n1.1969106\n0.3728076\n1\n0.8336732\n\n\n자차\n0.6374691\n0.8007309\n2.4582494\n1\n0.8888771\n\n\n\n\n\n\n\nproject_data_2 &lt;- project_data %&gt;% \n  mutate(\n    in1_sex = case_when(\n      PIB_SEX == 1 ~ d_1[1,1],\n      PIB_SEX == 5 ~ d_1[1,1],\n      PIB_SEX == 2 ~ d_1[1,2]),\n    in1_gai = case_when(\n      GAI_COD == 1 ~ d_2[1,2],\n      GAI_COD == 2 ~ d_2[1,2],\n      GAI_COD == 3 ~ d_2[1,3],\n      GAI_COD == 4 ~ d_2[1,5],\n      GAI_COD == 5 ~ d_2[1,5],\n      GAI_COD == 6 ~ d_2[1,6],\n      GAI_COD == 7 ~ d_2[1,7],\n      GAI_COD == 8 ~ d_2[1,8]\n    ),\n    in1_cha = case_when(\n      car_knd %in% c(\"1A\", \"1E\") ~ d_3[1,1],\n      car_knd %in% c(\"1F\", \"1G\", \"1H\") ~ d_3[1,2],\n      car_knd %in% c(\"1L\", \"1M\", \"1N\") ~ d_3[1,3],\n      car_knd %in% c(\"1P\", \"29\") ~ d_3[1,4],\n      TRUE ~ d_2[1,5]),\n    in1_sun = sum(in1_los)/nrow(project_data),\n    in1_new = in1_sun* in1_sex* in1_gai* in1_cha,\n    off_B = in1_sun %&gt;% sum()/in1_new %&gt;% sum()-1,\n    in1_sun_off = in1_sun+in1_sun*off_B,\n    in1_new_off = in1_sun_off* in1_sex* in1_gai* in1_cha\n  )\n\n\nDT::datatable(project_data_2)\n\n\n\n\n\n\n\nproject_data_2$in1_sun %&gt;% sum()/project_data_2$in1_new %&gt;% sum()-1\n\n[1] -0.2884038\n\nproject_data_2$in1_sun %&gt;% sum()\n\n[1] 279110140\n\nproject_data_2$in1_new_off %&gt;% sum()\n\n[1] 279110140"
+  },
+  {
+    "objectID": "posts/0914.html#서론",
+    "href": "posts/0914.html#서론",
+    "title": "01_빈도와 심도",
+    "section": "",
+    "text": "보험료는 심도와 빈도의 곱으로 나타낼 수 있다.\n심도란 사고 1건당 피해액을 말하며빈도란 사건 발생률로 보험기간에 유효한 계약건수 중 사고 건수의 비율을 말한다.\n자동차 보험에는 물담보, 인담보가 존재한다.\n물담보에는 대물, 자차가 해당하고 인담보에는 대인, 자손이 해당한다."
+  },
+  {
+    "objectID": "posts/0914.html#실습-데이터",
+    "href": "posts/0914.html#실습-데이터",
+    "title": "01_빈도와 심도",
+    "section": "실습 데이터",
+    "text": "실습 데이터\n실습 데이터는 다음과 같다.\n\n\n\n\n\n\n\n\n컬럼 설명\n\n\n\n영\n한\n\n\n\n\ncar_knd\n차종\n\n\nGAI_COD\n가입코드(가입년수)\n\n\nPIB_AGE\n피보험자 나이\n\n\nPIB_SEX\n피보험자 성별\n\n\nin1_los\n대인손해\n\n\nmul_los\n대물손해\n\n\njas_los\n자손손해\n\n\ncha_los\n자차손해"
+  },
+  {
+    "objectID": "posts/0914.html#담보별-빈도-심도",
+    "href": "posts/0914.html#담보별-빈도-심도",
+    "title": "01_빈도와 심도",
+    "section": "담보별 빈도, 심도",
+    "text": "담보별 빈도, 심도\n\n\n\n담보\n빈도\n\n\n\n\n대인손해\n0.021832498210451\n\n\n대물손해\n0.0626342161775233\n\n\n자손\n0.00536864710093057\n\n\n자차손해\n0.284180386542591\n\n\n\n\n\n\n담보\n심도\n\n\n\n\n대인손해액\n4575576.06557377\n\n\n대물손해액\n1283375.08571429\n\n\n자손액\n1033460\n\n\n자차손해액\n909640.365239295"
+  },
+  {
+    "objectID": "posts/0914.html#코드",
+    "href": "posts/0914.html#코드",
+    "title": "01_빈도와 심도",
+    "section": "코드",
+    "text": "코드\n\n대인 손해액 빈도&심도\n\n#빈도\nnrow(filter(data,in1_los!=0))/nrow(data)\n\n[1] 0.0218325\n\n\n\n#심도\nsum(data$in1_los)/nrow(filter(data,in1_los!=0))\n\n[1] 4575576\n\n\n\n\n대물 손해액 빈도&심도\n\n#빈도\nnrow(filter(data,mul_los!=0))/nrow(data)\n\n[1] 0.06263422\n\n\n\n#심도\nsum(data$mul_los)/nrow(filter(data,mul_los!=0))\n\n[1] 1283375\n\n\n\n\n자손 빈도&심도\n\n#빈도\nnrow(filter(data,jas_los!=0))/nrow(data)\n\n[1] 0.005368647\n\n\n\n#심도\nsum(data$jas_los)/nrow(filter(data,jas_los!=0))\n\n[1] 1033460\n\n\n\n\n자차 손해액 빈도&심도\n\n#빈도\nnrow(filter(data,cha_los!=0))/nrow(data)\n\n[1] 0.2841804\n\n\n\n#심도\nsum(data$cha_los)/nrow(filter(data,cha_los!=0))\n\n[1] 909640.4"
+  },
+  {
+    "objectID": "posts/1010_Regression.html#실습-데이터",
+    "href": "posts/1010_Regression.html#실습-데이터",
+    "title": "02_회귀분석",
+    "section": "",
+    "text": "실습 데이터는 2020~2022년의 월별 대인 손해액이다.월별 대인 손해액을 회귀분석 한다."
+  },
+  {
+    "objectID": "posts/1010_Regression.html#회귀모델",
+    "href": "posts/1010_Regression.html#회귀모델",
+    "title": "02_회귀분석",
+    "section": "회귀모델",
+    "text": "회귀모델\n\nmodel &lt;- lm(market ~ t, data = data)\nmodel %&gt;% summary\n\n\nCall:\nlm(formula = market ~ t, data = data)\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-3859553 -1315301   -70334  1707873  2962448 \n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)  5879738     634908   9.261 8.03e-11 ***\nt              84466      29924   2.823   0.0079 ** \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 1865000 on 34 degrees of freedom\nMultiple R-squared:  0.1898,    Adjusted R-squared:  0.166 \nF-statistic: 7.967 on 1 and 34 DF,  p-value: 0.007902"
+  },
+  {
+    "objectID": "posts/1010_Regression.html#선형회귀모형",
+    "href": "posts/1010_Regression.html#선형회귀모형",
+    "title": "02_회귀분석",
+    "section": "선형회귀모형",
+    "text": "선형회귀모형\n\nformula\n\\[ y = b_0 + b_1x\\]\n\nmodel &lt;- lm(market ~ t, data = data)\nmodel %&gt;% summary\n\n\nCall:\nlm(formula = market ~ t, data = data)\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-3859553 -1315301   -70334  1707873  2962448 \n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)  5879738     634908   9.261 8.03e-11 ***\nt              84466      29924   2.823   0.0079 ** \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 1865000 on 34 degrees of freedom\nMultiple R-squared:  0.1898,    Adjusted R-squared:  0.166 \nF-statistic: 7.967 on 1 and 34 DF,  p-value: 0.007902\n\n\n\\[b_0 = 5879738\\]\n\\[b_1 = 84666\\]\n\n\n회귀식\n\\[y = 5879738 + 84666x\\]\np-value 가 0.007902로 0.05보다 작으므로 유의하다고 볼 수 있다.\nR-squared 값이 0.1898로 설명력이 낮다고 볼 수 있다."
+  },
+  {
+    "objectID": "posts/1010_Regression.html#시각화",
+    "href": "posts/1010_Regression.html#시각화",
+    "title": "02_회귀분석",
+    "section": "시각화",
+    "text": "시각화\n\nggplot(data, aes(x=t, y=market)) +\n  geom_point() +\n  geom_smooth(method='lm', se=FALSE)+\n  labs(title = \"Linear Regression of market ~ t\", subtitle = \"y = 5879738 + 84466 * t\")+\n  theme_minimal()\n\n`geom_smooth()` using formula = 'y ~ x'"
+  },
+  {
+    "objectID": "posts/1010_Regression.html#예측",
+    "href": "posts/1010_Regression.html#예측",
+    "title": "02_회귀분석",
+    "section": "예측",
+    "text": "예측\n\n2023년의 월별손해액 예측\n\n\nlinear_regression &lt;- function(t) {\n  y &lt;- 5879738 + 84466 * t\n  return(y)\n}\n\npred_t &lt;- c(37:48)\npred_yymm &lt;- c(\"2023.01\",\"2023.02\",\"2023.03\",\"2023.04\",\"2023.05\",\"2023.06\",\"2023.07\",\"2023.08\",\"2023.09\",\"2023.10\",\"2023.11\",\"2023.12\")\npred_market &lt;- linear_regression(pred_t)\n\ndata.frame(pred_t,pred_yymm,pred_market)\n\n   pred_t pred_yymm pred_market\n1      37   2023.01     9004980\n2      38   2023.02     9089446\n3      39   2023.03     9173912\n4      40   2023.04     9258378\n5      41   2023.05     9342844\n6      42   2023.06     9427310\n7      43   2023.07     9511776\n8      44   2023.08     9596242\n9      45   2023.09     9680708\n10     46   2023.10     9765174\n11     47   2023.11     9849640\n12     48   2023.12     9934106"
+  },
+  {
+    "objectID": "posts/1012_Indicator_Regression.html#서론",
+    "href": "posts/1012_Indicator_Regression.html#서론",
+    "title": "03_지시함수",
+    "section": "",
+    "text": "지시함수(indicator function)이란 0,1로 표현되는 변수로 손해액에 대한 월별, 분기별 효과를 고려하기 위해 사용한다.\n\n\n\\[y = b_0 + b_1x_1 +b_2In(x_2) +...+b_iIn(x_i) \\]"
+  },
+  {
+    "objectID": "posts/1012_Indicator_Regression.html#데이터",
+    "href": "posts/1012_Indicator_Regression.html#데이터",
+    "title": "03_지시함수",
+    "section": "데이터",
+    "text": "데이터\n손해액 데이터에서 월, 분기를 추출한다.\n\ndata &lt;- readxl::read_xlsx(\"contents/2. 예측수준의 결정.xlsx\",sheet = 1)\n\ndata$month &lt;- substr(data$yymm,6,8)\n\ndata$quarter &lt;- case_when(\n  data$month %in% c(\"01\", \"02\", \"03\") ~ \"Q1\",\n  data$month %in% c(\"04\", \"05\", \"06\") ~ \"Q2\",\n  data$month %in% c(\"07\", \"08\", \"09\") ~ \"Q3\",\n  TRUE ~ \"Q4\"\n)\n\ndatatable(data)"
+  },
+  {
+    "objectID": "posts/1012_Indicator_Regression.html#회귀분석",
+    "href": "posts/1012_Indicator_Regression.html#회귀분석",
+    "title": "03_지시함수",
+    "section": "회귀분석",
+    "text": "회귀분석\n\n월별\n\nmodel &lt;- lm(market ~ t+factor(month), data = data)\nmodel %&gt;% summary\n\n\nCall:\nlm(formula = market ~ t + factor(month), data = data)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-751429 -374312   26085  377139 1044296 \n\nCoefficients:\n                Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)      5255032     353306  14.874 2.73e-13 ***\nt                  64998       9721   6.686 8.04e-07 ***\nfactor(month)02  -867898     466697  -1.860 0.075772 .  \nfactor(month)03   587272     467000   1.258 0.221177    \nfactor(month)04  2885741     467506   6.173 2.69e-06 ***\nfactor(month)05  2408010     468213   5.143 3.27e-05 ***\nfactor(month)06   928546     469120   1.979 0.059870 .  \nfactor(month)07 -1592752     470226  -3.387 0.002536 ** \nfactor(month)08 -1860883     471531  -3.946 0.000642 ***\nfactor(month)09   936019     473031   1.979 0.059938 .  \nfactor(month)10  3360322     474726   7.078 3.28e-07 ***\nfactor(month)11  3548824     476614   7.446 1.44e-07 ***\nfactor(month)12  1485293     478691   3.103 0.005014 ** \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 571500 on 23 degrees of freedom\nMultiple R-squared:  0.9486,    Adjusted R-squared:  0.9217 \nF-statistic: 35.34 on 12 and 23 DF,  p-value: 6.202e-12\n\n\n\np-value 가 6.202e-12로 0.05보다 작으므로 유의하다고 볼 수 있다.\nR-squared 값이 0.9486로 설명력이 높다고 볼 수 있다.\n\n\nggplot(data, aes(x = t, y = market, color = month)) +\n  geom_point() +    \n  geom_smooth(method = \"lm\", se = FALSE) +  \n  labs(title = \"\", x = \"t\", y = \"market\") +\n  theme_minimal()\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\n\n\n\n\n\n예측\n\nlinear_regression &lt;- function(t) {\n  y &lt;- 5255032 + 64998  * t\n  return(y)\n}\n\npred_t &lt;- c(37:48)\npred_yymm &lt;- c(\"2023.01\",\"2023.02\",\"2023.03\"\n               ,\"2023.04\",\"2023.05\",\"2023.06\"\n               ,\"2023.07\",\"2023.08\",\"2023.09\"\n               ,\"2023.10\",\"2023.11\",\"2023.12\")\npred_market &lt;- linear_regression(pred_t)\n\ndata_pred &lt;- data.frame(pred_t,pred_yymm,pred_market)\n\nfor (i in 2:12) {\n  data_pred$pred_market[i] &lt;- data_pred$pred_market[i] + model$coefficients[i + 1]\n}\n\ndata_pred %&gt;% datatable()"
   }
 ]

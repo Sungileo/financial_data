@@ -1,5 +1,5 @@
 ---
-title: "빈도와 심도"
+title: "01_빈도와 심도"
 date: "2023/09/14"
 author: "Sungil Park"
 description: "2023-2학기 R로 하는 금융데이터분석"
@@ -14,9 +14,40 @@ library(knitr)
 data <- read_csv("contents/프로젝트자료.csv")
 ```
 
-## 정리
+## 서론
+
+보험료는 심도와 빈도의 곱으로 나타낼 수 있다.
+
+**심도**란 사고 1건당 피해액을 말하며<br>**빈도**란 사건 발생률로 보험기간에 유효한 계약건수 중 사고 건수의 비율을 말한다.
+
+자동차 보험에는 물담보, 인담보가 존재한다.
+
+물담보에는 **대물**, **자차**가 해당하고 <br>인담보에는 **대인**, **자손**이 해당한다.
+
+## 실습 데이터
+
+실습 데이터는 다음과 같다.
 
 ```{r, echo=FALSE}
+DT::datatable(data)
+```
+
+### 컬럼 설명
+
+|   영    |         한         |
+|:-------:|:------------------:|
+| car_knd |        차종        |
+| GAI_COD | 가입코드(가입년수) |
+| PIB_AGE |   피보험자 나이    |
+| PIB_SEX |   피보험자 성별    |
+| in1_los |      대인손해      |
+| mul_los |      대물손해      |
+| jas_los |      자손손해      |
+| cha_los |      자차손해      |
+
+## 담보별 빈도, 심도
+
+```{r, include=FALSE}
 myfunc_1 <- function(df){
     in1_bin <- paste("대인손해 빈도",nrow(filter(df,in1_los!=0))/nrow(df))
     mul_bin <- paste("대물손해 빈도",nrow(filter(df,mul_los!=0))/nrow(df))
@@ -53,9 +84,9 @@ data %>% myfunc_1()
 |   자손액   | 1033460          |
 | 자차손해액 | 909640.365239295 |
 
-# 빈도&심도
+## 코드
 
-## 대인 손해액 빈도&심도
+### 대인 손해액 빈도&심도
 
 ```{r}
 #빈도
@@ -67,7 +98,7 @@ nrow(filter(data,in1_los!=0))/nrow(data)
 sum(data$in1_los)/nrow(filter(data,in1_los!=0))
 ```
 
-## 대물 손해액 빈도&심도
+### 대물 손해액 빈도&심도
 
 ```{r}
 #빈도
@@ -79,7 +110,7 @@ nrow(filter(data,mul_los!=0))/nrow(data)
 sum(data$mul_los)/nrow(filter(data,mul_los!=0))
 ```
 
-## 자손 빈도&심도
+### 자손 빈도&심도
 
 ```{r}
 #빈도
@@ -91,7 +122,7 @@ nrow(filter(data,jas_los!=0))/nrow(data)
 sum(data$jas_los)/nrow(filter(data,jas_los!=0))
 ```
 
-## 자차 손해액 빈도&심도
+### 자차 손해액 빈도&심도
 
 ```{r}
 #빈도

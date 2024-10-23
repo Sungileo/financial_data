@@ -1,44 +1,50 @@
 ---
-title: "회귀분석"
+title: "02_회귀분석"
 date: "2023/10/10"
 author: "Sungil Park"
 description: "2023-2학기 R로 하는 금융데이터분석"
 ---
 
-```{r}
+```{r, include=FALSE}
 rm(list=ls())
 library(tidyverse)
 library(knitr)
+library(DT)
 ```
 
-## Data
+## 실습 데이터
 
-```{r}
+실습 데이터는 2020\~2022년의 월별 대인 손해액이다.<br>월별 대인 손해액을 회귀분석 한다.
+
+```{r, echo=FALSE}
 data <- readxl::read_xlsx("contents/2. 예측수준의 결정.xlsx",sheet = 1)
-head(data)
+datatable(data)
 ```
 
-## model
+## 선형회귀모형
+
+#### formula
+
+$$ y = b_0 + b_1x$$
 
 ```{r}
 model <- lm(market ~ t, data = data)
 model %>% summary
 ```
 
-## formula
+$$b_0 = 5879738$$
 
-$$ 
-\beta *{0} = 5879738,* \beta {1} = 84466
+$$b_1 = 84666$$
 
-$$
+### 회귀식
 
-y = 5879738 + 84466 \* t
+$$y = 5879738 + 84666x$$
 
 p-value 가 0.007902로 0.05보다 작으므로 유의하다고 볼 수 있다.
 
 R-squared 값이 0.1898로 설명력이 낮다고 볼 수 있다.
 
-## plot
+## 시각화
 
 ```{r}
 ggplot(data, aes(x=t, y=market)) +
@@ -48,10 +54,11 @@ ggplot(data, aes(x=t, y=market)) +
   theme_minimal()
 ```
 
-## Prediction
+## 예측
+
+-   2023년의 월별손해액 예측
 
 ```{r}
-# 회귀식을 함수로 정의
 linear_regression <- function(t) {
   y <- 5879738 + 84466 * t
   return(y)
